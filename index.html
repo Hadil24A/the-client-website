@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl">
     <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <title>Bewaarde huizen</title>
          <link rel="stylesheet" href="styles/styles.css">
     </head>
     <header>
 
-<!-- navigatie van funda site via inspecten gekopieerd -->
-
-        <div class="container">
-            <div id="app-header-title" class="a11y-sr-only">Hoofdmenu</div>
-    
-            <nav role="navigation" aria-labelledby="app-header-title" class="app-header-nav fd-flex fd-justify-content-between">
-                    <div class="flex items-center">
-                            <ul class="app-header__menu fd-m-none flex md:hidden">
-    
-    
-    <li class="app-header__menu--menu" data-app-header-menu="menu" data-navigation-menu="">
-            <a class="app-header__link app-header__menu-handle" aria-expanded="false" aria-controls="app-header__menu" data-app-header-menu-handle="" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;menu&quot;}">
-                    <span class="icon icon-menu-white"></span>
-                <span class="anchor-text">Menu</span>
-    
-            </a>
-    
-    
-        <div id="app-header__menu" class="app-header__submenu" data-app-header-submenu="">
-            <p class="h3 app-header__dialog-title app-header--show-mobile">
-                <span class="icon-menu"></span>Menu        </p>
-    
-            <button class="app-header--show-mobile app-header__close-dialog" data-app-header-menu-close="">
-                <span class="button-text">Sluiten</span>
-                <span class="icon icon-close-grey" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26.12 24l10.61-10.61a1.5 1.5 0 000-2.12 1.5 1.5 0 00-2.12 0L24 21.88 13.39 11.27a1.5 1.5 0 10-2.12 2.12L21.88 24 11.27 34.61a1.5 1.5 0 102.12 2.12L24 26.12l10.61 10.61a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.12z" fill="#999999"></path></svg></span>
-            </button>
-            
+<!-- navigatie van funda site via inspecten gekopieerd en aangepast -->
+     <nav>    
             <div class="accordion accordion--dark-3" data-accordion-close-others="">
                     <ul>
                         <details class="cursor-pointer block w-full text-left border-t border-light-2">
@@ -101,136 +78,28 @@
             </div>
         </div>
     </li>
-                            </ul>
-                            <a class="logo" rel="home" href="/">
-                                <img width="101" height="36" alt="Funda" src="https://assets.fstatic.nl/master-66220/assets/components/logo/fundawonen-logo.svg">
-                            </a>
+     </ul>
+     
+     <a class="logo" rel="home" href="/">
+      <img width="101" height="36" alt="Funda" src="https://assets.fstatic.nl/master-66220/assets/components/logo/fundawonen-logo.svg">
+          </a>
     
-                            <ul class="app-header__menu hidden md:flex ml-4">
+           <ul class="app-header__menu hidden md:flex ml-4">
     
-    
-    <li class="app-header__menu--kopen" data-app-header-menu="kopen">
-            <a href="" class="app-header__link app-header__menu-handle" aria-expanded="false" aria-controls="app-header__kopen" data-app-header-menu-handle="" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;buy&quot;}">
-                <span class="anchor-text">Kopen</span>
-    
-            </a>
-    
-    
-        <div id="app-header__kopen" class="app-header__submenu app-header__submenu--left left-0 md:rounded" data-app-header-submenu="">
-            <p class="h3 app-header__dialog-title app-header--show-mobile">
-    Kopen        </p>
-            <button class="app-header--show-mobile app-header__close-dialog" data-app-header-menu-close="">
-                <span class="button-text">Sluiten</span>
-                <span class="icon icon-close-grey" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26.12 24l10.61-10.61a1.5 1.5 0 000-2.12 1.5 1.5 0 00-2.12 0L24 21.88 13.39 11.27a1.5 1.5 0 10-2.12 2.12L21.88 24 11.27 34.61a1.5 1.5 0 102.12 2.12L24 26.12l10.61 10.61a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.12z" fill="#999999"></path></svg></span>
-            </button>
-    
-                <ul class="flat-list">
-    
-    
-        <li class="app-header__submenu--zoeken">
-                <a id="appheader-zoeken-link" class="app-header__link" href="/koop/heel-nederland/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-search-blue"></span>Zoek een koopwoning</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--makelaar">
-                <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/aankoop/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-makelaar-blue"></span>Zoek een NVM-aankoopmakelaar</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--maandlasten">
-                <a id="appheader-Maandlasten-link" class="app-header__link" href="/hypotheek/maandlasten/de-hypotheker/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;mortgage_calculator&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-calculator-blue"></span>Bereken je maandlasten</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--meerwetenkopen">
-                <a id="appheader-MeerWetenKopen-link" class="app-header__link" href="/meer-weten/kopen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;buying_tips&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-content-platform-blue"></span>Alles wat je moet weten over kopen</a>
-        </li>
-                </ul>
-        </div>
-    </li>
-    
-    
-    <li class="app-header__menu--huren" data-app-header-menu="huren">
-            <a href="" class="app-header__link app-header__menu-handle" aria-expanded="false" aria-controls="app-header__huren" data-app-header-menu-handle="" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;rent&quot;}">
-                <span class="anchor-text">Huren</span>
-    
-            </a>
-    
-    
-        <div id="app-header__huren" class="app-header__submenu app-header__submenu--left left-0 md:rounded" data-app-header-submenu="">
-            <p class="h3 app-header__dialog-title app-header--show-mobile">
-    Huren        </p>
-            <button class="app-header--show-mobile app-header__close-dialog" data-app-header-menu-close="">
-                <span class="button-text">Sluiten</span>
-                <span class="icon icon-close-grey" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26.12 24l10.61-10.61a1.5 1.5 0 000-2.12 1.5 1.5 0 00-2.12 0L24 21.88 13.39 11.27a1.5 1.5 0 10-2.12 2.12L21.88 24 11.27 34.61a1.5 1.5 0 102.12 2.12L24 26.12l10.61 10.61a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.12z" fill="#999999"></path></svg></span>
-            </button>
-    
-                <ul class="flat-list">
-    
-    
-        <li class="app-header__submenu--zoeken">
-                <a id="appheader-zoeken-link" class="app-header__link" href="/huur/heel-nederland/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;rent&quot;}"><span class="icon-search-blue"></span>Zoek een huurwoning</a>
-        </li>
-                </ul>
-        </div>
-    </li>
-    
-    
-    <li class="app-header__menu--verkopen" data-app-header-menu="verkopen">
-            <a href="" class="app-header__link app-header__menu-handle" aria-expanded="false" aria-controls="app-header__verkopen" data-app-header-menu-handle="" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;sell&quot;}">
-                <span class="anchor-text">Verkopen</span>
-    
-            </a>
-    
-    
-        <div id="app-header__verkopen" class="app-header__submenu app-header__submenu--left left-0 md:rounded" data-app-header-submenu="">
-            <p class="h3 app-header__dialog-title app-header--show-mobile">
-    Verkopen        </p>
-            <button class="app-header--show-mobile app-header__close-dialog" data-app-header-menu-close="">
-                <span class="button-text">Sluiten</span>
-                <span class="icon icon-close-grey" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26.12 24l10.61-10.61a1.5 1.5 0 000-2.12 1.5 1.5 0 00-2.12 0L24 21.88 13.39 11.27a1.5 1.5 0 10-2.12 2.12L21.88 24 11.27 34.61a1.5 1.5 0 102.12 2.12L24 26.12l10.61 10.61a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.12z" fill="#999999"></path></svg></span>
-            </button>
-    
-                <ul class="flat-list">
-    
-    
-        <li class="app-header__submenu--makelaar">
-                <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/verkoop/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-makelaar-blue"></span>Zoek een NVM-verkoopmakelaar</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--huisplaatsen">
-                <a id="appheader-HuisPlaatsen-link" class="app-header__link" href="/huis-plaatsen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;house_on_funda&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-for-sale-blue"></span>Plaats je huis op funda</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--meerwetenverkopen">
-                <a id="appheader-MeerWetenVerkopen-link" class="app-header__link" href="/meer-weten/verkopen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;selling_tips&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-content-platform-blue"></span>Alles wat je moet weten over verkopen</a>
-        </li>
-                </ul>
-        </div>
-    </li>
-    
-                            </ul>
-                    </div>
-                        <ul class="app-header__menu fd-flex fd-m-none my-account-enabled">
-                            
-    
-    
+
     <li class="app-header__menu--mijnhuis md:flex" data-app-header-menu="mijnhuis" data-navigation-my-home="">
         <a href="/account/mijn-huis/" class="app-header__link" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;my_house&quot;}">
                 <span class="icon icon-house-white"></span>
             <span class="anchor-text">Mijn Huis</span>
-        <a id="appheader-SavedHouses-link" class="app-header__link" href="/mijn/bewaard/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;saved_houses&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-heart-blue"></span>Bewaarde huizen</a></a>
+            </a>
+        
     
     
-        <div id="app-header__mijnhuis" class="app-header__submenu" data-app-header-submenu="">
-            <p class="h3 app-header__dialog-title app-header--show-mobile">
-                <span class="icon-house"></span>Mijn Huis        </p>
-            <button class="app-header--show-mobile app-header__close-dialog" data-app-header-menu-close="">
-                <span class="button-text">Sluiten</span>
-                <span class="icon icon-close-grey" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26.12 24l10.61-10.61a1.5 1.5 0 000-2.12 1.5 1.5 0 00-2.12 0L24 21.88 13.39 11.27a1.5 1.5 0 10-2.12 2.12L21.88 24 11.27 34.61a1.5 1.5 0 102.12 2.12L24 26.12l10.61 10.61a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.12z" fill="#999999"></path></svg></span>
-            </button>
+        <div id="app-header__mijn bewaarde huizen" class="app-header__submenu" data-app-header-submenu="">
+          <a href="/account/mijn-bewaarde-huizen/">
+          <p class="h3 app-header__dialog-title app-header--show-mobile">
+                <span class="icon-house"></span>Mijn bewaarde huizen   </p>
+               </a>
     
         </div>
     </li>
@@ -248,10 +117,7 @@
         <div id="app-header__account" class="app-header__submenu--account app-header__submenu md:rounded" data-app-header-submenu="" aria-hidden="true">
             <p class="h3 app-header__dialog-title app-header--show-mobile">
                 <span class="icon-avatar"></span>        </p>
-            <button class="app-header--show-mobile app-header__close-dialog" data-app-header-menu-close="">
-                <span class="button-text">Sluiten</span>
-                <span class="icon icon-close-grey" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26.12 24l10.61-10.61a1.5 1.5 0 000-2.12 1.5 1.5 0 00-2.12 0L24 21.88 13.39 11.27a1.5 1.5 0 10-2.12 2.12L21.88 24 11.27 34.61a1.5 1.5 0 102.12 2.12L24 26.12l10.61 10.61a1.5 1.5 0 002.12 0 1.5 1.5 0 000-2.12z" fill="#999999"></path></svg></span>
-            </button>
+
     
                 <ul class="flat-list">
     
@@ -259,9 +125,6 @@
         <li class="app-header__submenu--savedsearch">
                 <a id="appheader-SavedSearch-link" class="app-header__link" href="/mijn/nieuw/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;saved_search&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-alert-blue"></span>Bewaarde zoekopdracht</a>
         </li>
-    
-    
-       
     
     
         <li dc="">
@@ -285,17 +148,16 @@
         </div>
     </li>
                     </ul>
-        </nav>
+     
     </div>
-
-
+</nav>
 
     </header>
 
     <!-- einde navigatie van funda-->
 
     <body> 
-<article>      
+<article class="filter.container">      
     <h1>
         Bewaarde huizen
     </h1>
@@ -344,46 +206,68 @@
     <option value="G"></option>
   </datalist>
 
+<button>zoek</button>  
+
 </article>  
 
-<article>
-<ul>
+<aside>
+     <!-- werkend maken via js -->
+       <div id="respond">
+        
+          <form action="post_comment.php" method="post" id="commentform">
 
+            <label for="comment" class="required">Voeg een opmerking toe</label>
+            <textarea name="comment" id="comment"  tabindex="4"  required="required"></textarea>
+        
+            <!-- comment_post_ID value hard-coded as 1 -->
+            <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+            <input name="submit" type="submit" value="Plaatsen" />
+        
+          </form>
+        
+        </div>
+</aside>
+
+<article class="gesorteeerde-lijsten">
+<ul>
+<!-- data via js -->
      <li>
           <img src="" alt=""> <!-- data -->
           <img src="" alt=""> <!-- data -->
           <img src="" alt=""> <!-- data -->
-          <h2>Rotterdam</h2> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
+          <h2>Voeg een lijst toe</h2> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
           <p>gedeeld met ...</p> <!-- data -->
           <p>2</p>  <!-- Geliked aantal huizen in de lijst-->
           
      </li>
 
      <li>
+          <a href="indexv2.html">
           <img src="" alt=""> <!-- data -->
           <img src="" alt=""> <!-- data -->
           <img src="" alt=""> <!-- data -->
-          <h2>Amterdam</h2> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
+          <h2>Amterdam</h2></a> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
           <p>gedeeld met ...</p> <!-- data -->
           <p>7</p>  <!-- Geliked aantal huizen in de lijst-->
-          
      </li>
 
      <li>
+          <a href="indexv2.html">
           <img src="" alt=""> <!-- data -->
           <img src="" alt=""> <!-- data -->
           <img src="" alt=""> <!-- data -->
-          <h2>Rotterdam</h2> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
+          <h2>Rotterdam</h2> </a><!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
           <p>gedeeld met ...</p> <!-- data -->
           <p>2</p>  <!-- Geliked aantal huizen in de lijst-->
           
      </li>
 
      <li>
+          <a href="indexv2.html">
           <img src="" alt=""> <!-- data -->
           <img src="" alt=""> <!-- data -->
           <img src="" alt=""> <!-- data -->
-          <h2>Schalkwijk</h2> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
+          <h2>Schalkwijk</h2></a> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
           <p>gedeeld met ...</p> <!-- data -->
           <p>2</p>  <!-- Geliked aantal huizen in de lijst-->
           
@@ -392,7 +276,7 @@
 
 <!-- gekopieerd uit funda-->
 
-<ul class="search-results" data-component="search-results">
+<ul class="search-results" data-component="search-results"> 
      <li class="search-result " data-component="search-result">
      
          <div class="search-result-thumbnail-container"> 
@@ -465,69 +349,7 @@
      
              </div>
          </div>
-     
-     
-     <div class="async-object-rating user-saved-objects-async-object-rating user-saved-objects-async-object-rating is-expandible" data-expandible="" data-expandible-scroll="" data-async-object-rating="user-saved-objects" data-sync-rating-container="" aria-expanded="false" data-controller-uid="0">
-         <div class="async-object-rating-handle-wrapper">
-             <a href="/mijn/objectrating/?tinyId=88609812&amp;location=SavedList&amp;trackingListingOfferingType=unknown&amp;trackingPageType=my_funda&amp;trackingSiteSection=content" class="async-object-rating-handle" data-async-object-rating-handle="user-saved-objects" data-expandible-handle="object-rating">
-                 <span class="expandible-handle-icon icon-plus-blue" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M36.5 22.5h-11v-11A1.5 1.5 0 0024 10a1.5 1.5 0 00-1.5 1.5v11h-11a1.5 1.5 0 000 3h11v11A1.5 1.5 0 0024 38a1.5 1.5 0 001.5-1.5v-11h11a1.5 1.5 0 000-3z" fill="#0071B3"></path></svg></span>
-                 <span class="expandible-handle-icon icon-minus-blue" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M36.5 22.5h-25a1.5 1.5 0 000 3h25a1.5 1.5 0 000-3z" fill="#0071B3"></path></svg></span>
-                 <span class="object-rating-handle-text" data-async-object-rating-handle-text="Mijn score en notitie">Mijn score en notitie</span>
-             </a>
-             <form method="post" action="/mijn/objectrating/savecommonrating/?tinyId=88609812&amp;location=SavedList&amp;trackingListingOfferingType=unknown&amp;trackingPageType=my_funda&amp;trackingSiteSection=content" class="overall-object-rating-form" data-overall-object-rating-form="">
-                 <input name="__RequestVerificationToken" type="hidden" value="i181X64z9cRKwe-VAiCJ0rir7FWb2t3SnYV1TNNSbIEBpHsq8iXxpOqLxKQkZ38nyfGh8w1cYNZlKS7VumZ-I6aJEP4bMp5FhBvnxGVpmp6gmqfvjc0asizrRk8oEXrIUwkQmA2">
-     <fieldset class="rating object-rating-instance" data-rating="88609812-savedlist" data-controller-uid="7">
-         <legend class="object-rating-legend"></legend>
-     
-         <div class="ratings">
-                 <label for="88609812-0--0-SavedList" class="radio-default">
-                     <input id="88609812-0--0-SavedList" type="radio" name="common-88609812-0-0" value="0" class="custom-rating is-rated" data-default-rating-input="" checked="checked">
-     
-                     <span class="rating-replacement"><span class="label-text">Geen waardering</span></span>
-                 </label>
-                 <label for="88609812-0--1-SavedList" title="1 ster">
-                     <input id="88609812-0--1-SavedList" type="radio" name="common-88609812-0-0" value="1" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">1 ster</span></span>
-                 </label>
-                 <label for="88609812-0--2-SavedList" title="2 sterren">
-                     <input id="88609812-0--2-SavedList" type="radio" name="common-88609812-0-0" value="2" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">2 sterren</span></span>
-                 </label>
-                 <label for="88609812-0--3-SavedList" title="3 sterren">
-                     <input id="88609812-0--3-SavedList" type="radio" name="common-88609812-0-0" value="3" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">3 sterren</span></span>
-                 </label>
-                 <label for="88609812-0--4-SavedList" title="4 sterren">
-                     <input id="88609812-0--4-SavedList" type="radio" name="common-88609812-0-0" value="4" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">4 sterren</span></span>
-                 </label>
-                 <label for="88609812-0--5-SavedList" title="5 sterren">
-                     <input id="88609812-0--5-SavedList" type="radio" name="common-88609812-0-0" value="5" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">5 sterren</span></span>
-                 </label>
-         </div>
-     </fieldset>
-     
-                 <button type="submit" class="button-primary">Opslaan</button>
-             </form>
-         </div>
-         <div class="object-rating">
-     <div class="app-spinner" data-async-object-rating-spinner="">
-         <svg class="svg-circular" viewBox="0 0 48 48">
-             <circle class="path" cx="24" cy="24" r="20" fill="none" stroke-width="3" stroke-dasharray="89,200" stroke-dashoffset="-124"></circle>
-         </svg>
-     </div>
-             <div class="async-object-rating-content" data-async-object-rating-content=""></div>
-         </div>
-     </div>
-     
-     
-     </li>
+                 
      <li class="search-result " data-component="search-result">
      
          <div class="search-result-thumbnail-container"> 
@@ -607,67 +429,7 @@
          </div>
      
      
-     <div class="async-object-rating user-saved-objects-async-object-rating user-saved-objects-async-object-rating is-expandible" data-expandible="" data-expandible-scroll="" data-async-object-rating="user-saved-objects" data-sync-rating-container="" aria-expanded="false" data-controller-uid="1">
-         <div class="async-object-rating-handle-wrapper">
-             <a href="/mijn/objectrating/?tinyId=42249452&amp;location=SavedList&amp;trackingListingOfferingType=unknown&amp;trackingPageType=my_funda&amp;trackingSiteSection=content" class="async-object-rating-handle" data-async-object-rating-handle="user-saved-objects" data-expandible-handle="object-rating">
-                 <span class="expandible-handle-icon icon-plus-blue" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M36.5 22.5h-11v-11A1.5 1.5 0 0024 10a1.5 1.5 0 00-1.5 1.5v11h-11a1.5 1.5 0 000 3h11v11A1.5 1.5 0 0024 38a1.5 1.5 0 001.5-1.5v-11h11a1.5 1.5 0 000-3z" fill="#0071B3"></path></svg></span>
-                 <span class="expandible-handle-icon icon-minus-blue" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M36.5 22.5h-25a1.5 1.5 0 000 3h25a1.5 1.5 0 000-3z" fill="#0071B3"></path></svg></span>
-                 <span class="object-rating-handle-text" data-async-object-rating-handle-text="Mijn score en notitie">Mijn score en notitie</span>
-             </a>
-             <form method="post" action="/mijn/objectrating/savecommonrating/?tinyId=42249452&amp;location=SavedList&amp;trackingListingOfferingType=unknown&amp;trackingPageType=my_funda&amp;trackingSiteSection=content" class="overall-object-rating-form" data-overall-object-rating-form="">
-                 <input name="__RequestVerificationToken" type="hidden" value="4N6pCM7QKP2B6fY3eio8M3HlrYIbAWqEPIe1WmP8I-HQwjjrw3ll74jV1tqHTxPLAr9YfPFeCkcEC6dQJNgwY0AMletO1mhgpSAyauMGUsFpq6QvKbfAtkoHLTkFb81bdL-G4g2">
-     <fieldset class="rating object-rating-instance" data-rating="42249452-savedlist" data-controller-uid="8">
-         <legend class="object-rating-legend"></legend>
-     
-         <div class="ratings">
-                 <label for="42249452-0--0-SavedList" class="radio-default">
-                     <input id="42249452-0--0-SavedList" type="radio" name="common-42249452-0-0" value="0" class="custom-rating is-rated" data-default-rating-input="" checked="checked">
-     
-                     <span class="rating-replacement"><span class="label-text">Geen waardering</span></span>
-                 </label>
-                 <label for="42249452-0--1-SavedList" title="1 ster">
-                     <input id="42249452-0--1-SavedList" type="radio" name="common-42249452-0-0" value="1" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">1 ster</span></span>
-                 </label>
-                 <label for="42249452-0--2-SavedList" title="2 sterren">
-                     <input id="42249452-0--2-SavedList" type="radio" name="common-42249452-0-0" value="2" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">2 sterren</span></span>
-                 </label>
-                 <label for="42249452-0--3-SavedList" title="3 sterren">
-                     <input id="42249452-0--3-SavedList" type="radio" name="common-42249452-0-0" value="3" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">3 sterren</span></span>
-                 </label>
-                 <label for="42249452-0--4-SavedList" title="4 sterren">
-                     <input id="42249452-0--4-SavedList" type="radio" name="common-42249452-0-0" value="4" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">4 sterren</span></span>
-                 </label>
-                 <label for="42249452-0--5-SavedList" title="5 sterren">
-                     <input id="42249452-0--5-SavedList" type="radio" name="common-42249452-0-0" value="5" class="custom-rating">
-     
-                     <span class="rating-replacement"><span class="label-text">5 sterren</span></span>
-                 </label>
-         </div>
-     </fieldset>
-     
-                 <button type="submit" class="button-primary">Opslaan</button>
-             </form>
-         </div>
-         <div class="object-rating">
-     <div class="app-spinner" data-async-object-rating-spinner="">
-         <svg class="svg-circular" viewBox="0 0 48 48">
-             <circle class="path" cx="24" cy="24" r="20" fill="none" stroke-width="3" stroke-dasharray="89,200" stroke-dashoffset="-124"></circle>
-         </svg>
-     </div>
-             <div class="async-object-rating-content" data-async-object-rating-content=""></div>
-         </div>
-     </div>
-     
-     
-     </li>
+    
      <li class="search-result " data-component="search-result">
      
          <div class="search-result-thumbnail-container"> 
@@ -729,10 +491,13 @@
              
      
          </ul>
+  
      </div>
      
 
 
 </article>
+
+
 </body>
 
