@@ -1,291 +1,287 @@
 <!DOCTYPE html>
-<html lang="nl">
-    <head>
-         <title>Bewaarde huizen lijst</title>
-         <link rel="stylesheet" href="styles/stylesv2.css">
-    </head>
+<html>
+
+<head>
+    <title>Bewaarde huizen lijst</title>
+    <link rel="stylesheet" href="styles/stylesv2.css"></head>
+
+<body>
     <header>
-        <!-- navigatie van funda site via inspecten gekopieerd en aangepast -->
-     <nav>    
-        <div class="accordion accordion--dark-3" data-accordion-close-others="">
+                <!-- navigatie van funda site via inspecten gekopieerd en aangepast -->
+
+        <nav>
+            <div class="accordion accordion--dark-3" data-accordion-close-others="">
                 <ul>
                     <details class="cursor-pointer block w-full text-left border-t border-light-2">
                         <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;buy&quot;}">
                             <span class="px-5 flex justify-between font-semibold">Kopen</span>
                         </summary>
-
-
-    <li class="app-header__submenu--zoeken">
-            <a id="appheader-zoeken-link" class="app-header__link" href="/koop/heel-nederland/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-search-blue"></span>Zoek een koopwoning</a>
-    </li>
-
-
-    <li class="app-header__submenu--makelaar">
-            <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/aankoop/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-makelaar-blue"></span>Zoek een NVM-aankoopmakelaar</a>
-    </li>
-
-
-    <li class="app-header__submenu--maandlasten">
-            <a id="appheader-Maandlasten-link" class="app-header__link" href="/hypotheek/maandlasten/de-hypotheker/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;mortgage_calculator&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-calculator-blue"></span>Bereken je maandlasten</a>
-    </li>
-
-
-    <li class="app-header__submenu--meerwetenkopen">
-            <a id="appheader-MeerWetenKopen-link" class="app-header__link" href="/meer-weten/kopen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;buying_tips&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-content-platform-blue"></span>Alles wat je moet weten over kopen</a>
-    </li>
-
+                        <li class="app-header__submenu--zoeken">
+                            <a id="appheader-zoeken-link" class="app-header__link" href="/koop/heel-nederland/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;buy&quot;}">
+                                <span class="icon-search-blue"></span>Zoek een koopwoning</a>
+                        </li>
+                        <li class="app-header__submenu--makelaar">
+                            <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/aankoop/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;buy&quot;}">
+                                <span class="icon-makelaar-blue"></span>Zoek een NVM-aankoopmakelaar</a>
+                        </li>
+                        <li class="app-header__submenu--maandlasten">
+                            <a id="appheader-Maandlasten-link" class="app-header__link"
+                                href="/hypotheek/maandlasten/de-hypotheker/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;mortgage_calculator&quot;,&quot;menu_category&quot;:&quot;buy&quot;}">
+                                <span class="icon-calculator-blue"></span>Bereken je maandlasten</a>
+                        </li>
+                        <li class="app-header__submenu--meerwetenkopen">
+                            <a id="appheader-MeerWetenKopen-link" class="app-header__link" href="/meer-weten/kopen/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;buying_tips&quot;,&quot;menu_category&quot;:&quot;buy&quot;}">
+                                <span class="icon-content-platform-blue"></span>Alles wat je moet weten over kopen</a>
+                        </li>
                     </details>
-                    
                     <details class="cursor-pointer block w-full text-left border-t border-light-2">
                         <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;rent&quot;}">
                             <span class="px-5 flex justify-between font-semibold">Huren</span>
                         </summary>
-
-
-    <li class="app-header__submenu--zoeken">
-            <a id="appheader-zoeken-link" class="app-header__link" href="/huur/heel-nederland/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;rent&quot;}"><span class="icon-search-blue"></span>Zoek een huurwoning</a>
-    </li>
-
+                        <li class="app-header__submenu--zoeken">
+                            <a id="appheader-zoeken-link" class="app-header__link" href="/huur/heel-nederland/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;rent&quot;}">
+                                <span class="icon-search-blue"></span>Zoek een huurwoning</a>
+                        </li>
                     </details>
-
                     <details class="cursor-pointer block w-full text-left border-t border-b border-light-2">
                         <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;sell&quot;}">
                             <span class="px-5 flex justify-between font-semibold">Verkopen</span>
                         </summary>
-
-
-    <li class="app-header__submenu--makelaar">
-            <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/verkoop/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-makelaar-blue"></span>Zoek een NVM-verkoopmakelaar</a>
-    </li>
-
-
-    <li class="app-header__submenu--huisplaatsen">
-            <a id="appheader-HuisPlaatsen-link" class="app-header__link" href="/huis-plaatsen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;house_on_funda&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-for-sale-blue"></span>Plaats je huis op funda</a>
-    </li>
-
-
-    <li class="app-header__submenu--meerwetenverkopen">
-            <a id="appheader-MeerWetenVerkopen-link" class="app-header__link" href="/meer-weten/verkopen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;selling_tips&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-content-platform-blue"></span>Alles wat je moet weten over verkopen</a>
-    </li>
-
+                        <li class="app-header__submenu--makelaar">
+                            <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/verkoop/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;sell&quot;}">
+                                <span class="icon-makelaar-blue"></span>Zoek een NVM-verkoopmakelaar</a>
+                        </li>
+                        <li class="app-header__submenu--huisplaatsen">
+                            <a id="appheader-HuisPlaatsen-link" class="app-header__link" href="/huis-plaatsen/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;house_on_funda&quot;,&quot;menu_category&quot;:&quot;sell&quot;}">
+                                <span class="icon-for-sale-blue"></span>Plaats je huis op funda</a>
+                        </li>
+                        <li class="app-header__submenu--meerwetenverkopen">
+                            <a id="appheader-MeerWetenVerkopen-link" class="app-header__link" href="/meer-weten/verkopen/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;selling_tips&quot;,&quot;menu_category&quot;:&quot;sell&quot;}">
+                                <span class="icon-content-platform-blue"></span>Alles wat je moet weten over verkopen</a>
+                        </li>
                     </details>
-
-
+                    <div class="logo">
+                        <a rel="home" href="/">
+                          <img width="101" height="36" alt="Funda" src="https://assets.fstatic.nl/master-66220/assets/components/logo/fundawonen-logo.svg">
+                        </a>
+                      </div>
+                      
+                      <ul class="app-header__menu hidden md:flex ml-4">
+                        <li class="app-header__menu--mijnhuis md:flex" data-app-header-menu="mijnhuis" data-navigation-my-home="">
+                          <a href="/account/mijn-huis/" class="app-header__link" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;my_house&quot;}">
+                            <span class="icon icon-house-white"></span>
+                            <span class="anchor-text">Mijn Huis</span>
+                          </a>
+                          <div id="app-header__mijn bewaarde huizen" class="app-header__submenu" data-app-header-submenu="">
+                            <a href="/account/mijn-bewaarde-huizen/">
+                              <p class="h3 app-header__dialog-title app-header--show-mobile">
+                                <span class="icon-house"></span>Mijn bewaarde huizen
+                              </p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="app-header__menu--account" data-app-header-menu="account">
+                          <a class="app-header__link app-header__menu-handle" aria-expanded="false" aria-controls="app-header__account" data-app-header-menu-handle="" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;account&quot;}">
+                            <span class="icon icon-avatar-white"></span>
+                            <span class="anchor-text"></span>
+                          </a>
+                          <div id="app-header__account" class="app-header__submenu--account app-header__submenu md:rounded" data-app-header-submenu="" aria-hidden="true">
+                            <p class="h3 app-header__dialog-title app-header--show-mobile">
+                              <span class="icon-avatar"></span>
+                            </p>
+                            <ul class="flat-list">
+                              <li class="app-header__submenu--savedsearch">
+                                <a id="appheader-SavedSearch-link" class="app-header__link" href="/mijn/nieuw/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;saved_search&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-alert-blue"></span>Bewaarde zoekopdracht
+                                </a>
+                              </li>
+                              <li dc="">
+                                <a id="appheader-Statistics-link" class="app-header__link" href="/mijn/huis/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;sale_statistics&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-stats-good-blue"></span>Verkoopstatistieken
+                                </a>
+                              </li>
+                              <li class="app-header__submenu--mijnhuis">
+                                <a id="appheader-Mijnhuis-link" class="app-header__link" href="/account/mijn-huis/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-house-blue"></span>Mijn Huis
+                                </a>
+                              </li>
+                              <li class="">
+                                <a class="app-header__link" href="/account/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;my_account&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-avatar-blue"></span>Mijn account
+                                </a>
+                              </li>
+                              <li class="app-header__submenu--logout" data-user-logout="">
+                                <a id="appheader-logout-link" class="app-header__link" href="/mijn/logout/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;log_out&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-exit-blue"></span>Uitloggen
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                      
                 </ul>
-        </div>
-    </div>
-</li>
- </ul>
- 
- <a class="logo" rel="home" href="/">
-  <img width="101" height="36" alt="Funda" src="https://assets.fstatic.nl/master-66220/assets/components/logo/fundawonen-logo.svg">
-      </a>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <h1>Lijstnaam <input type="text" id="lijstnaam" name="lijstnaam" placeholder="Lijstnaam"></h1>
+        <form>
+            <button type="button">Bijdrager 1</button>
+            <button type="button">Bijdrager 2</button>
+            <button type="button">Bijdrager 3</button>
+            <button type="button">Bijdrager uitnodigen</button>
+        </form>
+        <!-- Comment sectie met opslaan en verwijderen -->
+        <form>
+            <div class="comments">
+                <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+            </div>
+            <div class="object-rating-form-actions">
+                <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                    data-object-rating-submit-button="">
+                    Opslaan
+                </button>
 
-       <ul class="app-header__menu hidden md:flex ml-4">
-
-
-<li class="app-header__menu--mijnhuis md:flex" data-app-header-menu="mijnhuis" data-navigation-my-home="">
-    <a href="/account/mijn-huis/" class="app-header__link" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;my_house&quot;}">
-            <span class="icon icon-house-white"></span>
-        <span class="anchor-text">Mijn Huis</span>
-        </a>
-    
-
-
-    <div id="app-header__mijn bewaarde huizen" class="app-header__submenu" data-app-header-submenu="">
-      <a href="/account/mijn-bewaarde-huizen/">
-      <p class="h3 app-header__dialog-title app-header--show-mobile">
-            <span class="icon-house"></span>Mijn bewaarde huizen   </p>
-           </a>
-
-    </div>
-</li>
-
-
-
-<li class="app-header__menu--account" data-app-header-menu="account">
-        <a class="app-header__link app-header__menu-handle" aria-expanded="false" aria-controls="app-header__account" data-app-header-menu-handle="" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;account&quot;}">
-            <span class="icon icon-avatar-white"></span>
-            <span class="anchor-text"></span>
-
-        </a>
-
-
-    <div id="app-header__account" class="app-header__submenu--account app-header__submenu md:rounded" data-app-header-submenu="" aria-hidden="true">
-        <p class="h3 app-header__dialog-title app-header--show-mobile">
-            <span class="icon-avatar"></span>        </p>
-
-
-            <ul class="flat-list">
-
-
-    <li class="app-header__submenu--savedsearch">
-            <a id="appheader-SavedSearch-link" class="app-header__link" href="/mijn/nieuw/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;saved_search&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-alert-blue"></span>Bewaarde zoekopdracht</a>
-    </li>
-
-
-    <li dc="">
-            <a id="appheader-Statistics-link" class="app-header__link" href="/mijn/huis/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;sale_statistics&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-stats-good-blue"></span>Verkoopstatistieken</a>
-    </li>
-
-    <li class="app-header__submenu--mijnhuis">
-            <a id="appheader-Mijnhuis-link" class="app-header__link" href="/account/mijn-huis/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-house-blue"></span>Mijn Huis</a>
-    </li>
-
-
-    <li class="">
-            <a class="app-header__link" href="/account/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;my_account&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-avatar-blue"></span>Mijn account</a>
-    </li>
-
-
-    <li class="app-header__submenu--logout" data-user-logout="">
-            <a id="appheader-logout-link" class="app-header__link" href="/mijn/logout/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;log_out&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-exit-blue"></span>Uitloggen</a>
-    </li>
-            </ul>
-    </div>
-</li>
+                <div class="object-rating-form-actions">
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <ul class="search-results" data-component="search-results">
+                    <li class="search-result " data-component="search-result">
+                        <div class="search-result-thumbnail-container">
+                            <div class="search-result__header-labels-col">
+                                <ul class="labels search-result__header-labels">
+                                    <li class="label label-nieuw">Nieuw</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
- 
-</div>
-</nav>
-
-</header>
-    <body> 
-        <h1> Lijstnaam <input type="text" id="lijstnaam" name= "lijstnaam" placeholder="Lijstnaam" ></h1>
-       <form> 
-        <button type="button"> Bijdrager 1 </button>
-        <button type="button"> Bijdrager 2 </button>
-        <button type="button"> Bijdrager 3 </button>
-        <button type="button"> Bijdrager uitnodigen </button>
-
-       <!--  <div data-test-id="user-rep-avatar" class=""> --> 
-    </form>
-<!-- Comment sectie met opslaan en verwijderen-->
-<form> 
-   <div class="comments">
-    <label class="object-rating-heading" for="notities">Opmerkingen</label>
-    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
-</div>
-
-<div class="object-rating-form-actions">
-
-    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit" data-object-rating-submit-button="">
-        Opslaan
-    </button>
-
-    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button" data-object-rating-form-reset-handle="">
-        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
-    </button>
-</div>
-
-<div class="comments">
-    <label class="object-rating-heading" for="notities">Commenten</label>
-    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
-</div>
-
-<div class="object-rating-form-actions">
-
-    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit" data-object-rating-submit-button="">
-        Opslaan
-    </button>
-
-    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button" data-object-rating-form-reset-handle="">
-        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
-    </button>
-</div>
-
-
-<div class="comments">
-    <label class="object-rating-heading" for="notities">Opmerkingen</label>
-    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
-</div>
-
-<div class="object-rating-form-actions">
-
-    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit" data-object-rating-submit-button="">
-        Opslaan
-    </button>
-
-    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button" data-object-rating-form-reset-handle="">
-        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
-    </button>
-</div>
-
-
-<div class="comments">
-    <label class="object-rating-heading" for="notities">Opmerkingen</label>
-    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
-</div>
-
-<div class="object-rating-form-actions">
-
-    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit" data-object-rating-submit-button="">
-        Opslaan
-    </button>
-
-    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button" data-object-rating-form-reset-handle="">
-        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
-    </button>
-</div>
-
-<div class="comments">
-    <label class="object-rating-heading" for="notities">Opmerkingen</label>
-    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
-</div>
-
-<div class="object-rating-form-actions">
-
-    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit" data-object-rating-submit-button="">
-        Opslaan
-    </button>
-
-    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button" data-object-rating-form-reset-handle="">
-        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
-    </button>
-</div>
-
-<div class="comments">
-    <label class="object-rating-heading" for="notities">Opmerkingen</label>
-    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
-</div>
-
-<div class="object-rating-form-actions">
-
-    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit" data-object-rating-submit-button="">
-        Opslaan
-    </button>
-
-    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button" data-object-rating-form-reset-handle="">
-        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
-    </button>
-</div>
-
-<div class="comments">
-    <label class="object-rating-heading" for="notities">Opmerkingen</label>
-    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
-</div>
-
-<div class="object-rating-form-actions">
-
-    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit" data-object-rating-submit-button="">
-        Opslaan
-    </button>
-
-    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button" data-object-rating-form-reset-handle="">
-        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
-    </button>
-</div>
-
-<ul class="search-results" data-component="search-results">
-    <li class="search-result " data-component="search-result">
-    
-        <div class="search-result-thumbnail-container"> 
-                <div class="search-result__header-labels-col">
-            <ul class="labels search-result__header-labels">
-                        <li class="label label-nieuw">Nieuw</li>
-                        </ul>
-        </div>
-</form>
+            </div>
+        </form>
 <!-- Data, bewaarde huizen gekopieerd van funda -->
 <section> 
     <div class="search-result-media">
@@ -832,156 +828,102 @@
         </ul>
 </section>        
  </body>
-<!-- gekopierde footer van funda -->
-    <footer> 
-        <div class="app-footer-v2-main-menu">
-            <div class="app-footer-v2-group">
-                    <div class="app-footer-v2-items">
-<strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-tools" aria-expanded="false">
-
-    Diensten
-</strong>
-<ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-tools" aria-expanded="false" data-controller-uid="7">
-<li>
-    <a href="/huis-plaatsen/" class="">
-Plaats je huis op funda
-</a>
-
-</li>
-<li>
-    <a href="/makelaar-zoeken/" class="appfooter-Makelaar-link">
-Zoek een NVM-makelaar
-</a>
-
-</li>
-<li>
-    <a href="/koop/bladeren/" class="">
-Bladeren door aanbod
-</a>
-
-</li>
-<li>
-    <a href="/mijn-huis-toevoegen/" class="waardecheck-trafficdriver">
-Wat is mijn woning waard?
-</a>
-
-</li>
-</ul>                            </div>
-            </div>
-            <div class="app-footer-v2-group">
-                    <div class="app-footer-v2-items">
-<strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-info" aria-expanded="false">
-Informatie
-</strong>
-<ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-info" aria-expanded="false" data-controller-uid="8">
-<li>
-    <a href="https://help.funda.nl/hc/nl/?utm_source=funda&amp;utm_medium=footer" class="" target="_blank">
-Vraag &amp; antwoord
-</a>
-
-</li>
-<li>
-    <a href="/funda-index/funda-index/" class="">
-Funda Index
-</a>
-
-</li>
-<li>
-    <a href="/meer-weten/kopen/" class="trafficdriver-footer-hoekoopikeenhuis">
-Alles over een huis kopen
-</a>
-
-</li>
-<li>
-    <a href="/meer-weten/verkopen/" class="trafficdriver-footer-hoekoopikeenhuis">
-Verkoop je huis
-</a>
-
-</li>
-<li>
-    <a href="/zoekbetervindmeer/" class="">
-Hoe zoek ik op funda?
-</a>
-
-</li>
-</ul>                            </div>
-            </div>
-            <div class="app-footer-v2-group">
-                    <div class="app-footer-v2-items">
-<strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-realtors" aria-expanded="false">
-Makelaars
-</strong>
-<ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-realtors" aria-expanded="false" data-controller-uid="9">
-<li>
-    <a href="https://www.fundadesk.nl" class="">
-Funda desk
-</a>
-
-</li>
-<li>
-    <a href="https://www.funda.nl/voormakelaars/verdieping/" class="">
-Tips, trends &amp; nieuws
-</a>
-
-</li>
-<li>
-    <a href="https://www.funda.nl/voormakelaars/leads/" class="">
-Leads
-</a>
-
-</li>
-<li>
-    <a href="https://www.funda.nl/voormakelaars/producten/" class="">
-Producten
-</a>
-
-</li>
-<li>
-    <a href="https://www.funda.nl/voormakelaars/events-meetups/" class="">
-Events &amp; meetups
-</a>
-
-</li>
-</ul>                            </div>
-            </div>
-            <div class="app-footer-v2-group">
-                    <div class="app-footer-v2-items">
-<strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-funda" aria-expanded="false">
-Over ons
-</strong>
-<ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-funda" aria-expanded="false" data-controller-uid="10">
-<li>
-    <a href="/over/" class="">
-Over funda
-</a>
-
-</li>
-<li>
-    <a href="/contact/" class="">
-Contact
-</a>
-
-</li>
-<li>
-    <a href="https://jobs.funda.nl/l/nl/" class="">
-Werken bij funda
-</a>
-
-</li>
-<li>
-    <a href="/adverteren/" class="">
-Adverteren
-</a>
-
-</li>
-<li>
-    <a href="/meer-weten/redactioneel-beleid-funda/" class="">
-Redactioneel beleid
-</a>
-
-</li>
-</ul>                            </div>
-            </div>
+<footer>
+    <!-- gekopierde footer van funda -->
+    <div class="app-footer-v2-main-menu">
+      <div class="app-footer-v2-group">
+        <div class="app-footer-v2-items">
+          <strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-tools" aria-expanded="false">
+            Diensten
+          </strong>
+          <ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-tools" aria-expanded="false" data-controller-uid="7">
+            <li>
+              <a href="/huis-plaatsen/" class="">Plaats je huis op funda</a>
+            </li>
+            <li>
+              <a href="/makelaar-zoeken/" class="appfooter-Makelaar-link">Zoek een NVM-makelaar</a>
+            </li>
+            <li>
+              <a href="/koop/bladeren/" class="">Bladeren door aanbod</a>
+            </li>
+            <li>
+              <a href="/mijn-huis-toevoegen/" class="waardecheck-trafficdriver">Wat is mijn woning waard?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="app-footer-v2-group">
+        <div class="app-footer-v2-items">
+          <strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-info" aria-expanded="false">
+            Informatie
+          </strong>
+          <ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-info" aria-expanded="false" data-controller-uid="8">
+            <li>
+              <a href="https://help.funda.nl/hc/nl/?utm_source=funda&amp;utm_medium=footer" class="" target="_blank">Vraag &amp; antwoord</a>
+            </li>
+            <li>
+              <a href="/funda-index/funda-index/" class="">Funda Index</a>
+            </li>
+            <li>
+              <a href="/meer-weten/kopen/" class="trafficdriver-footer-hoekoopikeenhuis">Alles over een huis kopen</a>
+            </li>
+            <li>
+              <a href="/meer-weten/verkopen/" class="trafficdriver-footer-hoekoopikeenhuis">Verkoop je huis</a>
+            </li>
+            <li>
+              <a href="/zoekbetervindmeer/" class="">Hoe zoek ik op funda?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="app-footer-v2-group">
+        <div class="app-footer-v2-items">
+          <strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-realtors" aria-expanded="false">
+            Makelaars
+          </strong>
+          <ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-realtors" aria-expanded="false" data-controller-uid="9">
+            <li>
+              <a href="https://www.fundadesk.nl" class="">Funda desk</a>
+            </li>
+            <li>
+              <a href="https://www.funda.nl/voormakelaars/verdieping/" class="">Tips, trends &amp; nieuws</a>
+            </li>
+            <li>
+              <a href="https://www.funda.nl/voormakelaars/leads/" class="">Leads</a>
+            </li>
+            <li>
+              <a href="https://www.funda.nl/voormakelaars/producten/" class="">Producten</a>
+            </li>
+            <li>
+              <a href="https://www.funda.nl/voormakelaars/events-meetups/" class="">Events &amp; meetups</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="app-footer-v2-group">
+        <div class="app-footer-v2-items">
+          <strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-funda" aria-expanded="false">
+            Over ons
+          </strong>
+          <ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-funda" aria-expanded="false" data-controller-uid="10">
+            <li>
+              <a href="/over/" class="">Over funda</a>
+            </li>
+            <li>
+              <a href="/contact/" class="">Contact</a>
+            </li>
+            <li>
+              <a href="https://jobs.funda.nl/l/nl/" class="">Werken bij funda</a>
+            </li>
+            <li>
+              <a href="/adverteren/" class="">Adverteren</a>
+            </li>
+            <li>
+              <a href="/meer-weten/redactioneel-beleid-funda/" class="">Redactioneel beleid</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    </footer>
-    
+  </footer>
+  
