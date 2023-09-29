@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bewaarde huizen lijst</title>
+    <link rel="stylesheet" href="styles/stylesv2.css">
+</head>
+<body>
+    <header>
+                <!-- navigatie van funda site via inspecten gekopieerd en aangepast -->
+
+        <nav>
+            <div class="accordion accordion--dark-3" data-accordion-close-others="">
+                <ul>
+                    <details class="cursor-pointer block w-full text-left border-t border-light-2">
+                        <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;buy&quot;}">
+                            <span class="px-5 flex justify-between font-semibold">Kopen</span>
+                        </summary>
+                        <li class="app-header__submenu--zoeken">
+                            <a id="appheader-zoeken-link" class="app-header__link" href="/koop/heel-nederland/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;buy&quot;}">
+                                <span class="icon-search-blue"></span>Zoek een koopwoning</a>
+                        </li>
+                        <li class="app-header__submenu--makelaar">
+                            <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/aankoop/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;buy&quot;}">
+                                <span class="icon-makelaar-blue"></span>Zoek een NVM-aankoopmakelaar</a>
+                        </li>
+                        <li class="app-header__submenu--maandlasten">
+                            <a id="appheader-Maandlasten-link" class="app-header__link"
+                                href="/hypotheek/maandlasten/de-hypotheker/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;mortgage_calculator&quot;,&quot;menu_category&quot;:&quot;buy&quot;}">
+                                <span class="icon-calculator-blue"></span>Bereken je maandlasten</a>
+                        </li>
+                        <li class="app-header__submenu--meerwetenkopen">
+                            <a id="appheader-MeerWetenKopen-link" class="app-header__link" href="/meer-weten/kopen/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;buying_tips&quot;,&quot;menu_category&quot;:&quot;buy&quot;}">
+                                <span class="icon-content-platform-blue"></span>Alles wat je moet weten over kopen</a>
+                        </li>
+                    </details>
+                    <details class="cursor-pointer block w-full text-left border-t border-light-2">
+                        <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;rent&quot;}">
+                            <span class="px-5 flex justify-between font-semibold">Huren</span>
+                        </summary>
+                        <li class="app-header__submenu--zoeken">
+                            <a id="appheader-zoeken-link" class="app-header__link" href="/huur/heel-nederland/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;rent&quot;}">
+                                <span class="icon-search-blue"></span>Zoek een huurwoning</a>
+                        </li>
+                    </details>
+                    <details class="cursor-pointer block w-full text-left border-t border-b border-light-2">
+                        <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;sell&quot;}">
+                            <span class="px-5 flex justify-between font-semibold">Verkopen</span>
+                        </summary>
+                        <li class="app-header__submenu--makelaar">
+                            <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/verkoop/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;sell&quot;}">
+                                <span class="icon-makelaar-blue"></span>Zoek een NVM-verkoopmakelaar</a>
+                        </li>
+                        <li class="app-header__submenu--huisplaatsen">
+                            <a id="appheader-HuisPlaatsen-link" class="app-header__link" href="/huis-plaatsen/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;house_on_funda&quot;,&quot;menu_category&quot;:&quot;sell&quot;}">
+                                <span class="icon-for-sale-blue"></span>Plaats je huis op funda</a>
+                        </li>
+                        <li class="app-header__submenu--meerwetenverkopen">
+                            <a id="appheader-MeerWetenVerkopen-link" class="app-header__link" href="/meer-weten/verkopen/"
+                                data-track-click="Header Menu Clicked"
+                                data-track-props="{&quot;navigation_trigger&quot;:&quot;selling_tips&quot;,&quot;menu_category&quot;:&quot;sell&quot;}">
+                                <span class="icon-content-platform-blue"></span>Alles wat je moet weten over verkopen</a>
+                        </li>
+                    </details>
+                    <div class="logo">
+                        <a rel="home" href="/">
+                          <img width="101" height="36" alt="Funda" src="https://assets.fstatic.nl/master-66220/assets/components/logo/fundawonen-logo.svg">
+                        </a>
+                      </div>
+                      
+                      <ul class="app-header__menu hidden md:flex ml-4">
+                        <li class="app-header__menu--mijnhuis md:flex" data-app-header-menu="mijnhuis" data-navigation-my-home="">
+                          <a href="/account/mijn-huis/" class="app-header__link" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;my_house&quot;}">
+                            <span class="icon icon-house-white"></span>
+                            <span class="anchor-text">Mijn Huis</span>
+                          </a>
+                          <div id="app-header__mijn bewaarde huizen" class="app-header__submenu" data-app-header-submenu="">
+                            <a href="/account/mijn-bewaarde-huizen/">
+                              <p class="h3 app-header__dialog-title app-header--show-mobile">
+                                <span class="icon-house"></span>Mijn bewaarde huizen
+                              </p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="app-header__menu--account" data-app-header-menu="account">
+                          <a class="app-header__link app-header__menu-handle" aria-expanded="false" aria-controls="app-header__account" data-app-header-menu-handle="" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;account&quot;}">
+                            <span class="icon icon-avatar-white"></span>
+                            <span class="anchor-text"></span>
+                          </a>
+                          <div id="app-header__account" class="app-header__submenu--account app-header__submenu md:rounded" data-app-header-submenu="" aria-hidden="true">
+                            <p class="h3 app-header__dialog-title app-header--show-mobile">
+                              <span class="icon-avatar"></span>
+                            </p>
+                            <ul class="flat-list">
+                              <li class="app-header__submenu--savedsearch">
+                                <a id="appheader-SavedSearch-link" class="app-header__link" href="/mijn/nieuw/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;saved_search&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-alert-blue"></span>Bewaarde zoekopdracht
+                                </a>
+                              </li>
+                              <li dc="">
+                                <a id="appheader-Statistics-link" class="app-header__link" href="/mijn/huis/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;sale_statistics&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-stats-good-blue"></span>Verkoopstatistieken
+                                </a>
+                              </li>
+                              <li class="app-header__submenu--mijnhuis">
+                                <a id="appheader-Mijnhuis-link" class="app-header__link" href="/account/mijn-huis/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-house-blue"></span>Mijn Huis
+                                </a>
+                              </li>
+                              <li class="">
+                                <a class="app-header__link" href="/account/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;my_account&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-avatar-blue"></span>Mijn account
+                                </a>
+                              </li>
+                              <li class="app-header__submenu--logout" data-user-logout="">
+                                <a id="appheader-logout-link" class="app-header__link" href="/mijn/logout/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;log_out&quot;,&quot;menu_category&quot;:&quot;account&quot;}">
+                                  <span class="icon-exit-blue"></span>Uitloggen
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                      
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <h1>Lijstnaam <input type="text" id="lijstnaam" name="lijstnaam" placeholder="Lijstnaam"></h1>
+        <form>
+            <button type="button">Bijdrager 1</button>
+            <button type="button">Bijdrager 2</button>
+            <button type="button">Bijdrager 3</button>
+            <button id="BijdragerUitnodigen">Bijdrager uitnodigen</button>    
+
+        </form>
+        <!-- Comment sectie met opslaan en verwijderen -->
+        <form>
+            <div class="comments">
+                <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+            </div>
+            <div class="object-rating-form-actions">
+                <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                    data-object-rating-submit-button="">
+                    Opslaan
+                </button>
+
+                <div class="object-rating-form-actions">
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <div class="comments">
+                    <label class="object-rating-heading" for="notities">Opmerkingen</label>
+                    <textarea class="form-textarea" id="comment" name="comment" data-object-rating-textarea=""></textarea>
+                </div>
+                
+                <div class="object-rating-form-actions">
+                    <button class="button-primary object-rating-form-button object-rating-form-submit-button" type="submit"
+                        data-object-rating-submit-button="">
+                        Opslaan
+                    </button>
+                
+                    <button type="reset" class="button-tertiary object-rating-form-button object-rating-form-remove-button"
+                        data-object-rating-form-reset-handle="">
+                        <span class="icon-trash-blue" data-grunticon-embed=""></span>Verwijderen
+                    </button>
+                </div>
+                
+                <ul class="search-results" data-component="search-results">
+                    <li class="search-result " data-component="search-result">
+                        <div class="search-result-thumbnail-container">
+                            <div class="search-result__header-labels-col">
+                                <ul class="labels search-result__header-labels">
+                                    <li class="label label-nieuw">Nieuw</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+<!-- Data, bewaarde huizen gekopieerd van funda -->
+<section> 
+    <!-- <div class="search-result-media">
+            <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/hoogland/huis-42243799-acacialaan-12/?navigateSource=resultlist" data-search-result-item-anchor="42243799" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898336,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+        <div class="search-result-image">
+    <img alt="Acacialaan 12" loading="lazy" sizes="(min-width: 500px) 228px, calc(100vw - 2rem)" src="https://cloud.funda.nl/valentina_media/180/692/414_720x480.jpg" srcset="https://cloud.funda.nl/valentina_media/180/692/414_360x240.jpg 360w, https://cloud.funda.nl/valentina_media/180/692/414_180x120.jpg 180w, https://cloud.funda.nl/valentina_media/180/692/414_720x480.jpg 720w">
+    
+                <div class="search-result-media-icons">
+                        <span class="search-result-media-icon icon-floorplan-white" title="Plattegrond beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-360-white" title="360° foto's beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-video-white" title="Video beschikbaar"></span>
+                </div>
+        </div>
+    
+        </a>
+        </div>
+    
+        </div>
+    
+        <div class="search-result-content">
+            <div class="search-result-content-inner">
+    <div class="search-result__header fd-flex fd-m-bottom-2xs fd-p-top-2xs--bp-s" data-test-search-result-header="">
+        <div class="search-result__header-title-col">
+                <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/hoogland/huis-42243799-acacialaan-12/?navigateSource=resultlist" data-search-result-item-anchor="42243799" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898336,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+            <h2 class="search-result__header-title fd-m-none" data-test-search-result-header-title="">
+                  Acacialaan 12
+            </h2>
+                </a>
+                        <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/hoogland/huis-42243799-acacialaan-12/?navigateSource=resultlist" data-search-result-item-anchor="42243799" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898336,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+    
+            <h4 class="search-result__header-subtitle fd-m-none" data-test-search-result-header-subtitle="">
+                3828 CM Hoogland
+    
+            </h4>
+    
+            </a>
+        </div>
+    
+            <div>
+                <a class="fd-flex" href="/mijn/objectactions/removesavedobject/?internalId=05e32e5b-f2df-4462-b45a-d01de128efe3&amp;tinyId=42243799&amp;Notification=True" title="Verwijder object">
+                    <span class="icon-close-greyDark remove-object-handle-icon"></span>
+                </a>
+            </div>
+    
+    
+    </div>    <div class="search-result-info search-result-info-price">
+                <span class="search-result-price">€ 500.000 k.k.</span>
+                        </div>
+    <div class="search-result-info">
+        <ul class="search-result-kenmerken ">
+                <li>
+                    
+                        <span title="Gebruiksoppervlakte wonen">111 m²</span>
+                                         / 
+                                        <span title="Perceeloppervlakte">291 m²</span>
+                </li>
+            
+                                <li>6 kamers</li>
+            
+    
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    
+    <a class="search-result-makelaar" href="/makelaars/hoogland/161-kruithof-makelaardij/">
+            <span class="search-result-makelaar-icon icon-logo-nvm"></span>
+    
+        <span class="search-result-makelaar-name">Kruithof Makelaardij</span>
+    </a>
+    
+    
+            </div>
+        </div>
+    
+    
+    </li>
+    <li class="search-result " data-component="search-result">
+    
+        <div class="search-result-thumbnail-container"> 
+                <div class="search-result__header-labels-col">
+            <ul class="labels search-result__header-labels">
+                        <li class="label label-nieuw">Nieuw</li>
+                <li class="label label-nvm-open-huizen-dag">NVM Open Huizen Dag</li>        </ul>
+        </div>
+    
+    <div class="search-result-media">
+            <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/oosterhout-nb/huis-42243735-jan-van-eijckhof-28/?navigateSource=resultlist" data-search-result-item-anchor="42243735" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898372,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+        <div class="search-result-image">
+    <img alt="Jan van Eijckhof 28" loading="lazy" sizes="(min-width: 500px) 228px, calc(100vw - 2rem)" src="https://cloud.funda.nl/valentina_media/180/693/939_720x480.jpg" srcset="https://cloud.funda.nl/valentina_media/180/693/939_360x240.jpg 360w, https://cloud.funda.nl/valentina_media/180/693/939_180x120.jpg 180w, https://cloud.funda.nl/valentina_media/180/693/939_720x480.jpg 720w">
+    
+                <div class="search-result-media-icons">
+                        <span class="search-result-media-icon icon-floorplan-white" title="Plattegrond beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-360-white" title="360° foto's beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-video-white" title="Video beschikbaar"></span>
+                </div>
+        </div>
+    
+        </a>
+        </div>
+    
+        </div>
+    
+        <div class="search-result-content">
+            <div class="search-result-content-inner">
+    <div class="search-result__header fd-flex fd-m-bottom-2xs fd-p-top-2xs--bp-s" data-test-search-result-header="">
+        <div class="search-result__header-title-col">
+                <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/oosterhout-nb/huis-42243735-jan-van-eijckhof-28/?navigateSource=resultlist" data-search-result-item-anchor="42243735" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898372,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+            <h2 class="search-result__header-title fd-m-none" data-test-search-result-header-title="">
+                  Jan van Eijckhof 28
+            </h2>
+                </a>
+                        <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/oosterhout-nb/huis-42243735-jan-van-eijckhof-28/?navigateSource=resultlist" data-search-result-item-anchor="42243735" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898372,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+    
+            <h4 class="search-result__header-subtitle fd-m-none" data-test-search-result-header-subtitle="">
+                4907 MB Oosterhout (NB)
+    
+            </h4>
+    
+            </a>
+        </div>
+    
+            <div>
+                <a class="fd-flex" href="/mijn/objectactions/removesavedobject/?internalId=1650a8cf-9107-4713-abb6-75e486956956&amp;tinyId=42243735&amp;Notification=True" title="Verwijder object">
+                    <span class="icon-close-greyDark remove-object-handle-icon"></span>
+                </a>
+            </div>
+    
+    
+    </div>    <div class="search-result-info search-result-info-price">
+                <span class="search-result-price">€ 389.500 k.k.</span>
+                        </div>
+    <div class="search-result-info">
+        <ul class="search-result-kenmerken ">
+                <li>
+                    
+                        <span title="Gebruiksoppervlakte wonen">143 m²</span>
+                                         / 
+                                        <span title="Perceeloppervlakte">181 m²</span>
+                </li>
+            
+                                <li>4 kamers</li>
+            
+    
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    
+    <a class="search-result-makelaar" href="/makelaars/oosterhout-nb/19181-verbrugge-makelaardij-oosterhout/">
+            <span class="search-result-makelaar-icon icon-logo-nvm"></span>
+    
+        <span class="search-result-makelaar-name">Verbrugge Makelaardij Oosterhout</span>
+    </a>
+    
+    
+            </div>
+        </div>
+    
+    
+    </li>
+    <li class="search-result " data-component="search-result">
+    
+        <div class="search-result-thumbnail-container"> 
+                <div class="search-result__header-labels-col">
+            <ul class="labels search-result__header-labels">
+                        <li class="label label-nieuw">Nieuw</li>
+                        </ul>
+        </div>
+    
+    <div class="search-result-media">
+            <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/alphen-ge/huis-42243746-valksestraat-9-a/?navigateSource=resultlist" data-search-result-item-anchor="42243746" data-track-click="Featured Listing Clicked" data-track-props="{&quot;global_id&quot;:6898383,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+        <div class="search-result-image">
+    <img alt="Valksestraat 9 a" loading="lazy" sizes="(min-width: 500px) 228px, calc(100vw - 2rem)" src="https://cloud.funda.nl/valentina_media/180/694/620_720x480.jpg" srcset="https://cloud.funda.nl/valentina_media/180/694/620_360x240.jpg 360w, https://cloud.funda.nl/valentina_media/180/694/620_180x120.jpg 180w, https://cloud.funda.nl/valentina_media/180/694/620_720x480.jpg 720w">
+    
+                <div class="search-result-media-icons">
+                        <span class="search-result-media-icon icon-floorplan-white" title="Plattegrond beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-360-white" title="360° foto's beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-video-white" title="Video beschikbaar"></span>
+                </div>
+        </div>
+    
+        </a>
+        </div>
+    
+        </div>
+    
+        <div class="search-result-content">
+            <div class="search-result-content-inner">
+    <div class="search-result__header fd-flex fd-m-bottom-2xs fd-p-top-2xs--bp-s" data-test-search-result-header="">
+        <div class="search-result__header-title-col">
+                <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/alphen-ge/huis-42243746-valksestraat-9-a/?navigateSource=resultlist" data-search-result-item-anchor="42243746" data-track-click="Featured Listing Clicked" data-track-props="{&quot;global_id&quot;:6898383,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+            <h2 class="search-result__header-title fd-m-none" data-test-search-result-header-title="">
+                  Valksestraat 9 a
+            </h2>
+                </a>
+                        <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/alphen-ge/huis-42243746-valksestraat-9-a/?navigateSource=resultlist" data-search-result-item-anchor="42243746" data-track-click="Featured Listing Clicked" data-track-props="{&quot;global_id&quot;:6898383,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+    
+            <h4 class="search-result__header-subtitle fd-m-none" data-test-search-result-header-subtitle="">
+                6626 AE Alphen (GE)
+    
+            </h4>
+    
+            </a>
+        </div>
+    
+            <div>
+                <a class="fd-flex" href="/mijn/objectactions/removesavedobject/?internalId=9a9050fe-3bb6-43f2-a607-0fcb26297892&amp;tinyId=42243746&amp;Notification=True" title="Verwijder object">
+                    <span class="icon-close-greyDark remove-object-handle-icon"></span>
+                </a>
+            </div>
+    
+    
+    </div>    <div class="search-result-info search-result-info-price">
+                <span class="search-result-price">€ 1.250.000 k.k.</span>
+                        </div>
+    <div class="search-result-info">
+        <ul class="search-result-kenmerken ">
+                <li>
+                    
+                        <span title="Gebruiksoppervlakte wonen">300 m²</span>
+                                         / 
+                                        <span title="Perceeloppervlakte">4.150 m²</span>
+                </li>
+            
+                                <li>9 kamers</li>
+            
+    
+        </ul>
+    </div>
+            <p class="search-promo-text">
+                Heerlijk royale woning met 3 bijgebouwen + veel privacy, nabij natuur
+            </p>
+     <a class="search-result-makelaar" href="/koop/alphen-ge/huis-42243746-valksestraat-9-a/">
+            <span class="search-result-makelaar-icon icon-logo-nvm"></span>
+    
+        <span class="search-result-makelaar-name">Meerdere makelaars betrokken</span>
+    </a>
+    
+    
+            </div>
+        </div>
+    </li>
+    <li class="search-result " data-component="search-result">
+    <div class="search-result-thumbnail-container"> 
+                <div class="search-result__header-labels-col">
+            <ul class="labels search-result__header-labels">
+                        <li class="label label-nieuw">Nieuw</li>
+                <li class="label label-nvm-open-huizen-dag">NVM Open Huizen Dag</li>        </ul>
+        </div>
+    <div class="search-result-media">
+            <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/ouddorp/huis-42243879-broekweg-11/?navigateSource=resultlist" data-search-result-item-anchor="42243879" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898416,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+        <div class="search-result-image">
+    <img alt="Broekweg 11" loading="lazy" sizes="(min-width: 500px) 228px, calc(100vw - 2rem)" src="https://cloud.funda.nl/valentina_media/180/696/323_720x480.jpg" srcset="https://cloud.funda.nl/valentina_media/180/696/323_360x240.jpg 360w, https://cloud.funda.nl/valentina_media/180/696/323_180x120.jpg 180w, https://cloud.funda.nl/valentina_media/180/696/323_720x480.jpg 720w">
+    <div class="search-result-media-icons">
+                        <span class="search-result-media-icon icon-floorplan-white" title="Plattegrond beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-360-white" title="360° foto's beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-video-white" title="Video beschikbaar"></span>
+                </div>
+        </div>
+    
+        </a>
+        </div>
+    </div>
+    
+        <div class="search-result-content">
+            <div class="search-result-content-inner">
+    <div class="search-result__header fd-flex fd-m-bottom-2xs fd-p-top-2xs--bp-s" data-test-search-result-header="">
+        <div class="search-result__header-title-col">
+                <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/ouddorp/huis-42243879-broekweg-11/?navigateSource=resultlist" data-search-result-item-anchor="42243879" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898416,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+            <h2 class="search-result__header-title fd-m-none" data-test-search-result-header-title="">
+                  Broekweg 11
+            </h2>
+                </a>
+                        <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/ouddorp/huis-42243879-broekweg-11/?navigateSource=resultlist" data-search-result-item-anchor="42243879" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898416,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+    
+            <h4 class="search-result__header-subtitle fd-m-none" data-test-search-result-header-subtitle="">
+                3253 XB Ouddorp
+    
+            </h4>
+    
+            </a>
+        </div>
+    
+            <div>
+                <a class="fd-flex" href="/mijn/objectactions/removesavedobject/?internalId=6b9226f6-2b29-4c30-8ea4-db08d8267d6d&amp;tinyId=42243879&amp;Notification=True" title="Verwijder object">
+                    <span class="icon-close-greyDark remove-object-handle-icon"></span>
+                </a>
+            </div>
+    
+    
+    </div>    <div class="search-result-info search-result-info-price">
+                <span class="search-result-price">€ 639.000 k.k.</span>
+                        </div>
+    <div class="search-result-info">
+        <ul class="search-result-kenmerken ">
+                <li>
+                    
+                        <span title="Gebruiksoppervlakte wonen">158 m²</span>
+                                         / 
+                                        <span title="Perceeloppervlakte">425 m²</span>
+                </li>
+            
+                                <li>6 kamers</li>
+            
+    
+        </ul>
+    </div>
+    
+    <a class="search-result-makelaar" href="/koop/ouddorp/huis-42243879-broekweg-11/">
+            <span class="search-result-makelaar-icon icon-logo-nvm"></span>
+    
+        <span class="search-result-makelaar-name">Meerdere makelaars betrokken</span>
+    </a>
+    
+    
+            </div>
+        </div>
+    
+    
+    </li>
+    <li class="search-result " data-component="search-result">
+    
+        <div class="search-result-thumbnail-container"> 
+                <div class="search-result__header-labels-col">
+            <ul class="labels search-result__header-labels">
+                        <li class="label label-nieuw">Nieuw</li>
+                        </ul>
+        </div>
+    
+    <div class="search-result-media">
+            <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/heemskerk/appartement-42243872-ingen-houszstraat-68/?navigateSource=resultlist" data-search-result-item-anchor="42243872" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898419,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+        <div class="search-result-image">
+    <img alt="Ingen Houszstraat 68" loading="lazy" sizes="(min-width: 500px) 228px, calc(100vw - 2rem)" src="https://cloud.funda.nl/valentina_media/180/696/563_720x480.jpg" srcset="https://cloud.funda.nl/valentina_media/180/696/563_360x240.jpg 360w, https://cloud.funda.nl/valentina_media/180/696/563_180x120.jpg 180w, https://cloud.funda.nl/valentina_media/180/696/563_720x480.jpg 720w">
+    
+                <div class="search-result-media-icons">
+                        <span class="search-result-media-icon icon-floorplan-white" title="Plattegrond beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-360-white" title="360° foto's beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-video-white" title="Video beschikbaar"></span>
+                </div>
+        </div>
+        </a>
+        </div>
+        </div>
+    
+        <div class="search-result-content">
+            <div class="search-result-content-inner">
+    <div class="search-result__header fd-flex fd-m-bottom-2xs fd-p-top-2xs--bp-s" data-test-search-result-header="">
+        <div class="search-result__header-title-col">
+                <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/heemskerk/appartement-42243872-ingen-houszstraat-68/?navigateSource=resultlist" data-search-result-item-anchor="42243872" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898419,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+            <h2 class="search-result__header-title fd-m-none" data-test-search-result-header-title="">
+                  Ingen Houszstraat 68
+            </h2>
+                </a>
+                        <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/heemskerk/appartement-42243872-ingen-houszstraat-68/?navigateSource=resultlist" data-search-result-item-anchor="42243872" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898419,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+    
+            <h4 class="search-result__header-subtitle fd-m-none" data-test-search-result-header-subtitle="">
+                1962 GK Heemskerk
+    
+            </h4>
+                </a>
+        </div>
+    
+            <div>
+                <a class="fd-flex" href="/mijn/objectactions/removesavedobject/?internalId=779b97a9-815b-410d-b73c-fb236a096045&amp;tinyId=42243872&amp;Notification=True" title="Verwijder object">
+                    <span class="icon-close-greyDark remove-object-handle-icon"></span>
+                </a>
+            </div>
+    
+    
+    </div>    <div class="search-result-info search-result-info-price">
+                <span class="search-result-price">€ 259.000 k.k.</span>
+                        </div>
+    <div class="search-result-info">
+        <ul class="search-result-kenmerken ">
+                <li>
+                    
+                        <span title="Gebruiksoppervlakte wonen">67 m²</span>
+                                                </li>
+            
+                                <li>3 kamers</li>
+            
+    
+        </ul>
+    </div>
+    <a class="search-result-makelaar" href="/makelaars/krommenie/24603-bert-van-vulpen-makelaars-hypotheken/">
+            <span class="search-result-makelaar-icon icon-logo-nvm"></span>
+    
+        <span class="search-result-makelaar-name">Bert van Vulpen makelaars + hypotheken</span>
+    </a>
+     </div>
+    </div>
+     </li>
+    <li class="search-result " data-component="search-result">
+     <div class="search-result-thumbnail-container"> 
+                <div class="search-result__header-labels-col">
+            <ul class="labels search-result__header-labels">
+                        <li class="label label-nieuw">Nieuw</li>
+                        </ul>
+        </div>
+    <div class="search-result-media">
+            <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/pijnacker/huis-42243816-oude-leedeweg-32/?navigateSource=resultlist" data-search-result-item-anchor="42243816" data-track-click="Featured Listing Clicked" data-track-props="{&quot;global_id&quot;:6898453,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+        <div class="search-result-image">
+    <img alt="Oude Leedeweg 32" loading="lazy" sizes="(min-width: 500px) 228px, calc(100vw - 2rem)" src="https://cloud.funda.nl/valentina_media/180/698/179_720x480.jpg" srcset="https://cloud.funda.nl/valentina_media/180/698/179_360x240.jpg 360w, https://cloud.funda.nl/valentina_media/180/698/179_180x120.jpg 180w, https://cloud.funda.nl/valentina_media/180/698/179_720x480.jpg 720w">
+                <div class="search-result-media-icons">
+                        <span class="search-result-media-icon icon-floorplan-white" title="Plattegrond beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-360-white" title="360° foto's beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-video-white" title="Video beschikbaar"></span>
+                </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        <div class="search-result-content">
+            <div class="search-result-content-inner">
+    <div class="search-result__header fd-flex fd-m-bottom-2xs fd-p-top-2xs--bp-s" data-test-search-result-header="">
+        <div class="search-result__header-title-col">
+                <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/pijnacker/huis-42243816-oude-leedeweg-32/?navigateSource=resultlist" data-search-result-item-anchor="42243816" data-track-click="Featured Listing Clicked" data-track-props="{&quot;global_id&quot;:6898453,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+            <h2 class="search-result__header-title fd-m-none" data-test-search-result-header-title="">
+                  Oude Leedeweg 32
+            </h2>
+                </a>
+                        <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/pijnacker/huis-42243816-oude-leedeweg-32/?navigateSource=resultlist" data-search-result-item-anchor="42243816" data-track-click="Featured Listing Clicked" data-track-props="{&quot;global_id&quot;:6898453,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+    
+            <h4 class="search-result__header-subtitle fd-m-none" data-test-search-result-header-subtitle="">
+                2641 NR Pijnacker
+    
+            </h4>
+            </a>
+        </div>
+            <div>
+                <a class="fd-flex" href="/mijn/objectactions/removesavedobject/?internalId=65800da1-2df8-4e11-b7eb-7891573e213e&amp;tinyId=42243816&amp;Notification=True" title="Verwijder object">
+                    <span class="icon-close-greyDark remove-object-handle-icon"></span>
+                </a>
+            </div>
+    </div>    <div class="search-result-info search-result-info-price">
+                <span class="search-result-price">€ 1.750.000 k.k.</span>
+                        </div>
+    <div class="search-result-info">
+        <ul class="search-result-kenmerken ">
+                <li>
+                    
+                        <span title="Gebruiksoppervlakte wonen">185 m²</span>
+                                         / 
+                                        <span title="Perceeloppervlakte">6.159 m²</span>
+                </li>
+            
+                                <li>5 kamers</li>
+        </ul>
+    </div>
+            <p class="search-promo-text">
+                Paradijs in de Randstad, gelegen in een schitterend polderlandschap!
+            </p> 
+    <a class="search-result-makelaar" href="/makelaars/bergschenhoek/15360-lagerweij-en-fonk-nvm-makelaars/">
+            <span class="search-result-makelaar-icon icon-logo-nvm"></span>
+    
+        <span class="search-result-makelaar-name">Lagerweij &amp; Fonk NVM Makelaars</span>
+    </a>
+         </div>
+        </div>
+    </li>
+    <li class="search-result " data-component="search-result">
+    
+        <div class="search-result-thumbnail-container"> 
+                <div class="search-result__header-labels-col">
+            <ul class="labels search-result__header-labels">
+                        <li class="label label-nieuw">Nieuw</li>
+                <li class="label label-nvm-open-huizen-dag">NVM Open Huizen Dag</li>        </ul>
+        </div>
+    
+    <div class="search-result-media">
+            <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/den-haag/appartement-42243903-obrechtstraat-213/?navigateSource=resultlist" data-search-result-item-anchor="42243903" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898540,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+        <div class="search-result-image">
+    <img alt="Obrechtstraat 213" loading="lazy" sizes="(min-width: 500px) 228px, calc(100vw - 2rem)" src="https://cloud.funda.nl/valentina_media/180/701/009_720x480.jpg" srcset="https://cloud.funda.nl/valentina_media/180/701/009_360x240.jpg 360w, https://cloud.funda.nl/valentina_media/180/701/009_180x120.jpg 180w, https://cloud.funda.nl/valentina_media/180/701/009_720x480.jpg 720w">
+    
+                <div class="search-result-media-icons">
+                        <span class="search-result-media-icon icon-floorplan-white" title="Plattegrond beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-360-white" title="360° foto's beschikbaar"></span>
+                                        <span class="search-result-media-icon icon-video-white" title="Video beschikbaar"></span>
+                </div>
+        </div>
+    
+        </a>
+        </div>
+    
+        </div>
+    
+        <div class="search-result-content">
+            <div class="search-result-content-inner">
+    <div class="search-result__header fd-flex fd-m-bottom-2xs fd-p-top-2xs--bp-s" data-test-search-result-header="">
+        <div class="search-result__header-title-col">
+                <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/den-haag/appartement-42243903-obrechtstraat-213/?navigateSource=resultlist" data-search-result-item-anchor="42243903" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898540,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+            <h2 class="search-result__header-title fd-m-none" data-test-search-result-header-title="">
+                  Obrechtstraat 213
+            </h2>
+                </a>
+                        <a data-object-url-tracking="resultlist" href="https://www.funda.nl/koop/den-haag/appartement-42243903-obrechtstraat-213/?navigateSource=resultlist" data-search-result-item-anchor="42243903" data-track-click="Listing Results Clicked" data-track-props="{&quot;global_id&quot;:6898540,&quot;navigation_trigger&quot;:&quot;saved_listings_listing&quot;}" data-track-exclude-page-properties="">
+    
+            <h4 class="search-result__header-subtitle fd-m-none" data-test-search-result-header-subtitle="">
+                2517 TV Den Haag
+    
+            </h4>
+    
+            </a>
+        </div>
+    
+            <div>
+                <a class="fd-flex" href="/mijn/objectactions/removesavedobject/?internalId=e6ff1e37-60c8-4b20-a199-7b55a3c96618&amp;tinyId=42243903&amp;Notification=True" title="Verwijder object">
+                    <span class="icon-close-greyDark remove-object-handle-icon"></span>
+                </a>
+            </div>
+    
+    
+    </div>    <div class="search-result-info search-result-info-price">
+                <span class="search-result-price">€ 875.000 k.k.</span>
+                        </div>
+    <div class="search-result-info">
+        <ul class="search-result-kenmerken ">
+                <li>
+                    
+                        <span title="Gebruiksoppervlakte wonen">211 m²</span>
+                                                </li>
+            
+                                <li>7 kamers</li>
+        </ul>
+    </div>
+    <a class="search-result-makelaar" href="/makelaars/wassenaar/8666-i4-housing-bv/">
+            <span class="search-result-makelaar-icon icon-logo-nvm"></span>
+    
+        <span class="search-result-makelaar-name">i4 Housing B.V.</span>
+    </a>
+                 </div>
+        </div>
+       </form></div>
+        </div>
+    </div>
+    </li>
+        </ul> -->
+</section>        
+ </body>
+<footer>
+    <!-- gekopierde footer van funda -->
+    <div class="app-footer-v2-main-menu">
+      <div class="app-footer-v2-group">
+        <div class="app-footer-v2-items">
+          <strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-tools" aria-expanded="false">
+            Diensten
+          </strong>
+          <ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-tools" aria-expanded="false" data-controller-uid="7">
+            <li>
+              <a href="/huis-plaatsen/" class="">Plaats je huis op funda</a>
+            </li>
+            <li>
+              <a href="/makelaar-zoeken/" class="appfooter-Makelaar-link">Zoek een NVM-makelaar</a>
+            </li>
+            <li>
+              <a href="/koop/bladeren/" class="">Bladeren door aanbod</a>
+            </li>
+            <li>
+              <a href="/mijn-huis-toevoegen/" class="waardecheck-trafficdriver">Wat is mijn woning waard?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="app-footer-v2-group">
+        <div class="app-footer-v2-items">
+          <strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-info" aria-expanded="false">
+            Informatie
+          </strong>
+          <ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-info" aria-expanded="false" data-controller-uid="8">
+            <li>
+              <a href="https://help.funda.nl/hc/nl/?utm_source=funda&amp;utm_medium=footer" class="" target="_blank">Vraag &amp; antwoord</a>
+            </li>
+            <li>
+              <a href="/funda-index/funda-index/" class="">Funda Index</a>
+            </li>
+            <li>
+              <a href="/meer-weten/kopen/" class="trafficdriver-footer-hoekoopikeenhuis">Alles over een huis kopen</a>
+            </li>
+            <li>
+              <a href="/meer-weten/verkopen/" class="trafficdriver-footer-hoekoopikeenhuis">Verkoop je huis</a>
+            </li>
+            <li>
+              <a href="/zoekbetervindmeer/" class="">Hoe zoek ik op funda?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="app-footer-v2-group">
+        <div class="app-footer-v2-items">
+          <strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-realtors" aria-expanded="false">
+            Makelaars
+          </strong>
+          <ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-realtors" aria-expanded="false" data-controller-uid="9">
+            <li>
+              <a href="https://www.fundadesk.nl" class="">Funda desk</a>
+            </li>
+            <li>
+              <a href="https://www.funda.nl/voormakelaars/verdieping/" class="">Tips, trends &amp; nieuws</a>
+            </li>
+            <li>
+              <a href="https://www.funda.nl/voormakelaars/leads/" class="">Leads</a>
+            </li>
+            <li>
+              <a href="https://www.funda.nl/voormakelaars/producten/" class="">Producten</a>
+            </li>
+            <li>
+              <a href="https://www.funda.nl/voormakelaars/events-meetups/" class="">Events &amp; meetups</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="app-footer-v2-group">
+        <div class="app-footer-v2-items">
+          <strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-funda" aria-expanded="false">
+            Over ons
+          </strong>
+          <ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-funda" aria-expanded="false" data-controller-uid="10">
+            <li>
+              <a href="/over/" class="">Over funda</a>
+            </li>
+            <li>
+              <a href="/contact/" class="">Contact</a>
+            </li>
+            <li>
+              <a href="https://jobs.funda.nl/l/nl/" class="">Werken bij funda</a>
+            </li>
+            <li>
+              <a href="/adverteren/" class="">Adverteren</a>
+            </li>
+            <li>
+              <a href="/meer-weten/redactioneel-beleid-funda/" class="">Redactioneel beleid</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
