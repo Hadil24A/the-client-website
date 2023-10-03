@@ -8,148 +8,41 @@
     </head>
     <header>
 
-<!-- navigatie van funda site via inspecten gekopieerd en aangepast -->
-     <nav>    
-            <div class="accordion accordion--dark-3" data-accordion-close-others="">
-                    <ul>
-                        <details class="cursor-pointer block w-full text-left border-t border-light-2">
-                            <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;buy&quot;}">
-                                <span class="px-5 flex justify-between font-semibold">Kopen</span>
-                            </summary>
-    
-    
-        <li class="app-header__submenu--zoeken">
-                <a id="appheader-zoeken-link" class="app-header__link" href="/koop/heel-nederland/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-search-blue"></span>Zoek een koopwoning</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--makelaar">
-                <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/aankoop/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-makelaar-blue"></span>Zoek een NVM-aankoopmakelaar</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--maandlasten">
-                <a id="appheader-Maandlasten-link" class="app-header__link" href="/hypotheek/maandlasten/de-hypotheker/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;mortgage_calculator&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-calculator-blue"></span>Bereken je maandlasten</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--meerwetenkopen">
-                <a id="appheader-MeerWetenKopen-link" class="app-header__link" href="/meer-weten/kopen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;buying_tips&quot;,&quot;menu_category&quot;:&quot;buy&quot;}"><span class="icon-content-platform-blue"></span>Alles wat je moet weten over kopen</a>
-        </li>
-    
-                        </details>
-                        
-                        <details class="cursor-pointer block w-full text-left border-t border-light-2">
-                            <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;rent&quot;}">
-                                <span class="px-5 flex justify-between font-semibold">Huren</span>
-                            </summary>
-    
-    
-        <li class="app-header__submenu--zoeken">
-                <a id="appheader-zoeken-link" class="app-header__link" href="/huur/heel-nederland/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;listing_search&quot;,&quot;menu_category&quot;:&quot;rent&quot;}"><span class="icon-search-blue"></span>Zoek een huurwoning</a>
-        </li>
-    
-                        </details>
-    
-                        <details class="cursor-pointer block w-full text-left border-t border-b border-light-2">
-                            <summary class="py-3" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;sell&quot;}">
-                                <span class="px-5 flex justify-between font-semibold">Verkopen</span>
-                            </summary>
-    
-    
-        <li class="app-header__submenu--makelaar">
-                <a id="appheader-Makelaar-link" class="app-header__link" href="/makelaar-zoeken/verkoop/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;finding_an_agent&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-makelaar-blue"></span>Zoek een NVM-verkoopmakelaar</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--huisplaatsen">
-                <a id="appheader-HuisPlaatsen-link" class="app-header__link" href="/huis-plaatsen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;house_on_funda&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-for-sale-blue"></span>Plaats je huis op funda</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--meerwetenverkopen">
-                <a id="appheader-MeerWetenVerkopen-link" class="app-header__link" href="/meer-weten/verkopen/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;selling_tips&quot;,&quot;menu_category&quot;:&quot;sell&quot;}"><span class="icon-content-platform-blue"></span>Alles wat je moet weten over verkopen</a>
-        </li>
-    
-                        </details>
-    
-    
-                    </ul>
-            </div>
-        </div>
-    </li>
-     </ul>
-     
-     <a class="logo" rel="home" href="/">
-      <img width="101" height="36" alt="Funda" src="https://assets.fstatic.nl/master-66220/assets/components/logo/fundawonen-logo.svg">
-          </a>
-    
-           <ul class="app-header__menu hidden md:flex ml-4">
-    
+<nav>
 
-    <li class="app-header__menu--mijnhuis md:flex" data-app-header-menu="mijnhuis" data-navigation-my-home="">
-        <a href="/account/mijn-huis/" class="app-header__link" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;my_house&quot;}">
-                <span class="icon icon-house-white"></span>
-            <span class="anchor-text">Mijn Huis</span>
-            </a>
-        
-    
-    
-        <div id="app-header__mijn bewaarde huizen" class="app-header__submenu" data-app-header-submenu="">
-          <a href="/account/mijn-bewaarde-huizen/">
-          <p class="h3 app-header__dialog-title app-header--show-mobile">
-                <span class="icon-house"></span>Mijn bewaarde huizen   </p>
-               </a>
-    
-        </div>
-    </li>
-    
-    
-    
-    <li class="app-header__menu--account" data-app-header-menu="account">
-            <a class="app-header__link app-header__menu-handle" aria-expanded="false" aria-controls="app-header__account" data-app-header-menu-handle="" data-track-click="Header Menu Viewed" data-track-props="{&quot;menu_category&quot;:&quot;account&quot;}">
-                <span class="icon icon-avatar-white"></span>
-                <span class="anchor-text"></span>
-    
-            </a>
-    
-    
-        <div id="app-header__account" class="app-header__submenu--account app-header__submenu md:rounded" data-app-header-submenu="" aria-hidden="true">
-            <p class="h3 app-header__dialog-title app-header--show-mobile">
-                <span class="icon-avatar"></span>        </p>
+    <ul class="kopen">
+    <li> <p>Kopen</p></li>
+    <li><a href="https://www.funda.nl/zoeken/koop?selected_area=[%22nl%22]">Zoek een koop woning</a></li>
+    <li><a href="https://www.funda.nl/makelaar-zoeken/aankoop/">Zoek een NVM-aankoopmakelaar</a></li>
+    <li> <a href="https://www.funda.nl/hypotheek/maandlasten/ing/">Bereken je maandlasten</a> </li>
+    <li> <a href="https://www.funda.nl/meer-weten/kopen/">Alles wat je moet weten over kopen</a></li>
+    </ul>
 
+    <ul class="huren">
+    <li><p>Huren</p></li>
+    <li><a href="https://www.funda.nl/zoeken/huur/?selected_area=%5B%22nl%22%5D">Zoek een huurwoning</a></li>
+    </ul>
+
+    <ul class="verkopen">
+    <li><p>Verkopen</p></li>
+    <li><a href="https://www.funda.nl/makelaar-zoeken/verkoop/">Zoek een NVM-verkoopmakelaar</a></li>
+    <li><a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/">Plaats je huis op funda</a></li>
+    <li><a href="https://www.funda.nl/meer-weten/verkopen/">Alles wat je moet weten over verkopen</a></li>
+    </ul>
+
+    <img src="https://assets.fstatic.nl/master-66220/assets/components/logo/fundawonen-logo.svg">
+
+    <a href="https://www.funda.nl/waardecheck/">Mijn huis</a>
+    <a href="index.html">Mijn bewaarde huizen</a>
+
+    <ul class="mijn account">
+    <p>Mijn account</p>
+    <li><a href="https://www.funda.nl/zoeken/zoekopdracht/">Bewaarde zoekopdracht</a></li>
+    <li><a href="https://www.funda.nl/mijn/huis/">Verkoopstatistieken</a></li>
+    <li><a href="https://www.funda.nl/waardecheck/"></a>Mijn huis</li>
+    <li><a href="https://www.funda.nl/account/"></a>Mijn account</li>
+    </ul>
     
-                <ul class="flat-list">
-    
-    
-        <li class="app-header__submenu--savedsearch">
-                <a id="appheader-SavedSearch-link" class="app-header__link" href="/mijn/nieuw/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;saved_search&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-alert-blue"></span>Bewaarde zoekopdracht</a>
-        </li>
-    
-    
-        <li dc="">
-                <a id="appheader-Statistics-link" class="app-header__link" href="/mijn/huis/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;sale_statistics&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-stats-good-blue"></span>Verkoopstatistieken</a>
-        </li>
-    
-        <li class="app-header__submenu--mijnhuis">
-                <a id="appheader-Mijnhuis-link" class="app-header__link" href="/account/mijn-huis/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;waardecheck&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-house-blue"></span>Mijn Huis</a>
-        </li>
-    
-    
-        <li class="">
-                <a class="app-header__link" href="/account/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;my_account&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-avatar-blue"></span>Mijn account</a>
-        </li>
-    
-    
-        <li class="app-header__submenu--logout" data-user-logout="">
-                <a id="appheader-logout-link" class="app-header__link" href="/mijn/logout/" data-track-click="Header Menu Clicked" data-track-props="{&quot;navigation_trigger&quot;:&quot;log_out&quot;,&quot;menu_category&quot;:&quot;account&quot;}"><span class="icon-exit-blue"></span>Uitloggen</a>
-        </li>
-                </ul>
-        </div>
-    </li>
-                    </ul>
-     
-    </div>
 </nav>
 
     </header>
@@ -157,14 +50,16 @@
     <!-- einde navigatie van funda-->
 
     <body> 
+<main>
 <article class="filtercontainer">      
     <h1>
         Bewaarde huizen
     </h1>
 
-    <input type="text" id="searchbar" name="searchbar" placeholder="zoek in bewaarde huizen">
-    <input type="text" id="plaats" name="plaats" placeholder="plaats">
+    <form> <input type="text" id="searchbar" name="searchbar" placeholder="zoek in bewaarde huizen"></form>
+    <form> <input type="text" id="plaats" name="plaats" placeholder="plaats"></form>
 
+    <form>
     <input list="sorteren" id="sorteren1" name="sorteren2" placeholder="sorteren">
     <datalist id="sorteren">
      <option value="Vraagprijs - hoog naar laag"></option>
@@ -175,8 +70,10 @@
      <option value="Gebruiksopp."></option>
      <option value="Perceelopp."></option>
      <option value="Kamers"></option>
-   </datalist>
+   </datalist> 
+    </form>
 
+    <form>
    <input list="soortaanbod" id="soortaanbod1" name="soortaanbod2" placeholder="soort aanbod">
    <datalist id="soortaanbod">
     <option value="Woonhuis"></option>
@@ -189,7 +86,9 @@
     <option value="Onderstuk"></option>
     <option value="Standplaats"></option>
   </datalist>
+</form>
 
+<form>
  <input list="duurzaamheid" id="duurzaamheid1" name="duurzaamheid2" placeholder="Energielabel">
    <datalist id="duurzaamheid">
     <option value="A+++++"></option>
@@ -205,8 +104,11 @@
     <option value="F"></option>
     <option value="G"></option>
   </datalist>
+</form>
 
-<button>zoek</button>  
+<form>
+    <button>zoek</button> 
+</form>
 
 </article>  
 
@@ -230,52 +132,52 @@
 
 <article class="gesorteeerde-lijsten">
 <ul>
-<!-- data via js -->
-     <li>
-          <img src="" alt=""> <!-- data -->
-          <img src="" alt=""> <!-- data -->
-          <img src="" alt=""> <!-- data -->
-          <h2>Voeg een lijst toe</h2> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
-          <p>gedeeld met ...</p> <!-- data -->
-          <p>2</p>  <!-- Geliked aantal huizen in de lijst-->
+     <li class="toevoegenlijst">
+          <a href="indexv2.html">
+          <h2>Voeg een lijst toe</h2></a> 
           
      </li>
 
-     <li>
-          <a href="indexv2.html">
-          <img src="" alt=""> <!-- data -->
-          <img src="" alt=""> <!-- data -->
-          <img src="" alt=""> <!-- data -->
-          <h2>Amterdam</h2></a> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
-          <p>gedeeld met ...</p> <!-- data -->
-          <p>7</p>  <!-- Geliked aantal huizen in de lijst-->
+     <li class="Randstadhuizen">
+        <a href="indexv2.html">
+        <div class=""> </div>
+          <img src="https://cloud.funda.nl/valentina_media/180/746/920_1440x960.jpg" alt="foto van Ampèrestraat 6"> 
+          <img src="https://cloud.funda.nl/valentina_media/180/468/364_1440x960.jpg" alt="foto van Hullenberglaan 19"> 
+          <img src="https://cloud.funda.nl/valentina_media/180/386/487_1440x960.jpg" alt="foto 1 van Eleanor Rooseveltlaan 190">
+        </div>
+          <h2>Randstad</h2></a>
+          <p>gedeeld met ...</p> 
+          <p>7</p>
      </li>
 
-     <li>
+     <li class="Europahuizen">
           <a href="indexv2.html">
-          <img src="" alt=""> <!-- data -->
-          <img src="" alt=""> <!-- data -->
-          <img src="" alt=""> <!-- data -->
-          <h2>Rotterdam</h2> </a><!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
-          <p>gedeeld met ...</p> <!-- data -->
-          <p>2</p>  <!-- Geliked aantal huizen in de lijst-->
+          <div class="">
+          <img src="https://cloud.funda.nl/valentina_media/176/206/643_1440x960.jpg" alt="foto van Nagypuszta lakótelep 25"> <!-- data -->
+          <img src="https://cloud.funda.nl/valentina_media/177/662/816_1440x960.jpg" alt="foto van Brestovci 524"> <!-- data -->
+          <img src="https://cloud.funda.nl/valentina_media/180/636/371_1440x960.jpg" alt="foto 1 van Kangasniementie 74"> <!-- data -->
+        </div>
+          <h2>Europa</h2></a>
+          <p>gedeeld met Piet, Paul en Paulien <p> 
+          <p>15</p> 
           
      </li>
 
-     <li>
+     <li class="Geldhuizen">
           <a href="indexv2.html">
-          <img src="" alt=""> <!-- data -->
-          <img src="" alt=""> <!-- data -->
-          <img src="" alt=""> <!-- data -->
-          <h2>Schalkwijk</h2></a> <!-- Tijdelijk, deze titel maakt de gebruiker zelf-->
-          <p>gedeeld met ...</p> <!-- data -->
-          <p>2</p>  <!-- Geliked aantal huizen in de lijst-->
+          <div class="">
+          <img src="https://cloud.funda.nl/valentina_media/178/434/463_1440x960.jpg" alt="foto van Munnik 18"> 
+          <img src="https://cloud.funda.nl/valentina_media/178/957/131_1440x960.jpg" alt="foto van Randweg 2"> <!-- data -->
+          <img src="https://cloud.funda.nl/valentina_media/180/317/849_1440x960.jpg" alt="foto van Gravenstraat 30"> <!-- data -->
+          <h2>Gelderland</h2></a> 
+          <p>gedeeld met Samantha & Cynthia </p> 
+          <p>5</p> 
           
      </li>
 </ul>
-
+</article>
 <!-- gekopieerd uit funda-->
-
+<article>
 <ul class="search-results" data-component="search-results"> 
      <li class="search-result " data-component="search-result">
      
@@ -498,157 +400,87 @@
 
 </article>
 
-
+</main>
 </body>
 
 <footer> 
-     <div class="app-footer-v2-main-menu">
-         <div class="app-footer-v2-group">
-                 <div class="app-footer-v2-items">
-<strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-tools" aria-expanded="false">
-
- Diensten
-</strong>
-<ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-tools" aria-expanded="false" data-controller-uid="7">
-<li>
- <a href="/huis-plaatsen/" class="">
-Plaats je huis op funda
-</a>
-
-</li>
-<li>
- <a href="/makelaar-zoeken/" class="appfooter-Makelaar-link">
-Zoek een NVM-makelaar
-</a>
-
-</li>
-<li>
- <a href="/koop/bladeren/" class="">
-Bladeren door aanbod
-</a>
-
-</li>
-<li>
- <a href="/mijn-huis-toevoegen/" class="waardecheck-trafficdriver">
-Wat is mijn woning waard?
-</a>
-
-</li>
-</ul>                            </div>
-         </div>
-         <div class="app-footer-v2-group">
-                 <div class="app-footer-v2-items">
-<strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-info" aria-expanded="false">
-Informatie
-</strong>
-<ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-info" aria-expanded="false" data-controller-uid="8">
-<li>
- <a href="https://help.funda.nl/hc/nl/?utm_source=funda&amp;utm_medium=footer" class="" target="_blank">
-Vraag &amp; antwoord
-</a>
-
-</li>
-<li>
- <a href="/funda-index/funda-index/" class="">
-Funda Index
-</a>
-
-</li>
-<li>
- <a href="/meer-weten/kopen/" class="trafficdriver-footer-hoekoopikeenhuis">
-Alles over een huis kopen
-</a>
-
-</li>
-<li>
- <a href="/meer-weten/verkopen/" class="trafficdriver-footer-hoekoopikeenhuis">
-Verkoop je huis
-</a>
-
-</li>
-<li>
- <a href="/zoekbetervindmeer/" class="">
-Hoe zoek ik op funda?
-</a>
-
-</li>
-</ul>                            </div>
-         </div>
-         <div class="app-footer-v2-group">
-                 <div class="app-footer-v2-items">
-<strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-realtors" aria-expanded="false">
-Makelaars
-</strong>
-<ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-realtors" aria-expanded="false" data-controller-uid="9">
-<li>
- <a href="https://www.fundadesk.nl" class="">
-Funda desk
-</a>
-
-</li>
-<li>
- <a href="https://www.funda.nl/voormakelaars/verdieping/" class="">
-Tips, trends &amp; nieuws
-</a>
-
-</li>
-<li>
- <a href="https://www.funda.nl/voormakelaars/leads/" class="">
-Leads
-</a>
-
-</li>
-<li>
- <a href="https://www.funda.nl/voormakelaars/producten/" class="">
-Producten
-</a>
-
-</li>
-<li>
- <a href="https://www.funda.nl/voormakelaars/events-meetups/" class="">
-Events &amp; meetups
-</a>
-
-</li>
-</ul>                            </div>
-         </div>
-         <div class="app-footer-v2-group">
-                 <div class="app-footer-v2-items">
-<strong class="app-footer-v2-item-title" data-expandible-handle="toggle-footer-funda" aria-expanded="false">
-Over ons
-</strong>
-<ul class="app-footer-v2-item-list is-expandible" data-expandible="toggle-footer-funda" aria-expanded="false" data-controller-uid="10">
-<li>
- <a href="/over/" class="">
-Over funda
-</a>
-
-</li>
-<li>
- <a href="/contact/" class="">
-Contact
-</a>
-
-</li>
-<li>
- <a href="https://jobs.funda.nl/l/nl/" class="">
-Werken bij funda
-</a>
-
-</li>
-<li>
- <a href="/adverteren/" class="">
-Adverteren
-</a>
-
-</li>
-<li>
- <a href="/meer-weten/redactioneel-beleid-funda/" class="">
-Redactioneel beleid
-</a>
-
-</li>
-</ul>                            </div>
-         </div>
- </div>
- </footer>
+    <div class="footer-menu">
+      <div class="kolom-1">
+          <strong class="titel-kolom-1">Diensten</strong>
+          <ul class="kolom-1">
+              <li>
+                  <a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/" class="">Plaats je huis op funda</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl/makelaar-zoeken/" class="appfooter-Makelaar-link">Zoek een NVM-makelaar</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl/koop/bladeren/" class="">Bladeren door aanbod</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl/mijn-huis-toevoegen/" class="waardecheck-trafficdriver">Wat is mijn woning waard?</a>
+                </li> 
+          </ul>     
+      </div>
+      <div class="kolom-2">
+          <strong class="titel-kolom-2">Informatie</strong>
+          <ul class="kolom-2">
+              <li>
+                  <a href="https://help.funda.nl/hc/nl/?utm_source=funda&amp;utm_medium=footer" class="" target="_blank">Vraag &amp; antwoord</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl/funda-index/funda-index/" class="">Funda Index</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl//meer-weten/kopen/" class="trafficdriver-footer-hoekoopikeenhuis">Alles over een huis kopen</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl//meer-weten/verkopen/" class="trafficdriver-footer-hoekoopikeenhuis">Verkoop je huis</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl//zoekbetervindmeer/" class="">Hoe zoek ik op funda?</a>
+                </li> 
+          </ul>
+      </div>
+      <div class="kolom-3">
+          <strong class="titel-kolom-3">Makelaars</strong>
+          <ul class="kolom-3">
+              <li>
+                  <a href="https://www.fundadesk.nl" class="">Funda desk</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl/voormakelaars/verdieping/" class="">Tips, trends &amp; nieuws</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl/voormakelaars/leads/" class="">Leads</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl/voormakelaars/producten/" class="">Producten</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl/voormakelaars/events-meetups/" class="">Events &amp; meetups</a>
+                </li> 
+          </ul>
+      </div>
+      <div class="kolom-4">
+          <strong class="titel-kolom-4">Over ons</strong>
+          <ul class="kolom-4">
+              <li>
+                  <a href="https://www.funda.nl//over/" class="">Over funda</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl//contact/" class="">Contact</a>
+                </li>
+                <li>
+                  <a href="https://jobs.funda.nl/l/nl/" class="">Werken bij funda</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl//adverteren/" class="">Adverteren</a>
+                </li>
+                <li>
+                  <a href="https://www.funda.nl//meer-weten/redactioneel-beleid-funda/" class="">Redactioneel beleid</a>
+                </li>
+          </ul>
+      </div>
+    </div>  
+  </footer>
