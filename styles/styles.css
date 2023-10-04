@@ -1,1 +1,18 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    font-family: "Proxima Nova", sans-serif;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/AnyConv.com__ProximaNova-Regular_2607783814[2339].woff2);
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/AnyConv.com__ProximaNova-Regular_2607783814[2339].woff2);
+    font-weight: 700;
+}
