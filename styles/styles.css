@@ -1,9 +1,12 @@
 * {
     box-sizing: border-box;
+
 }
 
 body {
     font-family: "Proxima Nova", sans-serif;
+    margin: 0;
+    list-style: none;
 }
 
 @font-face {
@@ -13,6 +16,288 @@ body {
 
 @font-face {
     font-family: "Proxima Nova";
-    src: url(../assets/AnyConv.com__ProximaNova-Regular_2607783814[2339].woff2);
-    font-weight: 700;
+    src: url(../assets/AnyConv.com__ProximaNova-Semibold_3872794340.woff2);
+    font-weight: 600;
 }
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/AnyConv.com__ProximaNova-Medium_2770618388[2258].woff2);
+    font-weight: 400;
+}
+
+/* nav css */
+nav {
+    background:#F7A100;
+    margin: 0%;
+    padding-left: 13em;
+    padding-right: 13em;
+    /* padding-top: 1em; */
+    height: 4em;
+    color: #FFFFFF;
+    font-size: 1em;   
+    display: flex;
+    flex-direction: row;
+}
+
+nav > img {
+    width: 6em;
+    position: absolute;
+    left: 12%;
+    top: 1em;
+}
+
+.menu {
+    visibility: hidden;
+}
+
+.icoon {
+    line-height: 0.17em;
+    font-size: 3.5em;
+    position: absolute;
+    top: -1.04em;
+    left: 0.2em;
+    color: #ffffff;
+}
+
+.kopen {
+    position: absolute;
+    left:  18em;
+    top: 0.7em;
+}
+
+.kopen > ul {
+    visibility: hidden;
+}
+
+.huren {
+    position: absolute;
+    left:  22.5em;
+    top: 0.7em;
+}
+
+.huren > ul {
+    visibility: hidden;
+}
+
+.verkopen {
+    position: absolute;
+    left: 26.9em;
+    top: 0.7em;
+}
+
+.verkopen > ul {
+    visibility: hidden;
+}
+
+.mijnhuis {
+    position: absolute;
+    right:  28.2em;
+    top: 1.5em;
+}
+
+.bewaardehuizen {
+    position: absolute;
+    right:  17em;
+    top: 1.5em;
+}
+
+.mijnaccount {
+    position: absolute;
+    right:  3%;
+    top: 0.7em;
+}
+
+.mijnaccount > ul {
+    visibility: hidden;
+}
+
+/* einde nav */
+
+/* filter styling */
+
+.filtercontainer {
+    margin-top: 1.5em;
+    margin-left: 12%;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: antiquewhite;
+}
+
+input {
+    height: 3em;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* start commentsection styling */
+
+.commentsectie {
+    position: sticky;
+    top: 30px;
+    margin-top: -5em;
+    margin-left: 88%;
+    height: 15em;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #EDEDED;
+
+}
+/* lijstblokken styling */
+
+.gesorteeerde-lijsten > ul{
+    list-style: none;
+}
+
+.gesorteeerde-lijsten {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pluslijst randstad" "europa geld";
+}
+
+.toevoegenlijst {
+    background-color: burlywood;
+    /* height: 20em; */
+    width: auto;
+    grid-area: pluslijst;
+}
+.Randstadhuizen {
+    background-color: steelblue;
+    /* height: 20em; */
+    width: auto;
+    grid-area: randstad;
+}
+.Europahuizen{
+    background-color: cornflowerblue;
+    /* height: 20em; */
+    grid-area: europa;
+}
+.Geldhuizen {
+    background-color: olivedrab;
+    /* height: 20em; */
+    width: auto;
+    grid-area: geld;
+}
+
+/* tekst styling */
+h1 {
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+/* link styling */
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+a:visited {
+    color: rgb(255, 255, 255);
+  }
+/* link styling einde */
+
+  @media (max-width:1050px){
+    nav { 
+        background-color: rgb(255, 0, 200);
+  }
+  nav > img {
+    position: absolute;
+    left: 1em;
+}
+
+.kopen {
+    position: absolute;
+    left: 8em;
+}
+.huren {
+    position: absolute;
+    left: 11.5em;
+}
+.verkopen {
+    position: absolute;
+    left: 15em;
+}
+.mijnhuis {
+    position: absolute;
+    right: 20em;
+}
+.bewaardehuizen {
+    position: absolute;
+    right: 9em;
+}
+.mijnaccount {
+    position: absolute;
+    right: -5.5em;
+}
+.filtercontainer{
+    margin-left: 0;
+}
+.commentsectie {
+    margin-left: 87.5%;
+}
+}
+
+  @media (max-width: 709px) {
+
+    h1 {
+        font-size: 1.4em;
+    }
+    nav { 
+        background-color: aqua;
+        padding: 0;
+        display: flex;
+    }
+    /* .menu {
+        visibility: hidden;
+    }
+    .menu > ul {
+        visibility: hidden;
+    }
+    .menu > h2 {
+        visibility: hidden;
+    }
+    .menu > a {
+        visibility: hidden;
+    } */
+    .icoon {
+        visibility: visible;
+    }
+    nav > img {
+        position: absolute;
+        left: 4em;
+        width: 6.5em;
+    }
+    .kopen {
+        visibility: hidden;
+    }
+    .huren {
+        visibility: hidden;
+    }
+    .verkopen {
+        visibility: hidden;
+    }
+    .mijnhuis {
+        visibility: hidden;
+    }
+    .bewaardehuizen {
+        visibility: hidden;
+    }
+    .mijnaccount {
+        position: absolute;
+        right: -6.5em;
+    }
+
+    .filtercontainer{
+        margin-left: 0;
+    }
+    .commentsectie {
+        margin-left: 95%;
+    }
+  }
