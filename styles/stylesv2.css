@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+
+}
+
+header {
+    background-color: #F7A100;
+}
+
+body {
+    font-family: "Proxima Nova", sans-serif;
+    
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Proxima Nova", sans-serif;
+    src: url(../assets/AnyConv.com__ProximaNova-Regular_2607783814[2260].woff) format('woff'); 
+
+}
+
+@font-face {
+    font-family: "Proxima Nova", sans-serif;
+    src: url(../assets/AnyConv.com__ProximaNova-Bold_1760577842[2252].woff) format("woff");
+    font-weight: 700;
+}
+
+main{
+    padding-left: 13em;
+    padding-right: 13em;
+}
+form > button {
+
+    padding: 1px;
+    margin: 10px;
+    width: 5em;
+    height: 4em;
+    background-color: #478BB3;
+    cursor: pointer;
+    border-radius: 25%;
+    color: #E6F2F7;
+}
+
+ 
+footer {
+    padding: 1em;
+    margin: 0.5em;
+    background-color: #EDEDED;
+}
+
+.footer-menu-rij-1 {
+    margin-left: 13em;
+    margin-right: 13em;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.75rem;
+    padding-left: 0em;  
+    line-height: 2.25rem;
+}
+
+a {
+    text-decoration: none;
+    color: #0071b3;
+    transition: color .25s cubic-bezier(.23,1,.32,1);
+}
+
+.kolom-1 {
+    list-style: none;
+    padding-left: 0em;
+    padding-right: 2em;
+}
+
+.kolom-2 {
+    list-style: none;
+    padding-left: 0em;
+    padding-right: 2em;
+}
+
+.kolom-3 {
+    list-style: none;
+    padding-left: 0em;
+    padding-right: 2em;
+}
+
+.kolom-4 {
+    list-style: none;
+    padding-left: 0em;
+    padding-right: 2em;
+}
+
+
+.footer-menu-rij-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    justify: center;
+    list-style: none;
+} 
+ .bulletpoint {
+    padding:0.5em;
+ }
+
+
+svg{
+    margin:0.5em;
+    background-color: #FFFFFF;
+}
+
+
+.footer-3 { 
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.copyright-2 {
+    list-style: none;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+h1 {
+    align-items: center;
+    font-size: xx-large;
+         
+}
+    
+.favoriete-huis-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.favoriete-huis-2 {
+    display: flex;
+
+}
+
+.favoriete-huis-3 {
+    display: flex;
+
+}
+
+.favoriete-huis-4 {
+    display: flex;
+
+}
+
+.favoriete-huis-5 {
+    display: flex;
+
+}
+
+.favoriete-huis-6 {
+    display: grid;
+
+}
+
+.favoriete-huis-7 {
+    display: flex;
+
+}
+
+.favoriete-huis-8 {
+    display: flex;
+
+}
+
+.favoriete-huis-9 {
+    display: flex;
+
+}
+
+.favoriete-huis-10 {
+    display: flex;
+
+}
+
+.favoriete-huis-11 {
+    display: flex;
+
+}
+
+
+
+
+
+
+
