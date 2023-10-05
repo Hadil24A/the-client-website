@@ -150,37 +150,186 @@ input {
 
 .gesorteeerde-lijsten > ul{
     list-style: none;
-}
-
-.gesorteeerde-lijsten {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "pluslijst randstad" "europa geld";
+    gap: 35px;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 .toevoegenlijst {
-    background-color: burlywood;
-    /* height: 20em; */
-    width: auto;
+    background-color: #EDEDED;
+    border-radius: 20px;
     grid-area: pluslijst;
+    aspect-ratio: 1 / 1;
 }
+.toevoegenlijst > p {
+    font-size: 13em;
+    color: #F7A100;
+    position: absolute;
+    top: 1.5em;
+    left: 0.9em;
+}
+/* .toevoegenlijst > a {
+    
+} */
 .Randstadhuizen {
-    background-color: steelblue;
-    /* height: 20em; */
-    width: auto;
-    grid-area: randstad;
+    background-color: #EDEDED;
+    border-radius: 20px;
+    aspect-ratio: 1 / 1;
 }
+.Randstadhuizen:hover{
+    background-color: #F7A100;
+    transition: 0.3s;
+}
+.randstadfoto img:nth-of-type(1){
+    position: absolute;
+    top: 44.7em;
+    right: 10.5em;
+    width: 12%;
+    height: 25.5%;
+    object-fit: cover;
+}
+.randstadfoto img:nth-of-type(2){
+    position: absolute;
+    border-top-right-radius: 7%;
+    right: 10.5em;
+    width: 12%;
+    height: 25.5%;
+    object-fit: cover;
+}
+.randstadfoto img:nth-of-type(3){
+    position: absolute;
+    border-top-left-radius: 6%;
+    width: 22.8%;
+    height: 52%;
+    object-fit: cover;
+}
+.Randstadhuizen h3 {
+    position: absolute;
+    top: 40em;
+    left: 33.5em;
+    font-size: 1.4em;  
+}
+.Randstadhuizen p:nth-of-type(1){ 
+    position: absolute;
+    top: 58.4em;
+    left: 47em;
+}
+.Randstadhuizen p:nth-of-type(2){ 
+    position: absolute;
+    top: 75em;
+    left: 58.8em;
+    font-size: 0.8em;
+    
+}
+
 .Europahuizen{
-    background-color: cornflowerblue;
-    /* height: 20em; */
+    background-color: #EDEDED;
+    border-radius: 20px;
     grid-area: europa;
+    aspect-ratio: 1 / 1;
 }
+.Europahuizen:hover{
+    background-color: #F7A100;
+    transition: 0.3s;
+}
+.europafoto img:nth-of-type(1){
+    position: absolute;
+    border-top-right-radius: 12%;
+    top: 65.72em;
+    left: 33.37em;
+    width: 12%;
+    height: 25.5%;
+    object-fit: cover;
+}
+.europafoto img:nth-of-type(2){
+    position: absolute;
+    top: 65.72em;
+    border-top-left-radius: 7%;
+    width: 22.8%;
+    height: 52%;
+    object-fit: cover;
+}
+.europafoto img:nth-of-type(3){
+    position: absolute;
+    top: 77.72em;
+    left: 33.37em;
+    width: 12%;
+    height: 25.5%;
+    object-fit: cover;
+}
+.Europahuizen h3 {
+    position: absolute;
+    top: 63.7em;
+    left: 10em;
+    font-size: 1.4em;  
+}
+.Europahuizen p:nth-of-type(1){
+    position: absolute;
+    top: 91.5em;
+    left: 14.1em;
+}
+.Europahuizen p:nth-of-type(2){
+    position: absolute;
+    top: 116.4em;
+    left: 17.7em;
+    font-size: 0.8em;
+}
+
 .Geldhuizen {
-    background-color: olivedrab;
-    /* height: 20em; */
-    width: auto;
+    background-color: #EDEDED;
+    border-radius: 20px;
     grid-area: geld;
+    aspect-ratio: 1 / 1;
+}
+.Geldhuizen:hover{
+    background-color: #F7A100;
+    transition: 0.3s;
+}
+.geldfoto img:nth-of-type(1){
+    position: absolute;
+    border-top-left-radius: 6.1%;
+    top: 65.72em;
+    width: 22.8%;
+    height: 52%;
+    object-fit: cover;
+}
+.geldfoto img:nth-of-type(2){
+    position: absolute;
+    top: 65.72em;
+    right: 10.5em;
+    border-top-right-radius: 7%;
+    width: 12%;
+    height: 25.5%;
+    object-fit: cover;
+}
+.geldfoto img:nth-of-type(3){
+    position: absolute;
+    top: 77.72em;
+    right: 10.5em;
+    width: 12%;
+    height: 25.5%;
+    object-fit: cover;
+} 
+.Geldhuizen h3 {
+    position: absolute;
+    font-size: 1.4em;
+    top: 63.7em;
+    left: 33.5em;
+}
+.Geldhuizen p:nth-of-type(1){
+    position: absolute;
+    top: 91.5em;
+    left: 47em;  
+}
+.Geldhuizen p:nth-of-type(2){
+    position: absolute;
+    top: 116.4em;
+    left: 58.8em;
+    font-size: 0.8em;
 }
 
 /* tekst styling */
@@ -191,6 +340,11 @@ h1 {
 
 h2 {
     font-size: 1em;
+}
+
+h3 {
+    font-size: 1em;
+    color: black;
 }
 
 /* link styling */
