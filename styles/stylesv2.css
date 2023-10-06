@@ -117,8 +117,8 @@ body {
 
 
 main{
-    padding-left: 13em;
-    padding-right: 13em;
+    padding-left: 12em;
+    padding-right: 12em;
 }
 
 /* gebruikers/ gebruikertoevoegen button */
@@ -400,20 +400,21 @@ img {
 }
 
 button {
-    background: #E6F2F7;
-    border-color:#0071b3;
+    background:#F7A100;
+    border-color: transparent;
+    box-shadow: none;
     border-radius: 8px;
+    height: 3em;
     color: #333333;
-    font-size: 14px;
+    font-size: 0.8em;
     margin: 0.5em;
     cursor: pointer;
-    transition: background-color 0.4s ease-out , color 0.4s ease-out;
     }
 
 
-.button:hover {
-    background:#F7A100;
-    color: #ccc;
+button:hover {
+background: #0071b3;
+color: #ccc;
     }
 
 /* footer */
