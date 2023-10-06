@@ -148,7 +148,7 @@ input {
 }
 /* lijstblokken styling */
 
-.gesorteeerde-lijsten > ul{
+.gesorteeerde-lijsten > ul{ 
     list-style: none;
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -166,15 +166,23 @@ input {
     aspect-ratio: 1 / 1;
 }
 .toevoegenlijst > p {
-    font-size: 13em;
-    color: #F7A100;
+    font-size: 15em;
     position: absolute;
     top: 1.5em;
-    left: 0.9em;
+    left: 1.65em;
 }
-/* .toevoegenlijst > a {
-    
-} */
+.toevoegenlijst  a {
+    position: absolute;
+    top: 35.75em;
+    left: 15em;
+    font-size: 1.5em;
+} 
+.toevoegenlijst:hover {
+    color: #FFFFFF;
+    background-color: #F7A100;
+    transition: 0.3s;
+}
+
 .Randstadhuizen {
     background-color: #EDEDED;
     border-radius: 20px;
@@ -182,6 +190,7 @@ input {
 }
 .Randstadhuizen:hover{
     background-color: #F7A100;
+    color: #FFFFFF;
     transition: 0.3s;
 }
 .randstadfoto img:nth-of-type(1){
@@ -234,6 +243,7 @@ input {
 }
 .Europahuizen:hover{
     background-color: #F7A100;
+    color: #FFFFFF;
     transition: 0.3s;
 }
 .europafoto img:nth-of-type(1){
@@ -287,6 +297,7 @@ input {
 }
 .Geldhuizen:hover{
     background-color: #F7A100;
+    color: #FFFFFF;
     transition: 0.3s;
 }
 .geldfoto img:nth-of-type(1){
