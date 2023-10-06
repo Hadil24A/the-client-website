@@ -3,9 +3,93 @@
 
 }
 
-header {
-    background-color: #F7A100;
+/* /* nav css */
+nav {
+    background:#F7A100;
+    margin: 0%;
+    padding-left: 13em;
+    padding-right: 13em;
+    /* padding-top: 1em; */
+    height: 4em;
+    color: #FFFFFF;
+    font-size: 1em;   
+    display: flex;
+    flex-direction: row;
 }
+
+nav > img {
+    width: 6em;
+    position: absolute;
+    left: 12%;
+    top: 1em;
+}
+
+.menu {
+    visibility: hidden;
+}
+
+.icoon {
+    line-height: 0.17em;
+    font-size: 3.5em;
+    position: absolute;
+    top: -1.04em;
+    left: 0.2em;
+    color: #ffffff;
+}
+
+.kopen {
+    position: absolute;
+    left:  18em;
+    top: 0.7em;
+}
+
+.kopen > ul {
+    visibility: hidden;
+}
+
+.huren {
+    position: absolute;
+    left:  22.5em;
+    top: 0.7em;
+}
+
+.huren > ul {
+    visibility: hidden;
+}
+
+.verkopen {
+    position: absolute;
+    left: 26.9em;
+    top: 0.7em;
+}
+
+.verkopen > ul {
+    visibility: hidden;
+}
+
+.mijnhuis {
+    position: absolute;
+    right:  28.2em;
+    top: 1.5em;
+}
+
+.bewaardehuizen {
+    position: absolute;
+    right:  17em;
+    top: 1.5em;
+}
+
+.mijnaccount {
+    position: absolute;
+    right:  3%;
+    top: 0.7em;
+}
+
+.mijnaccount > ul {
+    visibility: hidden;
+}
+
+/* einde nav */
 
 body {
     font-family: "Proxima Nova", sans-serif;
@@ -25,13 +109,23 @@ body {
     font-weight: 700;
 }
 
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/AnyConv.com__ProximaNova-Medium_2770618388[2258].woff2);
+    font-weight: 400;
+}
+
+
 main{
     padding-left: 13em;
     padding-right: 13em;
 }
+
+/* gebruikers/ gebruikertoevoegen button */
+
 form > button {
 
-    padding: 1px;
+    /* padding: 1px;
     margin: 10px;
     width: 5em;
     height: 4em;
@@ -39,9 +133,293 @@ form > button {
     cursor: pointer;
     border-radius: 25%;
     color: #E6F2F7;
+    align-items: center; */
+
+    color:#FFFFFF;
+    background-color: #0071b3;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: center;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
 }
 
- 
+.form > button:hover {
+    background-color:#ccc;
+    transition: 0.7s;
+}
+/* main/ favorietenlijst */
+
+h3 {
+    font-size: 3em; 
+    text-align: center;
+}
+
+h4 {
+    margin: 0em;
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+.huis-1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+}
+.favoriete-huis-1 {
+    display: grid;
+    font-size: 1em;
+}
+
+.opmerking-plaatsen-1 {
+    display: grid;
+}
+
+.huis-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-2 {
+    display: grid;
+
+}
+
+.opmerking-plaatsen-2 {
+    display: grid;
+}
+
+.huis-3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-3 {
+    display: grid;
+}
+
+.opmerking-plaatsen-3 {
+    display: grid;
+}
+
+.huis-4 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-4 {
+    display: grid;
+}
+
+.opmerking-plaatsen-4 {
+    display: grid;
+}
+
+.huis-5 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom-style: solid;
+    border-width: 0.1em;
+    border-;
+
+}
+
+.favoriete-huis-5 {
+    display: grid;
+}
+
+.opmerking-plaatsen-5 {
+    display: grid;
+}
+
+.huis-6 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+} 
+
+.favoriete-huis-6 {
+    display: grid;
+}
+
+.opmerking-plaatsen-6 {
+    display: grid;
+}
+
+.huis-7 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-7 {
+    display: grid;
+}
+
+.opmerking-plaatsen-7 {
+    display: grid;
+}
+
+.huis-8 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-8 {
+    display: grid;
+}
+
+.opmerking-plaatsen-8 {
+    display: grid;
+}
+
+.huis-9 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-9 {
+    display: grid;
+}
+
+.opmerking-plaatsen-9 {
+    display: grid;
+}
+
+.huis-10 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-10 {
+    display: grid;
+}
+
+.opmerking-plaatsen-10 {
+    display: grid;
+}
+
+.huis-11 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.favoriete-huis-11 {
+    display: grid;
+}
+
+.opmerking-plaatsen-11 {
+    display: grid;
+}
+
+
+textarea{ 
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #999999;
+    border-radius: 8px;
+    background-color: #EDEDED
+    ;
+    font-size: 16px;
+    resize: none;
+}
+img {
+    border-radius: 8px;
+}
+
+button {
+    background: #E6F2F7;
+    border-color:#0071b3;
+    border-radius: 8px;
+    color: #333333;
+    font-size: 14px;
+    margin: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.4s ease-out , color 0.4s ease-out;
+    }
+
+
+.button:hover {
+    background:#F7A100;
+    color: #ccc;
+    }
+
+/* footer */
+
 footer {
     padding: 1em;
     margin: 0.5em;
@@ -125,70 +503,6 @@ svg{
 
 
 
-
-
-
-
-h1 {
-    align-items: center;
-    font-size: xx-large;
-         
-}
-    
-.favoriete-huis-1 {
-    display: flex;
-    flex-direction: row;
-}
-
-.favoriete-huis-2 {
-    display: flex;
-
-}
-
-.favoriete-huis-3 {
-    display: flex;
-
-}
-
-.favoriete-huis-4 {
-    display: flex;
-
-}
-
-.favoriete-huis-5 {
-    display: flex;
-
-}
-
-.favoriete-huis-6 {
-    display: grid;
-
-}
-
-.favoriete-huis-7 {
-    display: flex;
-
-}
-
-.favoriete-huis-8 {
-    display: flex;
-
-}
-
-.favoriete-huis-9 {
-    display: flex;
-
-}
-
-.favoriete-huis-10 {
-    display: flex;
-
-}
-
-.favoriete-huis-11 {
-    display: flex;
-
-}
 
 
 
