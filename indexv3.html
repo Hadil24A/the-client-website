@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Bewaarde huizen lijst</title>
-    <link rel="stylesheet" href="styles/stylesv2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bewaarde huizen lijst</title>
+  <link rel="stylesheet" href="styles/stylesv2.css">
 </head>
 <body>
         <!-- navigatiebalk -->
@@ -22,9 +23,9 @@
                   </ul>
                   <h2>Verkopen</h2>
                   <ul>
-                  <li><a href="https://www.funda.nl/makelaar-zoeken/verkoop/">Zoek een NVM-verkoopmakelaar</a></li>
-                  <li><a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/">Plaats je huis op funda</a></li>
-                  <li><a href="https://www.funda.nl/meer-weten/verkopen/">Alles wat je moet weten over verkopen</a></li>
+                   <li><a href="https://www.funda.nl/makelaar-zoeken/verkoop/">Zoek een NVM-verkoopmakelaar</a></li>
+                   <li><a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/">Plaats je huis op funda</a></li>
+                   <li><a href="https://www.funda.nl/meer-weten/verkopen/">Alles wat je moet weten over verkopen</a></li>
                   </ul>
                 </div>
 
@@ -32,9 +33,9 @@
                   <div class="kopen">
                    <h2>Kopen</h2>
                    <ul><li><a href="https://www.funda.nl/zoeken/koop?selected_area=[%22nl%22]">Zoek een koop woning</a></li>
-                    <li><a href="https://www.funda.nl/makelaar-zoeken/aankoop/">Zoek een NVM-aankoopmakelaar</a></li>
-                    <li> <a href="https://www.funda.nl/hypotheek/maandlasten/ing/">Bereken je maandlasten</a> </li>
-                    <li> <a href="https://www.funda.nl/meer-weten/kopen/">Alles wat je moet weten over kopen</a></li>
+                     <li><a href="https://www.funda.nl/makelaar-zoeken/aankoop/">Zoek een NVM-aankoopmakelaar</a></li>
+                     <li> <a href="https://www.funda.nl/hypotheek/maandlasten/ing/">Bereken je maandlasten</a> </li>
+                     <li> <a href="https://www.funda.nl/meer-weten/kopen/">Alles wat je moet weten over kopen</a></li>
                     </ul> </div>
               
                   <div class="huren">
@@ -45,9 +46,9 @@
                   <div class="verkopen">
                   <h2>Verkopen</h2>
                   <ul>
-                  <li><a href="https://www.funda.nl/makelaar-zoeken/verkoop/">Zoek een NVM-verkoopmakelaar</a></li>
-                  <li><a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/">Plaats je huis op funda</a></li>
-                  <li><a href="https://www.funda.nl/meer-weten/verkopen/">Alles wat je moet weten over verkopen</a></li>
+                    <li><a href="https://www.funda.nl/makelaar-zoeken/verkoop/">Zoek een NVM-verkoopmakelaar</a></li>
+                    <li><a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/">Plaats je huis op funda</a></li>
+                    <li><a href="https://www.funda.nl/meer-weten/verkopen/">Alles wat je moet weten over verkopen</a></li>
                   </ul> </div>
               
                   <a class="mijnhuis" href="https://www.funda.nl/waardecheck/">Mijn huis</a>
@@ -56,10 +57,10 @@
                   <div class="mijnaccount">
                   <h2>Mijn account</h2>
                   <ul>
-                  <li><a href="https://www.funda.nl/zoeken/zoekopdracht/">Bewaarde zoekopdracht</a></li>
-                  <li><a href="https://www.funda.nl/mijn/huis/">Verkoopstatistieken</a></li>
-                  <li><a href="https://www.funda.nl/waardecheck/">Mijn huis</a></li>
-                  <li><a href="https://www.funda.nl/account/">Mijn account</a></li>
+                    <li><a href="https://www.funda.nl/zoeken/zoekopdracht/">Bewaarde zoekopdracht</a></li>
+                    <li><a href="https://www.funda.nl/mijn/huis/">Verkoopstatistieken</a></li>
+                    <li><a href="https://www.funda.nl/waardecheck/">Mijn huis</a></li>
+                    <li><a href="https://www.funda.nl/account/">Mijn account</a></li>
                   </ul></div>
         </nav>
       </header>
@@ -72,9 +73,28 @@
             <button type="button">Bijdrager 2</button>
             <button type="button">Bijdrager 3</button>
             <!-- plus in button bijdrager bold maken, maar button zelfde grootte blijven-->
-            <button type="button" style="font-size: 3em;">+</button> <title> Bijdrager uitnodigen.</title>
+            <button type="button"class="add-user" onclick="openPopup()">+</button> <title> Bijdrager uitnodigen.</title>
+            <div class="popup" id="popup">
+              <p>Voeg een gebruiker toe aan uw lijst.</p>
+              <input type="email" placeholder="Email">
+              <button type="submit" onclick="openPopup()">Gebruiker toevoegen</button>
+              <button class="close-button">&times;</button>
+              </button>
+          </div>
         </form>
 
+        <script>
+          let popup = document.getElementById("popup");
+
+          function openPopup(){
+            popup.classList.add("open-popup");
+          }
+
+          function closePopup(){
+            popup.classList.remove("open-popup");
+          }
+          
+        </script>
         <!-- Data, favoriete huizen -->
         <section>
         <div class="huis-1">
@@ -85,7 +105,7 @@
             <span> € 845.000,- k.k. </span>
             <span> 329 m²</span>
             <span> 11 kamers</span>
-            <span> Poels Makelaars</span>
+            <span class="makelaar"> Poels Makelaars</span>
           </div>
           <div class="opmerking-plaatsen-1">
             <textarea class="opmerkingen-vakje"></textarea>
@@ -103,7 +123,7 @@
             <span>  € 869.500 k.k.</span>
             <span> 895 m²</span>
             <span> 8 kamers</span>
-            <span> Brouwers Makelaars</span>
+            <span class="makelaar"> Brouwers Makelaars</span>
           </div>
           <div class="opmerking-plaatsen-2">
            <textarea class="opmerkingen-vakje"></textarea>
@@ -121,7 +141,7 @@
            <span> € 965.000 k.k. </span>
            <span> 202 m²</span>
            <span> 3 kamers</span>
-           <span> Groenoord </span>
+           <span class="makelaar"> Groenoord </span>
           </div>
           <div class="opmerking-plaatsen-3">
             <textarea class="opmerkingen-vakje"></textarea>
@@ -139,7 +159,7 @@
            <span> € 1.375.000 k.k.  </span>
            <span> 250 m²</span>
            <span> 4 kamers</span>
-           <span> Makelaardij Jacobs</span>
+           <span class="makelaar"> Makelaardij Jacobs</span>
          </div>
          <div class="opmerking-plaatsen-4">
           <textarea class="opmerkingen-vakje"></textarea>
@@ -157,7 +177,7 @@
            <span> € 1.325.000 k.k.  </span>          
            <span> 471 m²</span>
             <span> 4 kamers</span>
-           <span> Voorma & Millenaar makelaars </span>
+           <span class="makelaar"> Voorma & Millenaar makelaars </span>
           </div>
           <div class="opmerking-plaatsen-5">
             <textarea class="opmerkingen-vakje"></textarea>
@@ -175,7 +195,7 @@
           <span> € 495.000 k.k.  </span>
           <span> 310 m²</span>
           <span> 4 kamers</span>
-          <span> Amstel Housing Rotterdam </span>
+          <span class="makelaar"> Amstel Housing Rotterdam </span>
          </div>
          <div class="opmerking-plaatsen-6">
           <textarea class="opmerkingen-vakje"></textarea>
@@ -193,7 +213,7 @@
           <span> € 250.000 k.k.  </span>
           <span> 203 m²</span>
           <span> 4 kamers</span>
-          <span> Mijnhuisverkoopikzelf.nl </span>
+          <span class="makelaar"> Mijnhuisverkoopikzelf.nl </span>
          </div>
         <div class="opmerking-plaatsen-7">
             <textarea class="opmerkingen-vakje"></textarea>
@@ -211,7 +231,7 @@
           <span> € 260.000 k.k.  </span>
           <span> 125 m²</span>
           <span> 3 kamers</span>
-          <span> HP Maakelaardij & Vastgoedbeheer </span>
+          <span class="makelaar"> HP Maakelaardij & Vastgoedbeheer </span>
          </div>
         <div class="opmerking-plaatsen-8">   
           <textarea class="opmerkingen-vakje"></textarea>
@@ -229,7 +249,7 @@
             <span> € 849.000 k.k.  </span>
             <span> 146 m²</span>
             <span> 4 kamers</span>
-            <span> Maakelaardij Van de Weerd </span>
+            <span class="makelaar"> Maakelaardij Van de Weerd </span>
            </div>
           <div class="opmerking-plaatsen-9">
               <textarea class="opmerkingen-vakje"></textarea>
@@ -241,14 +261,14 @@
         <section>
         <div class="huis-10">
          <img src="https://cloud.funda.nl/valentina_media/178/957/131_1440x960.jpg" width="228" height="152" alt="foto van Randweg 2"> 
-        <div class="favoriete-huis-10">  
-        <h4> Randweg 2 </h4>
-        <h5> 2941 CG Lekkerkerk </h5>
-        <span> € 1.150.000 k.k.  </span>
-        <span> 247 m²</span>
-        <span> 5 kamers</span>
-        <span> Van Egmond Maakelaardij </span>
-        </div>
+         <div class="favoriete-huis-10">  
+           <h4> Randweg 2 </h4>
+           <h5> 2941 CG Lekkerkerk </h5>
+           <span> € 1.150.000 k.k.  </span>
+           <span> 247 m²</span>
+           <span> 5 kamers</span>
+           <span class="makelaar"> Van Egmond Maakelaardij </span>
+         </div>
         <div class="opmerking-plaatsen-10">
           <textarea class="opmerkingen-vakje"></textarea>
           <button class="Opmerking plaatsen">Opmerking plaatsen</button>
@@ -265,7 +285,7 @@
             <span> € 650.000 k.k.  </span>
             <span> 256 m²</span>
             <span> 9 kamers</span>
-            <span> Wilbrink Maakelaardij </span>
+            <span class="makelaar"> Wilbrink Maakelaardij </span>
           </div> 
         <div class="opmerking-plaatsen-11">   
           <textarea class="opmerkingen-vakje"></textarea>

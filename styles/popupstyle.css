@@ -1,0 +1,22 @@
+
+
+.popup {
+    width: 25em;
+    background: #ccc;
+    border-radius: 8px;
+    position: absolute;
+    top: 0%;
+    bottom: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 1.8em 1.8em;
+    color: black;
+    visibility: hidden;
+    transition: transform 0.4s. top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}

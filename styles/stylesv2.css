@@ -123,33 +123,57 @@ main{
 
 /* gebruikers/ gebruikertoevoegen button */
 
-form > button {
-
-    /* padding: 1px;
-    margin: 10px;
-    width: 5em;
-    height: 4em;
-    background-color: #478BB3;
-    cursor: pointer;
-    border-radius: 25%;
-    color: #E6F2F7;
-    align-items: center; */
-
-    color:#FFFFFF;
-    background-color: #0071b3;
-    font-size: 18px;
-    border-radius: 50%;
-    border: none;
-    display: inline-block;
-    padding: 8px 16px;
+form {
     text-align: center;
+}
+form > button {
+    color:#FFFFFF;
+    background: #0071b3;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    padding:1em;
     cursor: pointer;
-    aspect-ratio: 1 / 1;
 }
 
-.form > button:hover {
-    background-color:#ccc;
-    transition: 0.7s;
+form > button:active {
+    transform: scale(0.96);
+}
+
+.popup {
+    width: 25em;
+    background: #EDEDED;
+    border-radius: 8px;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 1em;
+    color: black;
+    visibility: hidden;
+    transition: transform 0.4s. top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close-button {
+    color: #999999;
+    background-color: transparent;
+    border: 0em;
+    font-size: 2em;
+    position: absolute;
+    right: 0em;
+    top: -1em;
+    transition: all 0.2 ease-in;
+}
+
+.close-button:hover {
+    color:#F7A100;
+    background-color: transparent;
 }
 /* main/ favorietenlijst */
 
@@ -161,10 +185,15 @@ h3 {
 h4 {
     margin: 0em;
     font-size: 1.5em;
+    color: #0071b3;
 }
 
 h5 {
     font-size: 1em;
+}
+
+.makelaar {
+    color: #0071b3;
 }
 
 .huis-1 {
@@ -413,7 +442,7 @@ button {
 
 button:hover {
 background: #0071b3;
-color: #ccc;
+color: #EDEDED;
     }
 
 /* footer */
