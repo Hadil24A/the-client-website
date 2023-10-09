@@ -533,6 +533,101 @@ svg{
     display: flex;
 }
 
+@media (max-width:1050px){
+  nav > img {
+    position: absolute;
+    left: 1em;
+}
+
+.kopen {
+    position: absolute;
+    left: 8em;
+}
+.huren {
+    position: absolute;
+    left: 11.5em;
+}
+.verkopen {
+    position: absolute;
+    left: 15em;
+}
+.mijnhuis {
+    position: absolute;
+    right: 20em;
+}
+.bewaardehuizen {
+    position: absolute;
+    right: 9em;
+}
+.mijnaccount {
+    position: absolute;
+    right: -5.5em;
+}
+.filtercontainer{
+    margin-left: 0;
+}
+.commentsectie {
+    margin-left: 87.5%;
+}
+}
+
+  @media (max-width: 709px) {
+
+    h1 {
+        font-size: 1.4em;
+    }
+    nav { 
+        padding: 0;
+        display: flex;
+    }
+    /* .menu {
+        visibility: hidden;
+    }
+    .menu > ul {
+        visibility: hidden;
+    }
+    .menu > h2 {
+        visibility: hidden;
+    }
+    .menu > a {
+        visibility: hidden;
+    } */
+    .icoon {
+        visibility: visible;
+    }
+    nav > img {
+        position: absolute;
+        left: 4em;
+        width: 6.5em;
+    }
+    .kopen {
+        visibility: hidden;
+    }
+    .huren {
+        visibility: hidden;
+    }
+    .verkopen {
+        visibility: hidden;
+    }
+    .mijnhuis {
+        visibility: hidden;
+    }
+    .bewaardehuizen {
+        visibility: hidden;
+    }
+    .mijnaccount {
+        position: absolute;
+        right: -6.5em;
+    }
+
+    .filtercontainer{
+        margin-left: 0;
+    }
+    .commentsectie {
+        margin-left: 95%;
+    }
+  }
+
 
 
 
