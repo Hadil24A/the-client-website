@@ -117,11 +117,12 @@ nav > img {
 /* filter styling */
 
 .filtercontainer {
-    margin-top: 1.5em;
-    margin-left: 12%;
+    margin-top: 3em;
     padding-left: 1em;
     padding-right: 1em;
     background-color: antiquewhite;
+    display: flex;
+    white-space: nowrap;
 }
 
 input {
@@ -139,8 +140,9 @@ input {
     position: sticky;
     top: 30px;
     margin-top: -5em;
-    margin-left: 88%;
+    margin-left: 103%;
     height: 15em;
+    width: 15em;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     background-color: #EDEDED;
@@ -150,32 +152,38 @@ input {
 
 .gesorteeerde-lijsten > ul{ 
     list-style: none;
+    margin-left: 0;
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "pluslijst randstad" "europa geld";
-    gap: 35px;
-    margin-left: 12%;
-    margin-right: 12%;
+    grid-template-columns: repeat(50, 1em);
+    grid-template-rows: repeat(50, 1em);
+    gap: 5px;
 }
 
 .toevoegenlijst {
     background-color: #EDEDED;
     border-radius: 20px;
-    grid-area: pluslijst;
-    aspect-ratio: 1 / 1;
+    grid-column: 1 / 24;
+    grid-row: 1 / 24;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
 }
 .toevoegenlijst > p {
     font-size: 15em;
-    position: absolute;
-    top: 1.5em;
-    left: 1.65em;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: -0.7em;
+    left: 0.7em;
 }
 .toevoegenlijst  a {
-    position: absolute;
-    top: 35.75em;
-    left: 15em;
     font-size: 1.5em;
+    white-space: nowrap;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: 12.5em;
+    left: 6.3em;
 } 
 .toevoegenlijst:hover {
     color: #FFFFFF;
@@ -186,7 +194,10 @@ input {
 .Randstadhuizen {
     background-color: #EDEDED;
     border-radius: 20px;
-    aspect-ratio: 1 / 1;
+    display: grid;
+    grid: subgrid / subgrid;
+    grid-column: 26 / 50;
+    grid-row: 1 / 24;
 }
 .Randstadhuizen:hover{
     background-color: #F7A100;
@@ -194,52 +205,67 @@ input {
     transition: 0.3s;
 }
 .randstadfoto img:nth-of-type(1){
-    position: absolute;
-    top: 44.7em;
-    right: 10.5em;
-    width: 12%;
-    height: 25.5%;
+    width: 11.5em;
+    height: 10.65em;
+    border-top-right-radius: 7%;
     object-fit: cover;
+    display: grid;
+    grid-template: subgrid /subgrid;
+    position: relative;
+    left: 19.7em;
 }
 .randstadfoto img:nth-of-type(2){
-    position: absolute;
-    border-top-right-radius: 7%;
-    right: 10.5em;
-    width: 12%;
-    height: 25.5%;
+    width: 11.5em;
+    height: 10.65em;
     object-fit: cover;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    left: 19.7em;
+    top: 0.65em;
 }
 .randstadfoto img:nth-of-type(3){
-    position: absolute;
     border-top-left-radius: 6%;
-    width: 22.8%;
-    height: 52%;
+    width: 19em;
+    height: 22em;
     object-fit: cover;
+    grid-template: subgrid / subgrid;
+    position: absolute;
+    top: 24.1em;
+
 }
 .Randstadhuizen h3 {
-    position: absolute;
-    top: 40em;
-    left: 33.5em;
     font-size: 1.4em;  
+    white-space: nowrap;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    left: 0.91em;
+    top: 0.5em;
 }
 .Randstadhuizen p:nth-of-type(1){ 
-    position: absolute;
-    top: 58.4em;
-    left: 47em;
+    white-space: nowrap;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: 24.7em;
 }
 .Randstadhuizen p:nth-of-type(2){ 
-    position: absolute;
-    top: 75em;
-    left: 58.8em;
+    white-space: nowrap;
     font-size: 0.8em;
-    
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: 33.05em;
+    left: -1.5em;
 }
 
 .Europahuizen{
     background-color: #EDEDED;
     border-radius: 20px;
-    grid-area: europa;
-    aspect-ratio: 1 / 1;
+    display: grid;
+    grid: subgrid / subgrid;
+    grid-column: 1 /  24;
+    grid-row: 25 / 50;
 }
 .Europahuizen:hover{
     background-color: #F7A100;
@@ -247,53 +273,69 @@ input {
     transition: 0.3s;
 }
 .europafoto img:nth-of-type(1){
-    position: absolute;
     border-top-right-radius: 12%;
-    top: 65.72em;
-    left: 33.37em;
-    width: 12%;
-    height: 25.5%;
+    width: 10.23em;
+    height: 12.17em;
     object-fit: cover;
+    display: grid;
+    grid-template: subgrid /subgrid;
+    position: relative;
+    left: 19.65em;
 }
 .europafoto img:nth-of-type(2){
-    position: absolute;
-    top: 65.72em;
-    border-top-left-radius: 7%;
-    width: 22.8%;
-    height: 52%;
+    border-top-left-radius: 6.4%;
+    width: 19em;
+    height: 25em;
     object-fit: cover;
+    display: grid;
+    grid-template: subgrid /subgrid;
+    position: absolute;
+    top: 55.62em;
+
 }
 .europafoto img:nth-of-type(3){
-    position: absolute;
-    top: 77.72em;
-    left: 33.37em;
-    width: 12%;
-    height: 25.5%;
+    width: 10.23em;
+    height: 12.17em;
     object-fit: cover;
+    display: grid;
+    grid-template: subgrid /subgrid;
+    position: relative;
+    left: 19.65em;
+    top: 0.69em;
 }
 .Europahuizen h3 {
-    position: absolute;
-    top: 63.7em;
-    left: 10em;
     font-size: 1.4em;  
+    white-space: nowrap;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    left: 0.91em;
+    top: 0.5em;
 }
 .Europahuizen p:nth-of-type(1){
-    position: absolute;
-    top: 91.5em;
-    left: 14.1em;
+    white-space: nowrap;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: 27.7em;
+    left: 0.04em;
 }
 .Europahuizen p:nth-of-type(2){
-    position: absolute;
-    top: 116.4em;
-    left: 17.7em;
     font-size: 0.8em;
+    white-space: nowrap;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: 36.6em;
+    left: -1.51em;
 }
 
 .Geldhuizen {
     background-color: #EDEDED;
     border-radius: 20px;
-    grid-area: geld;
-    aspect-ratio: 1 / 1;
+    display: grid;
+    grid: subgrid / subgrid;
+    grid-column: 26 /  50;
+    grid-row: 25 / 50;
 }
 .Geldhuizen:hover{
     background-color: #F7A100;
@@ -301,46 +343,61 @@ input {
     transition: 0.3s;
 }
 .geldfoto img:nth-of-type(1){
-    position: absolute;
-    border-top-left-radius: 6.1%;
-    top: 65.72em;
-    width: 22.8%;
-    height: 52%;
+    border-top-left-radius: 5.4%;
+    width: 19em;
+    height: 25em;
     object-fit: cover;
+    display: grid;
+    grid-template: subgrid /subgrid;
+    position: relative;
+    left: -1.29em;
 }
 .geldfoto img:nth-of-type(2){
-    position: absolute;
-    top: 65.72em;
-    right: 10.5em;
     border-top-right-radius: 7%;
-    width: 12%;
-    height: 25.5%;
-    object-fit: cover;
+    width: 11.4em;
+    height: 12.25em;
+    object-fit: cover;   
+    display: grid;
+    grid-template: subgrid /subgrid;
+    position: relative;
+    top: -25em;
+    left: 18.48em;
 }
 .geldfoto img:nth-of-type(3){
-    position: absolute;
-    top: 77.72em;
-    right: 10.5em;
-    width: 12%;
-    height: 25.5%;
+    width: 11.4em;
+    height: 12.25em;
     object-fit: cover;
+    display: grid;
+    grid-template: subgrid /subgrid;
+    position: relative;
+    left: 18.48em;
+    top: -24.5em;
 } 
 .Geldhuizen h3 {
-    position: absolute;
     font-size: 1.4em;
-    top: 63.7em;
-    left: 33.5em;
+    white-space: nowrap;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: -17.45em;
+
 }
 .Geldhuizen p:nth-of-type(1){
-    position: absolute;
-    top: 91.5em;
-    left: 47em;  
+    white-space: nowrap;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: -25.2em;
+    left: 0.04em;
 }
 .Geldhuizen p:nth-of-type(2){
-    position: absolute;
-    top: 116.4em;
-    left: 58.8em;
+    white-space: nowrap;
     font-size: 0.8em;
+    display: grid;
+    grid-template: subgrid / subgrid;
+    position: relative;
+    top: -32.5em;
+    left: 0.15em;
 }
 
 /* tekst styling */
@@ -356,6 +413,352 @@ h2 {
 h3 {
     font-size: 1em;
     color: black;
+}
+
+h4 {
+    margin: 0em;
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1em;
+}
+main{
+    padding-left: 12%;
+    padding-right: 12%; 
+}
+.allehuizen h2 {
+  padding-top: 1.6em;  
+  font-size: 2.3em;  
+  font-weight: 600vh;
+  text-align: center;
+}
+
+.allehuizen button {
+    background-color: #F7A100;
+    font-size: 0.8em;
+    border-radius: 8px;
+    height: 3em;
+    box-shadow: none;
+    margin-top: 0.5em;
+    border-color: transparent;
+    cursor: pointer;
+    
+}
+.allehuizen button:hover {
+    color: #ffffff;
+    background-color: #0071B3;
+    transition: 0.3s;
+}
+.huis-1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+}
+.favoriete-huis-1 {
+    display: grid;
+    font-size: 1em;
+}
+
+.opmerking-plaatsen-1 {
+    display: grid;
+}
+
+.huis-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-2 {
+    display: grid;
+
+}
+
+.opmerking-plaatsen-2 {
+    display: grid;
+}
+
+.huis-3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-3 {
+    display: grid;
+}
+
+.opmerking-plaatsen-3 {
+    display: grid;
+}
+
+.huis-4 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-4 {
+    display: grid;
+}
+
+.opmerking-plaatsen-4 {
+    display: grid;
+}
+
+.huis-5 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom-style: solid;
+    border-width: 0.1em;
+}
+
+.favoriete-huis-5 {
+    display: grid;
+}
+
+.opmerking-plaatsen-5 {
+    display: grid;
+}
+
+.huis-6 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+} 
+
+.favoriete-huis-6 {
+    display: grid;
+}
+
+.opmerking-plaatsen-6 {
+    display: grid;
+}
+
+.huis-7 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-7 {
+    display: grid;
+}
+
+.opmerking-plaatsen-7 {
+    display: grid;
+}
+
+.huis-8 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-8 {
+    display: grid;
+}
+
+.opmerking-plaatsen-8 {
+    display: grid;
+}
+
+.huis-9 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-9 {
+    display: grid;
+}
+
+.opmerking-plaatsen-9 {
+    display: grid;
+}
+
+.huis-10 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-color: #ccc;
+    border-bottom: solid;
+    border-width: 0.1em;
+
+}
+
+.favoriete-huis-10 {
+    display: grid;
+}
+
+.opmerking-plaatsen-10 {
+    display: grid;
+}
+
+.huis-11 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.favoriete-huis-11 {
+    display: grid;
+}
+
+.opmerking-plaatsen-11 {
+    display: grid;
+}
+
+
+textarea{ 
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #999999;
+    border-radius: 8px;
+    background-color: #EDEDED
+    ;
+    font-size: 16px;
+    resize: none;
+}
+
+footer {
+    padding: 1em;
+    margin: 0.5em;
+    background-color: #EDEDED;
+}
+
+.footer-menu-rij-1 {
+    margin-left: 13em;
+    margin-right: 13em;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.75rem;
+    padding-left: 0em;  
+    line-height: 2.25rem;
+}
+
+a {
+    text-decoration: none;
+    color: #0071b3;
+    transition: color .25s cubic-bezier(.23,1,.32,1);
+}
+
+.kolom-1 {
+    list-style: none;
+    padding-left: 0em;
+    padding-right: 2em;
+}
+
+.kolom-2 {
+    list-style: none;
+    padding-left: 0em;
+    padding-right: 2em;
+}
+
+.kolom-3 {
+    list-style: none;
+    padding-left: 0em;
+    padding-right: 2em;
+}
+
+.kolom-4 {
+    list-style: none;
+    padding-left: 0em;
+    padding-right: 2em;
+}
+
+
+.footer-menu-rij-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    justify: center;
+    list-style: none;
+} 
+ .bulletpoint {
+    padding:0.5em;
+ }
+
+
+svg{
+    margin:0.5em;
+    background-color: #FFFFFF;
+}
+
+.footer-3 { 
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.copyright-2 {
+    list-style: none;
+    display: flex;
+}
+footer a{
+    color: #0071b3;
+    transition: color .25s cubic-bezier(.23,1.32,1);
 }
 
 /* link styling */
