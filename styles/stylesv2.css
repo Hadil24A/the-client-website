@@ -89,6 +89,13 @@ nav > img {
     visibility: hidden;
 }
 
+h2 {
+    font-size: 1em;
+}
+
+nav > a {
+    color: #FFFFFF;
+}
 /* einde nav */
 
 body {
