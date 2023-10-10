@@ -128,7 +128,7 @@ main{
     padding-right: 12em;
 }
 
-/* gebruikers/ gebruikertoevoegen button */
+/* BIJDRAGERSBUTTON */
 
 form {
     text-align: center;
@@ -147,18 +147,18 @@ form > button:active {
     transform: scale(0.96);
 }
 
-.popup {
+/* POP-UP GEBRUIKER TOEVOEGEN */
+
+ .popup {    /* POP-UP IN CENTER */
     width: 25em;
     background: #EDEDED;
     border-radius: 8px;
-    top: 50%;
-    bottom: 50%;
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 1em;
     color: black;
     visibility: hidden;
-    transition: transform 0.4s. top 0.4s;
+    transition: transform 0.4s top 0.4s;
 }
 
 .open-popup {
@@ -182,7 +182,7 @@ form > button:active {
     color:#F7A100;
     background-color: transparent;
 }
-/* main/ favorietenlijst */
+/* MAIN / FAVOERIETE HUIZEN SECTION */
 
 h3 {
     font-size: 3em; 
@@ -199,9 +199,7 @@ h5 {
     font-size: 1em;
 }
 
-.makelaar {
-    color: #0071b3;
-}
+
 
 .huis-1 {
     display: flex;
@@ -434,6 +432,11 @@ img {
     border-radius: 8px;
 }
 
+.makelaar {
+    color: #0071b3;
+}
+/* COMMENT BUTTONS */
+
 button {
     background:#F7A100;
     border-color: transparent;
@@ -452,7 +455,7 @@ background: #0071b3;
 color: #EDEDED;
     }
 
-/* footer */
+/* FOOTER */
 
 footer {
     padding: 1em;
@@ -464,6 +467,7 @@ footer {
     margin-left: 13em;
     margin-right: 13em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-top: 1.75rem;
     padding-left: 0em;  
@@ -503,6 +507,7 @@ a {
 
 .footer-menu-rij-2 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -532,6 +537,8 @@ svg{
     list-style: none;
     display: flex;
 }
+
+/* EINDE FOOTER */
 
 @media (max-width:1050px){
   nav > img {
@@ -569,6 +576,18 @@ svg{
 .commentsectie {
     margin-left: 87.5%;
 }
+main {
+    padding: 0em;
+}
+
+.footer-menu-rij-1 {
+    margin: 0;
+}
+
+.footer-menu-rij-2 {
+    margin: 0;
+}
+
 }
 
   @media (max-width: 709px) {
@@ -577,7 +596,7 @@ svg{
         font-size: 1.4em;
     }
     nav { 
-        padding: 0;
+        padding: 0.2;
         display: flex;
     }
     /* .menu {
@@ -626,6 +645,41 @@ svg{
     .commentsectie {
         margin-left: 95%;
     }
+    main {
+        padding: 0.2em;
+    }
+
+    /* textarea {
+        width: 80%;
+        height: 4.7em;
+    }
+
+    button {
+        width: 80%;
+        height: 4.7em;
+    } */
+
+    h4 {
+        /* STRAATNAAM ONDER IMG */
+    }
+
+
+    span { 
+        visibility: hidden;
+    }
+
+    h5 {
+        visibility:hidden;
+    }
+    
+    .footer-menu-rij-1 {
+        margin: 0;
+    }
+
+    .footer-menu-rij-2 {
+        margin: 0;
+    }
+
   }
 
 
