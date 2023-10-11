@@ -117,22 +117,53 @@ nav > img {
 /* filter styling */
 
 .filtercontainer {
-    margin-top: 3em;
+    background-color: #F7A100;
+    border-radius: 8px;
+    display: flex;
+    height: 12em;
+    margin: 3em 2.5em;
+    max-width: 65em;
+    min-width: 64em;
     padding-left: 1em;
     padding-right: 1em;
-    background-color: antiquewhite;
+}
+
+.filtercontainer > h1 {
+    color: #ffffff;
     display: flex;
+    position: relative;
+    left: 13.5em;
+    text-align: center;
+    top: 0.37em;
     white-space: nowrap;
 }
 
 input {
-    height: 3em;
-    width: auto;
     display: flex;
     flex-direction: row;
+    position: relative;
+    left: -19em;
+    height: 3.5em;
+    margin-top: 9em;
+    width: 17em;
 }
 
-
+.filtercontainer > button {
+    background: #0071b3;
+    box-shadow: none;
+    color:#FFFFFF;
+    cursor: pointer;
+    height: 3.5em;
+    padding:1em 3.6em;
+    position: relative;
+    top: 9em;
+    left: -19em;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.filtercontainer > button:hover {
+    background: #006199;   
+}
 
 /* start commentsection styling */
 
@@ -140,19 +171,51 @@ input {
     position: sticky;
     top: 30px;
     margin-top: -5em;
-    margin-left: 103%;
-    height: 15em;
-    width: 15em;
+    margin-left: 101%;
+    height: 19em;
+    width: 11em;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     background-color: #EDEDED;
+}
 
+.textcomment {
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: 2em 1em;
+
+}
+.placecomment {
+    background-color: #ffffff;
+    width: 8.3em;
+    margin: -1.4em 1em;
+}
+.uploadcomment {
+    color:#FFFFFF;
+    background: #F7A100;
+    border-radius: 8px;
+    box-shadow: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    padding:1em;
+    width: 10.5em;
+    height: 3.5em;
+    font-size: 0.8em;
+    cursor: pointer;
+    position: relative;
+    left: 1.1em;
+    top: 1.5em;
+}
+.uploadcomment:hover {
+    background-color: #0071b3;
+    color: #EDEDED;
 }
 /* lijstblokken styling */
 
 .gesorteeerde-lijsten > ul{ 
     list-style: none;
     margin-left: 0;
+    margin-top: -14em;
     display: grid;
     grid-template-columns: repeat(50, 1em);
     grid-template-rows: repeat(50, 1em);
@@ -229,8 +292,8 @@ input {
     height: 22em;
     object-fit: cover;
     grid-template: subgrid / subgrid;
-    position: absolute;
-    top: 24.1em;
+    position: relative;
+    top: -21.5em;
 
 }
 .Randstadhuizen h3 {
@@ -240,7 +303,7 @@ input {
     grid-template: subgrid / subgrid;
     position: relative;
     left: 0.91em;
-    top: 0.5em;
+    top: -15.33em;
 }
 .Randstadhuizen p:nth-of-type(1){ 
     white-space: nowrap;
@@ -289,8 +352,8 @@ input {
     object-fit: cover;
     display: grid;
     grid-template: subgrid /subgrid;
-    position: absolute;
-    top: 55.62em;
+    position: relative;
+    top: -12.15em;
 
 }
 .europafoto img:nth-of-type(3){
@@ -301,7 +364,7 @@ input {
     grid-template: subgrid /subgrid;
     position: relative;
     left: 19.65em;
-    top: 0.69em;
+    top: -24.33em;
 }
 .Europahuizen h3 {
     font-size: 1.4em;  
@@ -310,7 +373,7 @@ input {
     grid-template: subgrid / subgrid;
     position: relative;
     left: 0.91em;
-    top: 0.5em;
+    top: -17.27em;
 }
 .Europahuizen p:nth-of-type(1){
     white-space: nowrap;
@@ -772,9 +835,6 @@ a:visited {
 /* link styling einde */
 
   @media (max-width:1050px){
-    nav { 
-        background-color: rgb(255, 0, 200);
-  }
   nav > img {
     position: absolute;
     left: 1em;
@@ -805,67 +865,252 @@ a:visited {
     right: -5.5em;
 }
 .filtercontainer{
-    margin-left: 0;
+    margin-left: 0em;
 }
+.filtercontainer > h1 {
+    display: flex;
+    position: relative;
+    left: 8.3em;
+}
+.filtercontainer{
+    margin-left: 0em;
+    margin-right: 0em;
+    min-width: 49.8em;
+    }
+
 .commentsectie {
-    margin-left: 87.5%;
+    width: 5.5em;
+    height: 20em;
 }
+.placecomment {
+    width: 4.3em;
+    height: 8em;
+}
+.uploadcomment {
+    width: 5.5em;
+    height: 5em;
+    white-space: normal;
+}  
+
+input {
+    width: 11em;
 }
 
+.gesorteeerde-lijsten > ul{ 
+    margin-left: -2.5em;
+    }
+.commentsectie {
+    margin-left: 106%;
+}
+
+.toevoegenlijst {
+    grid-column: 1 / 19;
+    grid-row: 1 / 24; 
+}
+.toevoegenlijst > p {
+    left: 0.45em;
+    }
+.toevoegenlijst  a { 
+    left: 4em;
+}
+
+.Randstadhuizen {
+    grid-column: 20 / 39;
+    grid-row: 1 / 24; 
+}
+.randstadfoto img:nth-of-type(3){
+    width: 15.3em;
+}
+.randstadfoto img:nth-of-type(1){
+    width: 8.6em;
+    left: 16.02em;
+}
+.randstadfoto img:nth-of-type(2){
+    width: 8.6em;
+    left: 16em;
+}
+
+.Europahuizen {
+    grid-column: 1 / 19;
+    grid-row: 25 / 50; 
+}
+.europafoto img:nth-of-type(2){
+    width: 15.3em; 
+}
+.europafoto img:nth-of-type(1){
+    width: 7.4em; 
+    left: 15.9em;
+}
+.europafoto img:nth-of-type(3){
+    width: 7.4em; 
+    left: 15.9em;
+}
+
+.Geldhuizen {
+    grid-column: 20 / 39;
+    grid-row: 25 / 50;
+}
+.geldfoto img:nth-of-type(1){
+    width: 15.3em;
+}
+.geldfoto img:nth-of-type(2){
+    width: 8.52em;
+    left: 14.81em;
+}
+.geldfoto img:nth-of-type(3){
+    width: 8.52em;
+    left: 14.81em;
+}
+
+  }
   @media (max-width: 709px) {
 
-    h1 {
-        font-size: 1.4em;
-    }
-    nav { 
-        background-color: aqua;
-        padding: 0;
-        display: flex;
-    }
-    /* .menu {
-        visibility: hidden;
-    }
-    .menu > ul {
-        visibility: hidden;
-    }
-    .menu > h2 {
-        visibility: hidden;
-    }
-    .menu > a {
-        visibility: hidden;
-    } */
-    .icoon {
-        visibility: visible;
-    }
-    nav > img {
-        position: absolute;
-        left: 4em;
-        width: 6.5em;
-    }
-    .kopen {
-        visibility: hidden;
-    }
-    .huren {
-        visibility: hidden;
-    }
-    .verkopen {
-        visibility: hidden;
-    }
-    .mijnhuis {
-        visibility: hidden;
-    }
-    .bewaardehuizen {
-        visibility: hidden;
-    }
-    .mijnaccount {
-        position: absolute;
-        right: -6.5em;
+h1 {
+    font-size: 1.4em;
+}
+nav { 
+    padding: 0;
+    display: flex;
     }
 
-    .filtercontainer{
-        margin-left: 0;
+.icoon {
+    visibility: visible;
     }
-    .commentsectie {
-        margin-left: 95%;
+nav > img {
+    position: absolute;
+    left: 4em;
+    width: 6.5em;
+    }
+.kopen {
+    visibility: hidden;
+    }
+.huren {
+    visibility: hidden;
+    }
+.verkopen {
+    visibility: hidden;
+    }
+.mijnhuis {
+    visibility: hidden;
+    }
+.bewaardehuizen {
+    visibility: hidden;
+    }
+.mijnaccount {
+    position: absolute;
+    right: -6.5em;
+    }
+
+.filtercontainer{
+    margin-left: 0em;
+    margin-right: 0em;
+    height: 14em;
+    min-width: 19.8em;
+    }
+
+.filtercontainer > h1 {
+    font-size: 2em;
+    display: flex;
+    position: relative;
+    left: 0.6em;
+    }
+input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 4.5em;
+    position: relative;
+    left: -20.6em;
+}
+.filtercontainer > button {
+    position: relative;
+    left: -43.1em;
+    top: 12.3em;
+    width: max-content;
+    padding: 1em 9.97em;
+}
+.commentsectie {
+    display: none;
+    }
+
+.gesorteeerde-lijsten > ul{ 
+    margin-top: 1.7em;
+    margin-left: -2.5em;
+    display: grid;
+    grid-template-columns: repeat(50, 1em);
+    grid-template-rows: repeat(100, 1em);
+    }
+.toevoegenlijst {
+    grid-column: 1 / 16;
+    grid-row: 1 / 24;
+    display: grid;
+    }
+.toevoegenlijst > p {
+    left: 0.31em;
+    }
+.toevoegenlijst  a { 
+    left: 2.5em;
+}
+
+.Randstadhuizen {
+    display: grid;
+    grid: subgrid / subgrid;
+    grid-column: 1 /  16;
+    grid-row: 25 / 49;
+    }
+.randstadfoto img:nth-of-type(3){
+    width: 12em;  
+    }
+.randstadfoto img:nth-of-type(1){
+    width: 6.6em;
+    left: 12.8em;
+}
+.randstadfoto img:nth-of-type(2){
+    width: 6.6em; 
+    left: 12.8em;
+}
+
+.Europahuizen {
+    display: grid;
+    grid: subgrid / subgrid;
+    grid-column: 1 /  16;
+    grid-row: 50 / 74;
+    }
+.europafoto img:nth-of-type(2){ 
+    width: 12em;
+}
+.europafoto img:nth-of-type(1){
+    width: 6.56em;
+    left: 12.8em;  
+}
+.europafoto img:nth-of-type(3){
+    width: 6.56em;
+    left: 12.8em;  
+}
+.Europahuizen h3 {
+    top: -17.5em
+}
+.Europahuizen p:nth-of-type(1){
+    top: 27.4em;
+}
+.Europahuizen p:nth-of-type(2){
+    top: 36.3em;
+}
+
+.Geldhuizen {
+    display: grid;
+    grid: subgrid / subgrid;
+    grid-column: 1 /  16;
+    grid-row: 75 / 100;
+    }
+.geldfoto img:nth-of-type(1){
+    width: 12.2em;
+    }
+.geldfoto img:nth-of-type(2){
+    width: 6.31em;
+    left: 11.8em;  
+    }
+.geldfoto img:nth-of-type(3){
+    width: 6.31em;
+    left: 11.8em;  
     }
   }
