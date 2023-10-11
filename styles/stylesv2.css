@@ -150,21 +150,31 @@ form > button:active {
 /* POP-UP GEBRUIKER TOEVOEGEN */
 
  .popup {    /* POP-UP IN CENTER */
-    width: 25em;
     background: #EDEDED;
     border-radius: 8px;
+    color: black;
+    margin-left: 35em;
+    padding: 1em;
+    position: fixed;
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
-    padding: 1em;
-    color: black;
     visibility: hidden;
+    width: 25em;
     transition: transform 0.4s top 0.4s;
 }
 
-.open-popup {
+.open-popup { 
+    /* overflow-y: hidden; */
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
+    position: fixed;
+}
+
+body.open-popup {
+    height: 100vh;
+    overflow: hidden;
+    padding-right:15px ;
 }
 
 .close-button {
@@ -577,7 +587,8 @@ svg{
     margin-left: 87.5%;
 }
 main {
-    padding: 0em;
+    padding: 0em; 
+
 }
 
 .footer-menu-rij-1 {
@@ -649,25 +660,10 @@ main {
         padding: 0.2em;
     }
 
-    /* textarea {
-        width: 80%;
-        height: 4.7em;
-    }
-
-    button {
-        width: 80%;
-        height: 4.7em;
-    } */
-
-    h4 {
-        /* STRAATNAAM ONDER IMG */
-    }
-
-
     span { 
         visibility: hidden;
     }
-
+     
     h5 {
         visibility:hidden;
     }
