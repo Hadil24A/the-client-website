@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+
+}
+
+body {
+    font-family: "Proxima Nova", sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/AnyConv.com__ProximaNova-Regular_2607783814[2339].woff2);
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/AnyConv.com__ProximaNova-Semibold_3872794340.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../assets/AnyConv.com__ProximaNova-Medium_2770618388[2258].woff2);
+    font-weight: 400;
+}
+
+header {
+    height: 35em;
+}
+
+nav {
+    height: 4em;
+    width: 100%;
+    background-color: #F7A100;
+
+}
+
+nav > button {
+    background-color:transparent;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    outline: none;
+    padding: .7em 1em;
+    text-decoration: none;
+    text-align: start;
+    color: #333333;
+}
+nav > button:hover {
+    background-color: #EDEDED;
+    transition: 0.3s;
+}
+
+nav img {
+    height: 2.7em;
+    display: flex;
+    flex-direction: row;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #0071B3;
+    line-height: 1.5em;
+
+}
+nav a:hover{
+    background-color: #E6F2F7;
+}
+nav button:nth-of-type(1){
+    width: 100%;
+    color: #ffffff;
+} 
+nav button:nth-of-type(1):hover{
+    background-color: #DE9000;
+}
+nav button:nth-of-type(2){
+    width:100%;
+}
+nav button:nth-of-type(3){
+    width:100%;
+}
+nav button:nth-of-type(4){
+    width:100%;
+}
+
+main {
+    width: 100%;
+    justify-content: center;
+}
+.filter-container {
+    height: 15em;
+    justify-content: center;
+}
+
+.list-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+.list-container > article {
+    background-color: #EDEDED;
+    border-radius: 20px;
+    width: 20em;
+    height: 16em;
+    overflow: hidden;
+    position: relative;
+}
+.list-container > article:hover {
+    background-color: #F7A100;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.list-container a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.list-container img {
+    flex-direction: column;
+    height: 8em;
+}
+.list-container img:nth-of-type(1){
+    width: 8em;
+    object-fit: cover;
+}
+
+.list-container img:nth-of-type(2){
+    width: 6.7em;
+    object-fit: cover;
+}
+
+.list-container img:nth-of-type(3){
+    width: 4.7em;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.list-container h2 {
+    padding: 0em .5em;
+    display: flex;
+}
+
+.list-container ul {
+    padding: 0em 0em 0em 1em;
+}
