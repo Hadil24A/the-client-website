@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Bewaarde huizen lijst </title>
+    <link rel="stylesheet" href="stylesv2h.css">
+
 </head>
 <body>
     <main>
         <h1> Randstad </h1>
         <form>
+            <!-- buttons, bijdragers (verwijst naar profiel) -->
             <button type="button"> Willeke </button>
             <button type="button"> Willem </button>
             <button type="button"> Wim </button>
             <!-- pop-up  -->
             <button type="button"class="add-user" onclick="openPopup()">+</button> <title> Bijdrager uitnodigen </title>
             <div class="popup" id="popup">
-              <p> Voeg een bijdrager toe aan uw lijst </p>
+              <p > Voeg een bijdrager toe aan uw lijst </p>
               <input type="email" placeholder="Email">
               <button type="submit" onclick="openPopup()"> Bijdrager toevoegen </button>
               <button class="close-button">&times;</button>
@@ -23,7 +26,7 @@
             </div>
         </form>
 
-        <script>
+        <script> 
           let popup = document.getElementById("popup");
 
           function openPopup(){
@@ -39,209 +42,473 @@
             
 
         <article>
+            <!-- lijst met alle bewaarde huizen -->
             <div class="house-1">
-                <img src="https://d1zsattj8yq64o.cloudfront.net/media/15049031/1200x800_fit.jpg" width="280" height="201.2" alt="foto van Broekstraat 56D">
-                <h3> Broekstraat 56 D </h3>
+                <a href="https://www.funda.nl/koop/valburg/huis-88650473-broekstraat-56/"><img src="https://d1zsattj8yq64o.cloudfront.net/media/15049031/1200x800_fit.jpg" width="280" height="201.2" alt="foto van Broekstraat 56D">
+              <div class="adres">
+                <h3> Broekstraat 56 D </h3> 
+                </a>
                 <ul>
                     <li> 5996 BC Maasbree </li>
                     <li> € 845.000,- k.k. </li>
                     <li> 329 m² </li>
                     <li> 11 kamers </li>
-                    <li> Poels Makelaars </li>
+                    <li> <a href="https://www.funda.nl/makelaars/zetten/62043-ras-makelaars/" >Ras Makelaars </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+          
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+              </div>
             </div>
 
             <div class="house-2">
-                <img src="https://cloud.funda.nl/valentina_media/176/908/478_1080x720.jpg" width="280" height="201.2" alt="foto van Wintergaats 12">
+                <a href="https://www.funda.nl/koop/melick/huis-88409775-wintergaats-12/"><img src="https://cloud.funda.nl/valentina_media/176/908/478_1080x720.jpg" width="280" height="201.2" alt="foto van Wintergaats 12">
+              <div class="adres">
                 <h3> Wintergaats 12 </h3>
+                </a>
                 <ul>
                     <li> 6074 DM Melick </li>
                     <li> € 869.500,- k.k. </li>
                     <li> 895 m² </li>
                     <li> 8 kamers </li>
-                    <li> Brouwers Makelaars </li>
+                    <li> <a href="https://www.funda.nl/makelaars/venlo/62963-brouwers-makelaars/" > Brouwers Makelaars </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
-            </div>
+              </div>
 
+                    <div class="box-container">
+                        <div class="box">
+                            <div class="msg-txt">
+                                <h5> Wim </h5>
+                                <p class="msg"> Ik vind de locatie erg mooi. </p>
+                            </div>
+                            <div class="msg-txt-2">
+                                        <h5> Willeke </h5>
+                                        <p class="msg"> Vind ik ook. </p>
+                                    </div>
+                            <div class="msg-txt-3">
+                                        <h5> Willem </h5>
+                                        <p class="msg"> Mooie tuin. </p>
+                                    </div>
+                        </div>
+                        <div class="add-comment">
+                        <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                    <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                    <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="house-3">
-                <img src="https://cloud.funda.nl/valentina_media/180/746/920_1440x960.jpg" width="280" height="201.2" alt="foto van Ampèrestraat 6"> 
+                <a href="https://www.funda.nl/koop/leiden/huis-88608741-amperestraat-6/"><img src="https://cloud.funda.nl/valentina_media/180/746/920_1440x960.jpg" width="280" height="201.2" alt="foto van Ampèrestraat 6"> 
+              <div class="adres">
                 <h3> Ampèrestraat 6 </h3>
+                </a>
                 <ul>
                     <li> 2316 DG Leiden </li>
                     <li> € 965.00,- k.k. </li>
                     <li> 202 m² </li>
                     <li> 3 kamers </li>
-                    <li>  Groenoord </li>
+                    <li><a href="https://www.funda.nl/makelaars/leiden/63613-ivo-van-der-leek-makelaardij/"> Ivo van der Leek Makelaardij </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+        
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+              </div>
             </div>
 
             
             <div class="house-4">
-                <img src="https://cloud.funda.nl/valentina_media/180/468/364_1440x960.jpg" width="280" height="201.2" alt="foto van Hullenberglaan 19"> 
+                <a href="https://www.funda.nl/koop/bennekom/huis-88602119-hullenberglaan-19/"><img src="https://cloud.funda.nl/valentina_media/180/468/364_1440x960.jpg" width="280" height="201.2" alt="foto van Hullenberglaan 19"> 
+              <div class="adres">
                 <h3> Hullenberglaan 19  </h3>
+                </a>
                 <ul>
                     <li> 6721 AL Bennekom </li>
                     <li> € 1.375.000,- k.k. </li>
                     <li> 250 m² </li>
                     <li> 4 kamers </li>
-                    <li> Maakelaardij Jacobs  </li>
+                    <li><a href="https://www.funda.nl/makelaars/bennekom/60016-makelaardij-jacobs/"> Makelaardij Jacobs </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+                
+            <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+                </div>
             </div>
 
             <div class="house-5">
-                <img src="https://cloud.funda.nl/valentina_media/180/386/487_1440x960.jpg" width="280" height="201.2" alt="foto 1 van Eleanor Rooseveltlaan 190">
+                <a href="https://www.funda.nl/koop/amstelveen/huis-42246664-eleanor-rooseveltlaan-190/"><img src="https://cloud.funda.nl/valentina_media/180/386/487_1440x960.jpg" width="280" height="201.2" alt="foto 1 van Eleanor Rooseveltlaan 190">
+              <div class="adres">
                 <h3> Eleanor Rooseveltlaan 190  </h3>
+                </a>
                 <ul>
                     <li> Heldenbuurt </li>
                     <li> € 1.325.000,- k.k. </li>
                     <li> 471 m² </li>
                     <li> 4 kamers </li>
-                    <li> Voorma & Millenaar makelaars </li>
+                    <li><a href="https://www.funda.nl/makelaars/amstelveen/24358-voorma-en-millenaar-makelaars-taxateurs-og/"> Voorma & Millenaar makelaars </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+              
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+              </div>
             </div>
             
             <div class="house-6">
-                <img src="https://cloud.funda.nl/valentina_media/176/206/643_1440x960.jpg" width="280" height="201.2" alt="foto van Nagypuszta lakótelep 25">
+                <a href="https://www.funda.nl/koop/bardudvarnok/huis-88500224-nagypuszta-lakotelep-25/"><img src="https://cloud.funda.nl/valentina_media/176/206/643_1440x960.jpg" width="280" height="201.2" alt="foto van Nagypuszta lakótelep 25">
+              <div class="adres">
                 <h3> Nagypuszta lakótelep 25  </h3>
+                </a>
                 <ul>
                     <li> 7478 Bardudvarnok, Hongarije </li>
                     <li> € 495.000,- k.k. </li>
                     <li> 310 m² </li>
                     <li> 4 kamers </li>
-                    <li> Amstel Housing Rotterdam </li>
+                    <li><a href="https://www.funda.nl/makelaars/capelle-aan-den-ijssel/66113-amstel-housing-rotterdam/"> Amstel Housing Rotterdam </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+              
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+              </div>
             </div>
 
             <div class="house-7">
-                <img src="https://cloud.funda.nl/valentina_media/177/662/816_1440x960.jpg" width="280" height="201.2" alt="foto van Brestovci 524">
+                <a href="https://www.funda.nl/europe/bosnie-en-herzegovina/huis-88635390-brestovci-524/"><img src="https://cloud.funda.nl/valentina_media/177/662/816_1440x960.jpg" width="280" height="201.2" alt="foto van Brestovci 524">
+              <div class="adres">
                 <h3> Brestovci 524 </h3>
+                </a>
                 <ul>
                     <li> Buzim, Bosinië en Herzegovina </li>
                     <li> € 250.000,- k.k. </li>
                     <li> 203 m² </li>
                     <li> 4 kamers </li>
-                    <li> Mijnhuisverkoopikzelf.nl </li>
+                    <li><a href="https://www.funda.nl/makelaars/capelle-aan-den-ijssel/66113-amstel-housing-rotterdam/"> Mijnhuisverkoopikzelf.nl </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+            
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+              </div>
             </div>
 
             <div class="house-8">
-                <img src="https://cloud.funda.nl/valentina_media/180/636/371_1440x960.jpg" width="280" height="201.2" alt="foto 1 van Kangasniementie 74">
+                <a href="https://www.funda.nl/koop/kaavi/huis-88606092-kangasniementie-74/"><img src="https://cloud.funda.nl/valentina_media/180/636/371_1440x960.jpg" width="280" height="201.2" alt="foto 1 van Kangasniementie 74">
+              <div class="adres">
                 <h3> Kangasniementie 74 </h3>
+                </a>
                 <ul>
                     <li> 73670, Finland </li>
                     <li> € 260.000,- k.k. </li>
                     <li> 125 m² </li>
                     <li> 3 kamers </li>
-                    <li> HP Maakelaardij & Vastgoedbeheer </li>
+                    <li><a href="https://www.funda.nl/makelaars/eelde/81801-hp-makelaardij-en-vastgoedbeheer/"> HP Maakelaardij & Vastgoedbeheer </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+           
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+              </div>
             </div>
 
             <div class="house-9">
-                <img src="https://cloud.funda.nl/valentina_media/178/434/463_1440x960.jpg" width="280" height="201.2" alt="foto van Munnik 18"> 
+                <a href="https://www.funda.nl/koop/nunspeet/huis-42291449-munnik-18/"><img src="https://cloud.funda.nl/valentina_media/178/434/463_1440x960.jpg" width="280" height="201.2" alt="foto van Munnik 18"> 
+              <div class="adres">
                 <h3> Munnik 18 </h3>
+                </a>
                 <ul>
                     <li> 8071 TK Nunspeet </li>
                     <li> € 849.000,- k.k. </li>
                     <li> 146 m² </li>
                     <li> 4 kamers </li>
-                    <li> Maakelaardij Van de Weerd </li>
+                    <li><a href="https://www.funda.nl/makelaars/nunspeet/23124-makelaardij-van-de-weerd/"> Maakelaardij Van de Weerd </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+            
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+                </div>
             </div>
 
             
             <div class="house-10">
-                <img src="https://cloud.funda.nl/valentina_media/178/957/131_1440x960.jpg" width="280" height="201.2" alt="foto van Randweg 2"> 
+                <a href="https://www.funda.nl/koop/lekkerkerk/huis-42203219-randweg-2/"><img src="https://cloud.funda.nl/valentina_media/178/957/131_1440x960.jpg" width="280" height="201.2" alt="foto van Randweg 2"> 
+              <div class="adres">
                 <h3> Randweg 2 </h3>
+                </a>
                 <ul>
                     <li> 2941 CG Lekkerkerk </li>
                     <li> € 1.150.000,- k.k. </li>
                     <li> 247 m² </li>
                     <li> 5 kamers </li>
-                    <li> Van Egmond Maakelaardij </li>
+                    <li><a href="https://www.funda.nl/makelaars/bergambacht/7104-van-egmond-makelaardij/"> Van Egmond Maakelaardij </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+           
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+              </div>
             </div>
 
             <div class="house-11">
-                <img src="https://cloud.funda.nl/valentina_media/180/317/849_1440x960.jpg" width="280" height="201.2" alt="foto van Gravenstraat 30"> 
+                <a href="https://www.funda.nl/koop/voorst-gem-voorst/huis-42234977-gravenstraat-30/"><img src="https://cloud.funda.nl/valentina_media/180/317/849_1440x960.jpg" width="280" height="201.2" alt="foto van Gravenstraat 30"> 
+              <div class="adres">
                 <h3> Gravenstraat 30 </h3>
+                </a>
                 <ul>
                     <li> 7383 RK Voorst </li>
                     <li> € 650.000,- k.k. </li>
                     <li> 256 m² </li>
                     <li> 9 kamers </li>
-                    <li> Wilbrink Maakelaardij </li>
+                    <li><a href="https://www.funda.nl/makelaars/beekbergen/1076-wilbrink-makelaardij-og/"> Wilbrink Maakelaardij </a></li>
                 </ul>
-                <textarea></textarea>
-                <button> Opmerking plaatsen </button>
+              </div>
+            
+                <div class="box-container">
+                    <div class="box">
+                        <div class="msg-txt">
+                            <h5> Wim </h5>
+                            <p class="msg"> Ik vind de locatie erg mooi. </p>
+                        </div>
+                        <div class="msg-txt-2">
+                                    <h5> Willeke </h5>
+                                    <p class="msg"> Vind ik ook. </p>
+                                </div>
+                        <div class="msg-txt-3">
+                                    <h5> Willem </h5>
+                                    <p class="msg"> Mooie tuin. </p>
+                                </div>
+                    </div>
+                    <div class="add-comment">
+                    <input type="text" id="input" placeholder="Typ hier uw opmerking...">
+                <button type="button" name="com" id="comment"> Opmerking plaatsen </button>
+                <button type="button" name="button" id="delete"> Opmerking verwijderen </button>
+                </div>
+              </div>
             </div>
         </article>
     </main>
 
     <footer>
+        <!-- footer, navigatie -->
         <div class="diensten">
         <h4> Diensten </h4>
         <nav>
-            <a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/" class="">Plaats je huis op funda</a>
-            <a href="https://www.funda.nl/makelaar-zoeken/" class="appfooter-Makelaar-link">Zoek een NVM-makelaar</a>
-            <a href="https://www.funda.nl/koop/bladeren/" class="">Bladeren door aanbod</a>
-            <a href="https://www.funda.nl/mijn-huis-toevoegen/" class="waardecheck-trafficdriver">Wat is mijn woning waard?</a>
+          <ul>
+            <li><a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/" class="">Plaats je huis op funda</a></li>
+            <li><a href="https://www.funda.nl/makelaar-zoeken/" class="appfooter-Makelaar-link">Zoek een NVM-makelaar</a></li>
+            <li><a href="https://www.funda.nl/koop/bladeren/" class="">Bladeren door aanbod</a></li>
+            <li><a href="https://www.funda.nl/mijn-huis-toevoegen/" class="waardecheck-trafficdriver">Wat is mijn woning waard?</a></li>
+          </ul>
         </nav>
         </div>
 
         <div class="informatie">
         <h4> Informatie </h4>
         <nav>
-            <a href="https://help.funda.nl/hc/nl/?utm_source=funda&amp;utm_medium=footer" class="" target="_blank">Vraag &amp; antwoord</a>
-            <a href="https://www.funda.nl/funda-index/funda-index/" class="">Funda Index</a>
-            <a href="https://www.funda.nl//meer-weten/kopen/" class="trafficdriver-footer-hoekoopikeenhuis">Alles over een huis kopen</a>
-            <a href="https://www.funda.nl//meer-weten/verkopen/" class="trafficdriver-footer-hoekoopikeenhuis">Verkoop je huis</a>
-            <a href="https://www.funda.nl//zoekbetervindmeer/" class="">Hoe zoek ik op funda?</a>
+          <ul> 
+            <li><a href="https://help.funda.nl/hc/nl/?utm_source=funda&amp;utm_medium=footer" class="" target="_blank">Vraag &amp; antwoord</a></li>
+            <li><a href="https://www.funda.nl/funda-index/funda-index/" class="">Funda Index</a></li>
+            <li><a href="https://www.funda.nl//meer-weten/kopen/" class="trafficdriver-footer-hoekoopikeenhuis">Alles over een huis kopen</a></li>
+            <li><a href="https://www.funda.nl//meer-weten/verkopen/" class="trafficdriver-footer-hoekoopikeenhuis">Verkoop je huis</a></li>
+            <li><a href="https://www.funda.nl//zoekbetervindmeer/" class="">Hoe zoek ik op funda?</a></li>
+          </ul>
         </nav>
         </div>
 
         <div class="makelaars">
         <h4> Makelaars </h4>
         <nav>
-            <a href="https://www.fundadesk.nl" class="">Funda desk</a>
-            <a href="https://www.funda.nl/voormakelaars/verdieping/" class="">Tips, trends &amp; nieuws</a>
-            <a href="https://www.funda.nl/voormakelaars/leads/" class="">Leads</a>
-            <a href="https://www.funda.nl/voormakelaars/producten/" class="">Producten</a>
-            <a href="https://www.funda.nl/voormakelaars/events-meetups/" class="">Events &amp; meetups</a>    
+          <ul> 
+            <li><a href="https://www.fundadesk.nl" class="">Funda desk</a></li>
+            <li><a href="https://www.funda.nl/voormakelaars/verdieping/" class="">Tips, trends &amp; nieuws</a></li>
+            <li><a href="https://www.funda.nl/voormakelaars/leads/" class="">Leads</a></li>
+            <li><a href="https://www.funda.nl/voormakelaars/producten/" class="">Producten</a></li>
+            <li><a href="https://www.funda.nl/voormakelaars/events-meetups/" class="">Events &amp; meetups</a></li>
+          </ul>  
         </nav>
         </div>
 
         <div class="over-ons">
         <h4> Over ons </h4>
         <nav>
-            <a href="https://www.funda.nl//over/" class="">Over funda</a>
-            <a href="https://www.funda.nl//contact/" class="">Contact</a>
-            <a href="https://jobs.funda.nl/l/nl/" class="">Werken bij funda</a>
-            <a href="https://www.funda.nl//adverteren/" class="">Adverteren</a>
-            <a href="https://www.funda.nl//meer-weten/redactioneel-beleid-funda/" class="">Redactioneel beleid</a>
+          <ul>
+            <li><a href="https://www.funda.nl//over/" class="">Over funda</a></li>
+            <li><a href="https://www.funda.nl//contact/" class="">Contact</a></li>
+            <li><a href="https://jobs.funda.nl/l/nl/" class="">Werken bij funda</a></li>
+            <li><a href="https://www.funda.nl//adverteren/" class="">Adverteren</a></li>
+            <li><a href="https://www.funda.nl//meer-weten/redactioneel-beleid-funda/" class="">Redactioneel beleid</a></li>
+          </ul>
         </nav>
         </div>
-
+        
+        <!-- footer socials, copyright, taal -->
         <ul class="socials">
             <li>
               <a href="https://www.facebook.com/funda" target="_blank">
