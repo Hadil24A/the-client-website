@@ -24,11 +24,6 @@ body {
     src: url(../assets/AnyConv.com__ProximaNova-Medium_2770618388[2258].woff2);
     font-weight: 400;
 }
-header {
-    background: #F7A100;
-    height: 3em;
-    width: 100%;
-}
 
 main{
     padding-left: 5em;
