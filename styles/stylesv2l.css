@@ -148,6 +148,25 @@ main {
     display: flex;
 }
 
+.add-list {
+    justify-content: center;
+    position: relative;
+}
+.add-list h2{
+    font-weight: 600;
+    justify-content: center;
+    position: absolute;
+    top: 6em;
+    left: 2.4em;
+    
+}
+
+.add-list p {
+    font-size: 8em;
+    font-weight: 600;
+    margin: .2em 2em 1em 1em;
+}
+
 .list-container ul {
     padding: 0em 0em 0em 1em;
 }
