@@ -10,43 +10,43 @@
 <body>
   <header>
 
-    <nav><!--navigatie begin -->
+    <nav class="navbar">
+        <div class="hamburger"> <span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        <a class="nav-branding" href="https://www.funda.nl"><img src="https://assets.fstatic.nl/master-73814/assets/components/logo/fundawonen-logo.svg" height="36"></a>
+        <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="https://www.funda.nl/zoeken/koop?selected_area=[%22nl%22]" class="nav-link"> Kopen</a></li>
+        <li class="nav-item">
+            <a href="https://www.funda.nl/zoeken/huur/?selected_area=%5B%22nl%22%5D" class="nav-link"> Huren</a></li>
+        <li class="nav-item">
+            <a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/" class="nav-link"> Verkopen</a></li>
+    </ul>
+    <svg class="heart" xmlns="http://www.w3.org/2000/svg" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M39 9.86A10.17 10.17 0 0032 7a9.9 9.9 0 00-6 2 10.1 10.1 0 00-2 2 10.1 10.1 0 00-2-2 9.91 9.91 0 00-12 0 9.9 9.9 0 00-4 8c0 15 16 24 18 24s18-9 18-24a10 10 0 00-3-7.14zm-15 28a29.61 29.61 0 01-12.72-12.1A18.77 18.77 0 019 17a7 7 0 0113.41-2.81c.06.14.11.29.17.44a1.49 1.49 0 002.82 0c.05-.15.11-.3.17-.44A7 7 0 0139 17a18.77 18.77 0 01-2.28 8.81A29.61 29.61 0 0124 37.91z"></path></svg>
+        <a href="https://www.funda.nl/account/"><svg class="account-human" xmlns="http://www.w3.org/2000/svg" height="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M24 9a8 8 0 108 8 8 8 0 00-8-8zm0 13a5 5 0 115-5 5 5 0 01-5 5z"></path><path d="M24 3a21 21 0 1021 21A21 21 0 0024 3zm-9 36.56V35c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0121 30h6a7.16 7.16 0 011.09.09C30.88 30.52 33 32.55 33 35v4.56a17.85 17.85 0 01-18 0zm21-2.19V34.5a1.48 1.48 0 00-.06-.4c-.5-4-4.31-7.1-8.94-7.1h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v2.88a18 18 0 1124 0z"></path></svg></a>
+    
 
-        <button>Menu</button> 
-        <a href="https://www.funda.nl"><img src="https://assets.fstatic.nl/master-66220/assets/components/logo/fundawonen-logo.svg" alt="logo funda"></a>
-        <button type="button">Kopen</button>
-        <ul><li><a href="https://www.funda.nl/zoeken/koop?selected_area=[%22nl%22]">Zoek een koop woning</a></li>
-        <li><a href="https://www.funda.nl/makelaar-zoeken/aankoop/">Zoek een NVM-aankoopmakelaar</a></li>
-        <li><a href="https://www.funda.nl/hypotheek/maandlasten/ing/">Bereken je maandlasten</a></li>
-        <li><a href="https://www.funda.nl/meer-weten/kopen/">Alles wat je moet weten over kopen</a></li></ul>
+</nav>
+</header>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-        <button>Huren</button>
-        <ul><li><a href="https://www.funda.nl/zoeken/huur/?selected_area=%5B%22nl%22%5D">Zoek een huurwoning</a></li></ul>
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
 
-        <button>Verkopen</button>
-        <ul><li><a href="https://www.funda.nl/makelaar-zoeken/verkoop/">Zoek een NVM-verkoopmakelaar</a></li>
-        <li><a href="https://www.funda.nl/producten-en-diensten/verkoop-je-huis-op-funda/">Plaats je huis op funda</a></li>
-        <li><a href="https://www.funda.nl/meer-weten/verkopen/">Alles wat je moet weten over verkopen</a></li></ul>
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}))
+</script>
 
-    </nav><!--navigatie einde -->
-
-  </header>  
   <main>
     <article class="filter-container">
     <h1>Bewaarde huizen</h1>
     <!--filters start-->
     <form><input type="text" id="savedhouse" name="savedhomes" placeholder="Zoek in bewaarde huizen"></form>
-    <form><input type="text" id="place" name="places" placeholder="Plaats"></form>
-    
-    <form><input list="sorteren" id="sorteren1" name="sorteren2" placeholder="sorteren"><datalist id="sorteren">
-        <option value="Vraagprijs - hoog naar laag"></option><option value="Vraagprijs - laag naar hoog"></option><option value="Huurprijs"></option><option value="Bewaardatum"></option><option value="Objectscore"></option><option value="Gebruiksopp."></option><option value="Perceelopp."></option><option value="Kamers"></option>
-    </datalist> </form>
-    <form><input list="soortaanbod" id="soortaanbod1" name="soortaanbod2" placeholder="soort aanbod"><datalist id="soortaanbod">
-        <option value="Woonhuis"></option><option value="Appartement"></option><option value="Parkeergelegenheid"></option><option value="Bouwgrond"></option><option value="Opslagruimte"></option><option value="Berging."></option><option value="Ligplaats."></option><option value="Onderstuk"></option><option value="Standplaats"></option>
-    </datalist></form>
-    <form><input list="duurzaamheid" id="duurzaamheid1" name="duurzaamheid2" placeholder="Energielabel"><datalist id="duurzaamheid">
-        <option value="A+++++"></option><option value="A++++"></option><option value="A+++"></option><option value="A++"></option><option value="A+"></option><option value="A"></option><option value="B"></option><option value="C"></option><option value="D"></option><option value="E"></option><option value="F"></option><option value="G"></option>
-    </datalist></form>
 
     <button>Zoek</button>
 
@@ -55,31 +55,55 @@
 
     <div class="list-container"><!--start lijstblokken-->
     <article class="add-list"><a href="">
-        <p>+</p>
-        <h2>voeg een lijst toe</h2>
+        <p>+</p><h2>voeg een lijst toe</h2>
     </a></article>
 
     <article><a href="indexv2h.html">
         <img src="https://cloud.funda.nl/valentina_media/180/746/920_1440x960.jpg" alt="foto van Ampèrestraat 6"> 
         <img src="https://cloud.funda.nl/valentina_media/180/468/364_1440x960.jpg" alt="foto van Hullenberglaan 19"> 
         <img src="https://cloud.funda.nl/valentina_media/180/386/487_1440x960.jpg" alt="foto 1 van Eleanor Rooseveltlaan 190">
-        <h2>Randstad</h2><ul><li>Gedeeld met Wario, Willem & Wim</li><li>7 huizen opgeslagen</li></ul>
+        <h2>Randstad</h2>
+        <div class="list-info"><svg class="accounthuman-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M24 9a8 8 0 108 8 8 8 0 00-8-8zm0 13a5 5 0 115-5 5 5 0 01-5 5z"></path><path d="M24 3a21 21 0 1021 21A21 21 0 0024 3zm-9 36.56V35c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0121 30h6a7.16 7.16 0 011.09.09C30.88 30.52 33 32.55 33 35v4.56a17.85 17.85 0 01-18 0zm21-2.19V34.5a1.48 1.48 0 00-.06-.4c-.5-4-4.31-7.1-8.94-7.1h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v2.88a18 18 0 1124 0z"></path></svg><p>2</p>
+        <svg class="heart-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M39 9.86A10.17 10.17 0 0032 7a9.9 9.9 0 00-6 2 10.1 10.1 0 00-2 2 10.1 10.1 0 00-2-2 9.91 9.91 0 00-12 0 9.9 9.9 0 00-4 8c0 15 16 24 18 24s18-9 18-24a10 10 0 00-3-7.14zm-15 28a29.61 29.61 0 01-12.72-12.1A18.77 18.77 0 019 17a7 7 0 0113.41-2.81c.06.14.11.29.17.44a1.49 1.49 0 002.82 0c.05-.15.11-.3.17-.44A7 7 0 0139 17a18.77 18.77 0 01-2.28 8.81A29.61 29.61 0 0124 37.91z"></path></svg><p>19</p></div>
     </a></article>
 
     <article><a href="indexv2h.html">
         <img src="https://cloud.funda.nl/valentina_media/176/206/643_1440x960.jpg" alt="foto van Nagypuszta lakótelep 25">
         <img src="https://cloud.funda.nl/valentina_media/177/662/816_1440x960.jpg" alt="foto van Brestovci 524">
         <img src="https://cloud.funda.nl/valentina_media/180/636/371_1440x960.jpg" alt="foto 1 van Kangasniementie 74">
-        <h2>Europa</h2><ul><li>Gedeeld met Piet, Paul en Paulien</li><li>15 huizen opgeslagen</li></ul>
+        <h2>Europa</h2>
+        <div class="list-info"><svg class="accounthuman-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M24 9a8 8 0 108 8 8 8 0 00-8-8zm0 13a5 5 0 115-5 5 5 0 01-5 5z"></path><path d="M24 3a21 21 0 1021 21A21 21 0 0024 3zm-9 36.56V35c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0121 30h6a7.16 7.16 0 011.09.09C30.88 30.52 33 32.55 33 35v4.56a17.85 17.85 0 01-18 0zm21-2.19V34.5a1.48 1.48 0 00-.06-.4c-.5-4-4.31-7.1-8.94-7.1h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v2.88a18 18 0 1124 0z"></path></svg><p>15</p>
+        <svg class="heart-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M39 9.86A10.17 10.17 0 0032 7a9.9 9.9 0 00-6 2 10.1 10.1 0 00-2 2 10.1 10.1 0 00-2-2 9.91 9.91 0 00-12 0 9.9 9.9 0 00-4 8c0 15 16 24 18 24s18-9 18-24a10 10 0 00-3-7.14zm-15 28a29.61 29.61 0 01-12.72-12.1A18.77 18.77 0 019 17a7 7 0 0113.41-2.81c.06.14.11.29.17.44a1.49 1.49 0 002.82 0c.05-.15.11-.3.17-.44A7 7 0 0139 17a18.77 18.77 0 01-2.28 8.81A29.61 29.61 0 0124 37.91z"></path></svg><p>274</p></div>
     </a></article>
 
     <article><a href="indexv2h.html">
-        <img src="https://cloud.funda.nl/valentina_media/178/434/463_1440x960.jpg" alt="foto van Munnik 18"> 
-        <img src="https://cloud.funda.nl/valentina_media/178/957/131_1440x960.jpg" alt="foto van Randweg 2">
-        <img src="https://cloud.funda.nl/valentina_media/180/317/849_1440x960.jpg" alt="foto van Gravenstraat 30">
-        <h2>Gelderland</h2><ul><li>Gedeeld met Samantha & Cynthia</li><li>5 huizen opgeslagen</li></ul>
+        <img src="https://cloud.funda.nl/valentina_media/179/432/229_1440x960.jpg" alt="foto van R. de Boa Nova village 28"> 
+        <img src="https://cloud.funda.nl/valentina_media/174/876/290_1440x960.jpg" alt="foto van Provence 2212">
+        <img src="https://cloud.funda.nl/valentina_media/165/647/694_1440x960.jpg" alt="foto van Villa Hermès">
+        <h2>Frankrijk</h2>
+        <div class="list-info"><svg class="accounthuman-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M24 9a8 8 0 108 8 8 8 0 00-8-8zm0 13a5 5 0 115-5 5 5 0 01-5 5z"></path><path d="M24 3a21 21 0 1021 21A21 21 0 0024 3zm-9 36.56V35c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0121 30h6a7.16 7.16 0 011.09.09C30.88 30.52 33 32.55 33 35v4.56a17.85 17.85 0 01-18 0zm21-2.19V34.5a1.48 1.48 0 00-.06-.4c-.5-4-4.31-7.1-8.94-7.1h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v2.88a18 18 0 1124 0z"></path></svg><p>8</p>
+        <svg class="heart-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M39 9.86A10.17 10.17 0 0032 7a9.9 9.9 0 00-6 2 10.1 10.1 0 00-2 2 10.1 10.1 0 00-2-2 9.91 9.91 0 00-12 0 9.9 9.9 0 00-4 8c0 15 16 24 18 24s18-9 18-24a10 10 0 00-3-7.14zm-15 28a29.61 29.61 0 01-12.72-12.1A18.77 18.77 0 019 17a7 7 0 0113.41-2.81c.06.14.11.29.17.44a1.49 1.49 0 002.82 0c.05-.15.11-.3.17-.44A7 7 0 0139 17a18.77 18.77 0 01-2.28 8.81A29.61 29.61 0 0124 37.91z"></path></svg><p>30</p></div>
+    </a></article>
+
+    <article><a href="indexv2h.html">
+        <img src="https://cloud.funda.nl/valentina_media/181/475/069_1440x960.jpg" alt="foto van kyrenia"> 
+        <img src="https://cloud.funda.nl/valentina_media/176/742/846_1440x960.jpg" alt="foto van Grote Nete">
+        <img src="https://cloud.funda.nl/valentina_media/167/621/422_1440x960.jpg" alt="foto van Lintbekelaan 19">
+        <h2>Villa's</h2>
+        <div class="list-info"><svg class="accounthuman-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M24 9a8 8 0 108 8 8 8 0 00-8-8zm0 13a5 5 0 115-5 5 5 0 01-5 5z"></path><path d="M24 3a21 21 0 1021 21A21 21 0 0024 3zm-9 36.56V35c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0121 30h6a7.16 7.16 0 011.09.09C30.88 30.52 33 32.55 33 35v4.56a17.85 17.85 0 01-18 0zm21-2.19V34.5a1.48 1.48 0 00-.06-.4c-.5-4-4.31-7.1-8.94-7.1h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v2.88a18 18 0 1124 0z"></path></svg><p>5</p>
+        <svg class="heart-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M39 9.86A10.17 10.17 0 0032 7a9.9 9.9 0 00-6 2 10.1 10.1 0 00-2 2 10.1 10.1 0 00-2-2 9.91 9.91 0 00-12 0 9.9 9.9 0 00-4 8c0 15 16 24 18 24s18-9 18-24a10 10 0 00-3-7.14zm-15 28a29.61 29.61 0 01-12.72-12.1A18.77 18.77 0 019 17a7 7 0 0113.41-2.81c.06.14.11.29.17.44a1.49 1.49 0 002.82 0c.05-.15.11-.3.17-.44A7 7 0 0139 17a18.77 18.77 0 01-2.28 8.81A29.61 29.61 0 0124 37.91z"></path></svg><p>58</p></div>
+    </a></article>
+
+    <article><a href="indexv2h.html">
+        <img src="https://cloud.funda.nl/valentina_media/175/952/204_1440x960.jpg" alt="foto van Brick 2000"> 
+        <img src="https://cloud.funda.nl/valentina_media/174/082/231_1440x960.jpg" alt="foto van Šetalište Vladimira Gortana">
+        <img src="https://cloud.funda.nl/valentina_media/181/670/091_1440x960.jpg" alt="Industrieweg 9">
+        <h2>Cadeau Jan</h2>
+        <div class="list-info"><svg class="accounthuman-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M24 9a8 8 0 108 8 8 8 0 00-8-8zm0 13a5 5 0 115-5 5 5 0 01-5 5z"></path><path d="M24 3a21 21 0 1021 21A21 21 0 0024 3zm-9 36.56V35c0-2.45 2.12-4.48 4.91-4.91A7.16 7.16 0 0121 30h6a7.16 7.16 0 011.09.09C30.88 30.52 33 32.55 33 35v4.56a17.85 17.85 0 01-18 0zm21-2.19V34.5a1.48 1.48 0 00-.06-.4c-.5-4-4.31-7.1-8.94-7.1h-6c-4.63 0-8.44 3.11-8.94 7.1a1.48 1.48 0 00-.06.4v2.88a18 18 0 1124 0z"></path></svg><p>4</p>
+        <svg class="heart-list" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor" role="presentation" viewBox="0 0 48 48" class="mr-1 -mt-1"><path d="M39 9.86A10.17 10.17 0 0032 7a9.9 9.9 0 00-6 2 10.1 10.1 0 00-2 2 10.1 10.1 0 00-2-2 9.91 9.91 0 00-12 0 9.9 9.9 0 00-4 8c0 15 16 24 18 24s18-9 18-24a10 10 0 00-3-7.14zm-15 28a29.61 29.61 0 01-12.72-12.1A18.77 18.77 0 019 17a7 7 0 0113.41-2.81c.06.14.11.29.17.44a1.49 1.49 0 002.82 0c.05-.15.11-.3.17-.44A7 7 0 0139 17a18.77 18.77 0 01-2.28 8.81A29.61 29.61 0 0124 37.91z"></path></svg><p>3</p></div>
     </a></article>
     </div><!--einde lijstblokken-->
+
 
   </main>
 </body>

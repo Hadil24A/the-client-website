@@ -1,15 +1,9 @@
 * {
     box-sizing: border-box;
     list-style: none;
-
-}
-
-body {
-    font-family: "Proxima Nova", sans-serif;
     margin: 0;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+
 }
 
 @font-face {
@@ -29,64 +23,68 @@ body {
     font-weight: 400;
 }
 
+/* nav-styling */
+
 header {
-    height: 35em;
+    background: #F7A100;
 }
 
-nav {
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar {
     height: 4em;
-    width: 100%;
-    background-color: #F7A100;
-
-}
-
-nav > button {
-    background-color:transparent;
-    border: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    outline: none;
-    padding: .7em 1em;
-    text-decoration: none;
-    text-align: start;
-    color: #333333;
-}
-nav > button:hover {
-    background-color: #EDEDED;
-    transition: 0.3s;
-}
-
-nav img {
-    height: 2.7em;
     display: flex;
-    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 24px;
 }
 
-nav a {
-    display: block;
-    text-decoration: none;
-    color: #0071B3;
-    line-height: 1.5em;
-
-}
-nav a:hover{
-    background-color: #E6F2F7;
-}
-nav button:nth-of-type(1){
+.nav-menu {
     width: 100%;
-    color: #ffffff;
-} 
-nav button:nth-of-type(1):hover{
-    background-color: #DE9000;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 2em;
+    gap: 30px;
 }
-nav button:nth-of-type(2){
-    width:100%;
+
+.heart, .account-human{
+    color: #fff;
+    height: 2em;
+
+    margin: auto 5px;
+ 
 }
-nav button:nth-of-type(3){
-    width:100%;
+.heart:hover {
+    color: #f60505;
+
 }
-nav button:nth-of-type(4){
-    width:100%;
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+body {
+    font-family: "Proxima Nova", sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -98,77 +96,164 @@ main {
     justify-content: center;
 }
 
+/* styling-listcontainer */
+
 .list-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2em;
-}
-.list-container > article {
-    background-color: #EDEDED;
-    border-radius: 20px;
-    width: 20em;
-    height: 16em;
-    overflow: hidden;
-    position: relative;
-}
-.list-container > article:hover {
-    background-color: #F7A100;
-    color: #ffffff;
-    transition: 0.3s;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 10em);
+    grid-template-rows: repeat(3, 15em);
+    gap: 2em;
 }
 
-.list-container a {
-    text-decoration: none;
-    color: #333333;
+.list-container > article {
+    background-color: #EDEDED;
+    width: 10em;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1em solid #de9000;
+}
+
+.list-container article:nth-of-type(1) {
+    display: grid;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+.list-container article:nth-of-type(2) {
+    display: grid;
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+}
+.list-container article:nth-of-type(3) {
+    display: grid;
+    grid-column: 1 / 1 ;
+    grid-row: 2 / 2;
+}
+.list-container article:nth-of-type(4) {
+    display: grid;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+}
+.list-container article:nth-of-type(5) {
+    display: grid;
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+}
+.list-container article:nth-of-type(5) {
+    display: grid;
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+}
+
+.list-container > article:hover {
+    background-color: #dedede;
+    transition: 0.4s ease-in;
 }
 
 .list-container img {
     flex-direction: column;
-    height: 8em;
+    height: 9em;
+    position: relative;
 }
+
 .list-container img:nth-of-type(1){
-    width: 8em;
+    width: 5.5em;
     object-fit: cover;
 }
-
 .list-container img:nth-of-type(2){
-    width: 6.7em;
-    object-fit: cover;
-}
-
-.list-container img:nth-of-type(3){
-    width: 4.7em;
+    width: 4.15em;
+    height: 4.3em;
     object-fit: cover;
     overflow: hidden;
 }
+.list-container img:nth-of-type(3){
+    width: 4.15em;
+    height: 4.3em;
+    object-fit: cover;
+    position: absolute;
+    right: .05em;
+}
 
 .list-container h2 {
-    padding: 0em .5em;
+    color: #333;
+    padding-left: .35em;
+    padding-top: .25em;
+}
+
+.list-info {
+    color: #333;
     display: flex;
+    flex-direction: row;
+    padding-left: .35em;
+    padding-top: .5em;
+    gap: .5em;
+}
+
+.heart-list {
+    color: hsl(39, 100%, 44%);
+}
+
+.accounthuman-list {
+    color: #de9000;
+    height: 2em;
+    padding-bottom: .6em;
+
 }
 
 .add-list {
     justify-content: center;
     position: relative;
-}
-.add-list h2{
-    font-weight: 600;
-    justify-content: center;
-    position: absolute;
-    top: 6em;
-    left: 2.4em;
+    flex-direction: column;
 }
 
+.add-list h2 {
+    justify-content: center;
+    margin: 0em .8em;
+    padding: 0 .2em;
+    text-align: center;
+    white-space: break-spaces;
+    color: #333;
+}
 .add-list p {
     font-size: 8em;
     font-weight: 600;
-    margin: .2em 2em 1em 1em;
+    color: #333;
+    padding-left: .39em;
 }
 
-.list-container ul {
-    position: absolute;
-    right: 4em;
-    bottom: .5em;
-    white-space: pre;
+/* mediaquery nav */
+
+@media (max-width:578px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        background-color: #de9000;
+        flex-direction: column;
+        gap: 0;
+        left: -100%;
+        position: absolute;
+        text-align: center;
+        top: 60px;
+        transition: 0.8s;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
 }
