@@ -79,6 +79,42 @@ a {
     background-color: #fff;
 }
 
+/* mediaquery nav */
+@media (max-width:578px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        background-color: #de9000;
+        flex-direction: column;
+        gap: 0;
+        left: -100%;
+        position: absolute;
+        text-align: center;
+        top: 60px;
+        transition: 0.8s;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
 body {
     font-family: "Proxima Nova", sans-serif;
     margin: 0;
@@ -96,14 +132,22 @@ main {
     justify-content: center;
 }
 
-/* styling-listcontainer */
+h2 {
+    font-size: 1.5em;
+    justify-content: center;
+    border-bottom: solid #de9000;
+    white-space: pre;
+    margin: 0 1.3em;
+}
 
+/* styling-listcontainer */
 .list-container {
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(1, 10em);
-    grid-template-rows: repeat(3, 15em);
+    grid-template-rows: repeat(3, 12.2em);
     gap: 2em;
+    padding: 2.5em 0;
 }
 
 .list-container > article {
@@ -111,7 +155,7 @@ main {
     width: 10em;
     overflow: hidden;
     position: relative;
-    border-bottom: 1em solid #de9000;
+    border-bottom: .8em solid #de9000;
 }
 
 .list-container article:nth-of-type(1) {
@@ -152,7 +196,7 @@ main {
 
 .list-container img {
     flex-direction: column;
-    height: 9em;
+    height: 7em;
     position: relative;
 }
 
@@ -162,22 +206,23 @@ main {
 }
 .list-container img:nth-of-type(2){
     width: 4.15em;
-    height: 4.3em;
+    height: 3.3em;
     object-fit: cover;
     overflow: hidden;
 }
 .list-container img:nth-of-type(3){
     width: 4.15em;
-    height: 4.3em;
+    height: 3.3em;
     object-fit: cover;
     position: absolute;
     right: .05em;
 }
 
-.list-container h2 {
+.list-container h3 {
     color: #333;
     padding-left: .35em;
     padding-top: .25em;
+    font-size: 1.3em;
 }
 
 .list-info {
@@ -197,7 +242,6 @@ main {
     color: #de9000;
     height: 2em;
     padding-bottom: .6em;
-
 }
 
 .add-list {
@@ -206,7 +250,7 @@ main {
     flex-direction: column;
 }
 
-.add-list h2 {
+.add-list h3 {
     justify-content: center;
     margin: 0em .8em;
     padding: 0 .2em;
@@ -219,41 +263,158 @@ main {
     font-weight: 600;
     color: #333;
     padding-left: .39em;
+    height: 120px;
 }
 
-/* mediaquery nav */
+/* styling-list-allhouses*/
+.list-allhouses {
+    padding-top: 1.3em;
+}
 
-@media (max-width:578px){
-    .hamburger{
-        display: block;
+h4 {
+    color: #0071b3;
+    font-size: 1.5em;
+    margin: 0em;
+    padding: 0 0 .5em 0;
+}
+
+.list-allhouses a {
+    text-decoration: none;
+    color: #0071b3;
+    transition: color .25s cubic-bezier(.23,1,.32,1);
+}
+
+.list-allhouses article {
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    border-width: 0.1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2em;
+    position: relative;
+}
+
+.adres {
+    padding: 0 0 0 2em;
+}
+
+.list-allhouses img {
+    width: 9em;
+    height:10em;
+    object-fit: cover;
+}
+
+@media (min-width:670px) {
+    .list-container {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 10em);
+        grid-template-rows: repeat(2, 12.2em);
+        gap: 2em;
+        padding: 2.5em 0;
     }
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
+    .list-container > article {
+        width: 10em;
+        overflow: hidden;
+        position: relative;
     }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
+    .list-container article:nth-of-type(1) {
+        display: grid;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
     }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+    .list-container article:nth-of-type(2) {
+        display: grid;
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
+    }
+    .list-container article:nth-of-type(3) {
+        display: grid;
+        grid-column: 3 / 3 ;
+        grid-row: 2 / 2;
+    }
+    .list-container article:nth-of-type(4) {
+        display: grid;
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
+    }
+    .list-container article:nth-of-type(5) {
+        display: grid;
+        grid-column: 2 / 2;
+        grid-row: 2 / 2;
+    }
+    .list-container article:nth-of-type(6) {
+        display: grid;
+        grid-column: 3 / 3;
+        grid-row: 1 / 1;
+    }
+}
+
+@media (min-width:987px) {
+    .list-container {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 18em);
+        grid-template-rows: repeat(2, 11em);
+        gap: 2em;
+        padding: 2.5em 0;
+    }
+    .list-container > article {
+        width: 18em;
+        overflow: hidden;
+        position: relative;
     }
 
-    .nav-menu{
-        background-color: #de9000;
+    .list-container img {
         flex-direction: column;
-        gap: 0;
-        left: -100%;
+        height: 7em;
+        position: relative;
+    }
+    
+    .list-container img:nth-of-type(1){
+        width: 8em;
+        object-fit: cover;
+    }
+    .list-container img:nth-of-type(2){
+        width: 5.2em;
+        height: 7em;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .list-container img:nth-of-type(3){
+        width: 4.3em;
+        height: 7em;
+        object-fit: cover;
         position: absolute;
-        text-align: center;
-        top: 60px;
-        transition: 0.8s;
-        width: 100%;
+        right: .05em;
     }
-
-    .nav-item {
-        margin: 16px 0;
+    .list-info {
+        color: #333;
+        display: flex;
+        flex-direction: row;
+        padding-left: 10.8em;
+        gap: .5em;
+        position: absolute;
+        bottom: .5em;
     }
-
-    .nav-menu.active {
-        left: 0;
+    
+    .accounthuman-list {
+        height: 2em;
+        padding-bottom: .6em;
+    }
+    .add-list {
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+    }
+    
+    .add-list h3 {
+        justify-content: center;
+        margin: 0em .8em;
+        padding: 0 .2em;
+    }
+    .add-list p {
+        padding-left: .59em;
     }
 }
