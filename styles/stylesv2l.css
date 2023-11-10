@@ -26,7 +26,7 @@
 /* nav-styling */
 
 header {
-    background: #F7A100;
+    background: var(--clr-orange);
 }
 
 a {
@@ -118,7 +118,8 @@ a {
 body {
     font-family: "Proxima Nova", sans-serif;
     margin: 0;
-    background-color: #ffffff;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
     display: flex;
     flex-direction: column;
 }
@@ -127,17 +128,126 @@ main {
     width: 100%;
     justify-content: center;
 }
+
+h1 {
+   justify-content: center;
+   display: flex;
+   padding: .5em 0 .5em 0;
+}
+
+:root {
+    --clr-dark: #1F2123;
+    --clr-light:#FFFFFF;
+    --clr-block: #ededed;
+    --clr-blockhover: #dedede;
+    --clr-orange: #F7A100;
+    --clr-icon: #DE9000;
+    --clr-blue:#1671B3;
+}
+
+.dark-mode {
+    --clr-dark: #fff;
+    --clr-light: #1F2123;
+    --clr-block: #333;
+    --clr-blockhover: #4a4a4a;
+}
+
+.contrast-mode {
+    --clr-dark: #1F2123;
+    --clr-light:#FFFFFF;
+    --clr-block: #ededed;
+    --clr-blockhover: #999999;
+    --clr-orange: #53241B;
+    --clr-icon: #53241B;
+    --clr-blue: #115D92;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--clr-orange);
+}
+
+.theme-toggle-contrast {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #F7A100;
+}
+
+.colour-modes {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    padding: 1em 1em 0 1em;
+    gap: 1em;
+
+}
+
 .filter-container {
-    height: 15em;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    height: 5em;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: .25em;
+}
+
+.search-button {
+    background: var(--clr-blue);
+    border: none;
+    box-shadow: none;
+    color:#FFFFFF;
+    cursor: pointer;
+    height: 3em;
+    width: 5em;
+}
+
+input {
+    height: 3em;
+    width: 26em;
+    background-color: var(--clr-block);
+    color: var(--clr-dark);
+    border: solid var(--clr-orange) .2em;
+}
+
+.header-list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.header-list-container p {
+    display: flex;
+    color: #666666;
+    padding-top: .3em;
+    padding-right: 3.4em;
+    white-space: nowrap;
+}
+
+.header-list-container h2 {
+    padding-right: 2em;
 }
 
 h2 {
     font-size: 1.5em;
     justify-content: center;
-    border-bottom: solid #de9000;
     white-space: pre;
     margin: 0 1.3em;
+}
+
+.bottom-line {
+    height: .25em;
+    width: 20em;
+    background: var(--clr-orange);
+    display: flex;
+    justify-content:center;
 }
 
 /* styling-listcontainer */
@@ -151,11 +261,11 @@ h2 {
 }
 
 .list-container > article {
-    background-color: #EDEDED;
+    background-color: var(--clr-block);
     width: 10em;
     overflow: hidden;
     position: relative;
-    border-bottom: .8em solid #de9000;
+    border-bottom: .8em solid var(--clr-orange);
 }
 
 .list-container article:nth-of-type(1) {
@@ -190,7 +300,7 @@ h2 {
 }
 
 .list-container > article:hover {
-    background-color: #dedede;
+    background-color: var(--clr-blockhover);
     transition: 0.4s ease-in;
 }
 
@@ -219,14 +329,13 @@ h2 {
 }
 
 .list-container h3 {
-    color: #333;
+    color: var(--clr-dark);
     padding-left: .35em;
     padding-top: .25em;
     font-size: 1.3em;
 }
 
 .list-info {
-    color: #333;
     display: flex;
     flex-direction: row;
     padding-left: .35em;
@@ -234,12 +343,16 @@ h2 {
     gap: .5em;
 }
 
+.list-info p {
+    color: var(--clr-dark);
+}
+
 .heart-list {
-    color: hsl(39, 100%, 44%);
+    color: var(--clr-orange);
 }
 
 .accounthuman-list {
-    color: #de9000;
+    color: var(--clr-icon);
     height: 2em;
     padding-bottom: .6em;
 }
@@ -256,12 +369,12 @@ h2 {
     padding: 0 .2em;
     text-align: center;
     white-space: break-spaces;
-    color: #333;
+    color: var(--clr-dark);
 }
 .add-list p {
     font-size: 8em;
     font-weight: 600;
-    color: #333;
+    color: var(--clr-dark);
     padding-left: .39em;
     height: 120px;
 }
@@ -272,7 +385,7 @@ h2 {
 }
 
 h4 {
-    color: #0071b3;
+    color: var(--clr-blue);
     font-size: 1.5em;
     margin: 0em;
     padding: 0 0 .5em 0;
@@ -280,13 +393,13 @@ h4 {
 
 .list-allhouses a {
     text-decoration: none;
-    color: #0071b3;
+    color: var(--clr-blue);
     transition: color .25s cubic-bezier(.23,1,.32,1);
 }
 
 .list-allhouses article {
     border-bottom-style: solid;
-    border-bottom-color: #ccc;
+    border-bottom-color: var(--clr-orange);
     border-width: 0.1em;
     display: flex;
     flex-direction: row;
@@ -348,6 +461,13 @@ h4 {
         display: grid;
         grid-column: 3 / 3;
         grid-row: 1 / 1;
+    }
+    input {
+        width: 38.5em;
+    }
+
+    .search-button {
+        width: 10em;
     }
 }
 
