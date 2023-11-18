@@ -3,9 +3,18 @@
 }
 
 body {
-    background: var(--clr-light);
+    background: #4a4646;
     font-family:"Proxima Nova", sans-serif;
     margin: 0;
+}
+
+h6 {
+    width: 10000px;
+    height: 5em;
+    color: #333;
+    font-weight: 800;
+    background: #F7A100;
+    margin-top: 0em;
 }
 
 @font-face {
@@ -24,7 +33,7 @@ body {
     src: url(../assets/AnyConv.com__ProximaNova-Medium_2770618388[2258].woff2);
     font-weight: 400;
 }
-
+/* 
 :root {
     --clr-dark: #1F2123;
     --clr-light:#FFFFFF;
@@ -81,7 +90,7 @@ body {
     justify-content: end;
     padding: 1em 1em 0 1em;
     gap: 1em;
-}
+} */
 
 main {
     padding-left: 2em;
@@ -107,7 +116,13 @@ form {
     text-align: center;
 }
 
-form  button {
+form > button {
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0em;
     transition: all 0.2s ease;
 }
 
@@ -115,12 +130,25 @@ form > button:active {
     transform: scale(0.96);
 }
 
+.add-user {
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    color: #0071b3;
+    cursor: pointer;
+    font-size: 48px;
+    padding: 0em;
+    transition: all 0.2s ease;
+}
+
+
 /* POP-UP BIJDRAGER TOEVOEGEN */
 
 .popup {
     background: #EDEDED;
     border-radius: 8px;
     color: #333333;
+    height: 10em;
     margin-left: 43em;
     padding: 1em;
     position: fixed;
@@ -142,12 +170,15 @@ form > button:active {
 body.open-popup {
     height: 100vh;
     overflow: hidden;
-    padding-right:15px ;
+    padding-right: 15px;
 }
+ .popup input {
+    border: none;
+ }
 
-.popup button {
-    background: none;
-    border: 0em;
+.add-user-button {
+    background: transparent;
+    border: 0.1em;
     color: #333333;
     font-size: 1em;
     position: absolute;
@@ -155,6 +186,12 @@ body.open-popup {
     left: 8em;
     transition: all 0.2 ease-in;
     cursor: pointer; 
+    padding: 0.65em 0 0.65em 0;
+}
+
+.add-user-button:hover {    
+    color: #F7A100;
+
 }
 
 .close-button {
@@ -214,6 +251,9 @@ article > li:last-child {
     display: grid;
     align-self: start;
     padding: 1em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    width: 230em;
 }
     
 .house-1 { 
@@ -225,67 +265,11 @@ article > li:last-child {
     padding-top: 0.5em;
 }
     
-.house-2 {
+.house-2 + .house-3, .house-4, .house-5, .house-6, .house-7, .house-8, .house-9, .house-10 {
     border-bottom-style: solid;
     border-bottom-color: #ccc;
     border-width: 0.1em;
-    padding-top: 0.5em;
-}
-    
-.house-3 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    padding-top: 0.5em;
-}
-    
-.house-4 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    padding-top: 0.5em;
-}
-    
-.house-5 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    padding-top: 0.5em;
-}
-    
-.house-6 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    padding-top: 0.5em;
-}
-    
-.house-7 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    padding-top: 0.5em;
-}
-    
-.house-8 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    padding-top: 0.5em;
-}
-    
-.house-9 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    padding-top: 0.5em;
-}
-    
-.house-10 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    padding-top: 0.5em;
+    padding: 0.5em;
 }
     
 .house-11 { 
@@ -301,7 +285,6 @@ article {
 
 .comment-section {
     border: none;
-    box-shadow: #EDEDED;
 }
 
 .msg1 {
@@ -352,8 +335,21 @@ input::after {
 }
 
 /* FOOTER */
-@media (max-width:800px){ 
- 
+@media (max-width:800px){
+
+    .comment-section {
+        border: none;
+        align-items: center;
+    }
+    
+    .msg1 {
+        display: none;
+        }
+        
+    .msg2 {
+        display: none;
+        }
+
 footer {
     background: #EDEDED;
     padding-left: 2em;
@@ -368,6 +364,7 @@ a {
 
 .copyright-2 {
     padding: 0 1em;
+    gap: 1em;
 }
 
 span {
@@ -395,6 +392,11 @@ span {
     border-bottom:  solid 0.1em #999999;
 }
 
+hr {
+    color: #ccc;
+    flex-grow: 1;
+}
+
 footer ul {
     display: none;
 }
@@ -411,6 +413,8 @@ footer ul {
 .center-footer {
     display: flex;
     flex-direction: row;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .copyright {
@@ -418,6 +422,9 @@ footer ul {
 }
 
 .switch-language {
+
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 }  
 
@@ -448,14 +455,12 @@ footer ul {
     }
     
     form > button {
-        background: #0071b3;
+        background: transparent;
         border-radius: 50%;
         border: none;
-        aspect-ratio: 1 / 1;
-        color: #FFFFFF;
         cursor: pointer;
         font-size: 16px;
-        padding:1em;
+        padding: 0em;
         transition: all 0.2s ease;
     }
     
@@ -548,6 +553,10 @@ footer ul {
         display: grid;
         align-self: start;
         padding: 1em;
+        padding-top: 0em;
+        padding-bottom: 0em;
+        width: 230em;
+    }
     }
     
     .house-1 { 
@@ -562,97 +571,8 @@ footer ul {
         padding-top: 0.5em;
         position: relative;
     }
-
     
-    .house-2 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        height: 18em;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        position: relative;
-    }
-    
-    .house-3 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        height: 18em;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        position: relative;
-    }
-    
-    .house-4 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        height: 18em;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        position: relative;
-    }
-    
-    .house-5 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        height: 18em;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        position: relative;
-    }
-    
-    .house-6 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        height: 18em;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        position: relative;
-    }
-    
-    .house-7 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        height: 18em;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        position: relative;
-    }
-    
-    .house-8 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        height: 18em;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        position: relative;
-    }
-    
-    .house-9 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        height: 18em;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        position: relative;
-    }
-    
-    .house-10 {
+    .house-2, .house-3, .house-4, .house-5, .house-6, .house-7, .house-8, .house-9, .house-10 {
         border-bottom-style: solid;
         border-bottom-color: #ccc;
         border-width: 0.1em;
@@ -722,7 +642,6 @@ article button {
 article button:hover {
     background: #F8C463;
 }  
-}
 
 @media (min-width:800px) {
 
@@ -748,6 +667,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 0 1em;
+     gap: 1em;
 }
 span {
     color: #333333;
@@ -765,7 +685,6 @@ span {
     line-height: 2.25em;
 }
 
-
 .makelaars {
     grid-column: 12 / 18;
     grid-row: 1 / 2;
@@ -778,6 +697,11 @@ span {
     line-height: 2.25em;
 }
 
+hr {
+    color: #ccc;
+    flex-grow: 1;
+}
+
 .socials {
     display: flex;
     justify-content: space-between;
@@ -786,6 +710,8 @@ span {
 }
 
 .center-footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
     display: flex;
     flex-direction: row;
     grid-column: 10 / 21;
@@ -800,6 +726,8 @@ span {
 .switch-language {
     grid-column: 22 / 24;
     grid-row: 2 / 3;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 }
 
@@ -830,11 +758,19 @@ span {
         color: #0071b3;
         margin-top: 1.5em;
     }
+
+    article img {
+        margin-left: 2em;
+    }
         
     .adres {
         display: grid;
         align-self: start;
         padding: 1em;
+        padding-top: 0em;
+        padding-bottom: 0em;
+        margin-right: 2em;
+        width: 230em;
     }
     
     .house-1 { 
@@ -849,87 +785,7 @@ span {
         margin-right: 2em;
     }
     
-    .house-2 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        margin-right: 2em;
-    }
-    
-    .house-3 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        margin-right: 2em;
-    }
-    
-    .house-4 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        margin-right: 2em;
-    }
-    
-    .house-5 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        margin-right: 2em;
-    }
-    
-    .house-6 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        margin-right: 2em;
-    }
-    
-    .house-7 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        margin-right: 2em;
-    }
-    
-    .house-8 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        margin-right: 2em;
-    }
-    
-    .house-9 {
-        border-bottom-style: solid;
-        border-bottom-color: #ccc;
-        border-width: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0.5em;
-        margin-right: 2em;
-    }
-    
-    .house-10 {
+    .house-2, .house-3, .house-4, .house-5, .house-6, .house-7, .house-8, .house-9, .house-10 {
         border-bottom-style: solid;
         border-bottom-color: #ccc;
         border-width: 0.1em;
@@ -955,7 +811,7 @@ span {
 
 .comment-section {
     border: none;
-    box-shadow: #EDEDED;
+    align-items: center;
 }
 
 .msg1 {
@@ -1039,7 +895,9 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 0 1em;
+    gap: 1em;
 }
+
 span {
     color: #333333;
 }
@@ -1068,6 +926,11 @@ span {
     line-height: 2.25em;
 }
 
+hr {
+    color: #ccc;
+    flex-grow: 1;
+}
+
 .socials {
     display: flex;
     justify-content: space-between;
@@ -1078,6 +941,8 @@ span {
 .center-footer {
     display: flex;
     flex-direction: row;
+    padding-top: 1em;
+    padding-bottom: 1em;
     grid-column: 10 / 21;
     grid-row: 2 / 3 ;
     justify-content: space-between;
@@ -1090,14 +955,16 @@ span {
 .switch-language {
     grid-column: 22 / 24;
     grid-row: 2 / 3;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 }
 
 @media (min-width:1080px) {
 
 main{
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 3em;
+    padding-right: 3em;
     color: #333333;
 }
 
@@ -1120,8 +987,6 @@ form {
 }
 
 form > button {
-    background: #0071b3;
-    border-radius: 50%;
     border: none;
     aspect-ratio: 1 / 1;
     color: #FFFFFF;
@@ -1222,86 +1087,7 @@ article > li:last-child {
     padding: 2em;
 }
 
-.adres {
-    display: grid;
-    align-self: start;
-    padding-left: 5em;
-    padding-right: 5em;
-}
-
-.house-2 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-
-.house-3 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-
-.house-4 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-
-.house-5 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-
-.house-6 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-
-.house-7 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-
-.house-8 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-
-.house-9 {
-    border-bottom-style: solid;
-    border-bottom-color: #ccc;
-    border-width: 0.1em;
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
-}
-
-.house-10 {
+.house-2, .house-3, .house-4, .house-5, .house-6, .house-7, .house-8, .house-9, .house-10 {
     border-bottom-style: solid;
     border-bottom-color: #ccc;
     border-width: 0.1em;
@@ -1315,12 +1101,86 @@ article > li:last-child {
     justify-content: space-between;
     padding: 2em;
 }
-
-article {
-margin-left: 10em;
-margin-right: 10em;
+.adres {
+    display: grid;
+    align-self: start;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    width: 230em;
 }
 
+article {
+margin-left: 0em;
+margin-right: 0em;
+}
+
+       /* COMMENT SECTION */
+
+       .comment-section {
+        border: none;
+        align-items: center;
+    }
+    
+    .msg1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        height: 3.5em;
+        width: 13em;
+        background: #F8C463;
+        margin: 0.3em;
+        }
+        
+        .msg2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        height: 3.5em;
+        width: 13em;
+        background: #F8C463;
+        margin: 0.3em;
+        margin-bottom: 5em;
+        }
+    
+    input {
+        padding: 1em;
+        height: 3em;
+        width: 15em;
+        margin: 0.3em; 
+        margin-bottom: 0.5em;
+        border: none;
+        border-bottom: solid 0.1em #F8C463;
+        font-size: 16px;
+        outline: none;
+    }
+    
+    input::after {
+        border-bottom: solid 0.1em #F8C463;
+        outline: none;
+        width: 20em;
+    }
+    
+    .newmsg {
+        display: flex;
+        width: 15em;
+    }
+    
+    .place-comment {
+        background: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+        padding-top: 0.1em;
+        margin: 0.1em;
+        transition:0.4s; cursor: pointer;
+    }
+    
+    .place-comment:hover {
+        background: #F8C463;
+    }
 
 /* FOOTER */
 
@@ -1344,7 +1204,9 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 0 1em;
+    gap: 1em;
 }
+
 span {
     color: #333333;
 }
@@ -1361,20 +1223,17 @@ span {
     line-height: 2.25em;
 }
 
-
 .makelaars {
     grid-column: 12 / 18;
     grid-row: 1 / 2;
     line-height: 2.25em;
 }
 
-
 .over-ons {
     grid-column: 18 / 24;
     grid-row: 1 / 2;
     line-height: 2.25em;
 }
-
 
 .socials {
     display: flex;
@@ -1398,5 +1257,7 @@ span {
 .switch-language {
     grid-column: 22 / 24;
     grid-row: 2 / 3;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 }
