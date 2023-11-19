@@ -307,7 +307,7 @@ input {
     outline: none;
 }
 
-input::after {
+input:after {
     border-bottom: solid 0.1em #F8C463;
     outline: none;
     width: 20em;
@@ -328,12 +328,15 @@ input::after {
     margin: 0.1em;
     transition: all 0.2s ease;
     cursor: pointer;
+    position: relative;
 }
 
-.place-comment:hover {
-    transform: scale(0.96);
+.place-comment img {
+    margin: 0em;
+    position: absolute;
+    left: -0.7em;
+    bottom: 0.35em;
 }
-
 /* FOOTER */
 @media (max-width:800px){
 
@@ -393,8 +396,7 @@ span {
 }
 
 hr {
-    color: #ccc;
-    flex-grow: 1;
+    display: none;
 }
 
 footer ul {
@@ -474,7 +476,7 @@ footer ul {
         background: #EDEDED;
         border-radius: 8px;
         color: #333333;
-        margin-left: 43em;
+        margin-left: 15em;
         padding: 1em;
         position: fixed;
         transform: translate(-50%, -50%) scale(0.1);
@@ -552,12 +554,12 @@ footer ul {
     .adres {
         display: grid;
         align-self: start;
-        padding: 1em;
+        padding: 3em;
         padding-top: 0em;
         padding-bottom: 0em;
         width: 230em;
     }
-    }
+    
     
     .house-1 { 
         border-bottom-style: solid;
@@ -601,8 +603,8 @@ footer ul {
 .comment-section{
     border: none;
     position: absolute;
-    bottom: 1em;
-    left: 0em;
+    bottom: -0.2em;
+    left: 3.5em;
 }
 
 .msg1 {
@@ -624,11 +626,15 @@ input {
     outline: none;
 }
 
+input:focus {
+    border-bottom: #F8C463 solid 0.15em;
+}
+
 .newmsg {
     display: flex;
 }
 
-article button {
+.place-comment {
     background: none;
     border: none;
     border-radius: 5px;
@@ -636,12 +642,18 @@ article button {
     outline: none;
     padding-top: 0.1em;
     margin: 0.1em;
-    transition:0.4s; cursor: pointer;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
 }
 
-article button:hover {
-    background: #F8C463;
-}  
+.place-comment img {
+    margin: 0em;
+    position: absolute;
+    left: -1.7em;
+    bottom: 1em;
+}
+}
 
 @media (min-width:800px) {
 
@@ -732,6 +744,56 @@ hr {
 }
 
 @media (min-width:900px) {
+    
+/* POP-UP BIJDRAGER TOEVOEGEN */
+
+.popup {
+    background: #EDEDED;
+    border-radius: 8px;
+    color: #333333;
+    margin-left: 27em;
+    padding: 1em;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.4s top 0.4s;
+    text-align: center;
+    visibility: hidden;
+    width: 25em;
+    z-index: 100;
+}
+
+.open-popup {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+body.open-popup {
+    height: 100vh;
+    overflow: hidden;
+    padding-right:15px ;
+}
+
+.close-button {
+    background-color: transparent;
+    border: 0em;
+    color: #333333;
+    font-size: 2em;
+    position: absolute;
+    right: 0em;
+    top: 0em;
+    transition: all 0.2 ease-in;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: transparent;
+    color:#F7A100;
+    position: absolute;
+    top: 0em;
+    right: 0em;
+}
     h3 {
         color: #0071b3;
         font-size: 1.5em;
@@ -815,24 +877,26 @@ hr {
 }
 
 .msg1 {
-    display: flex;
+    display: none;
+    /* display: flex;
     justify-content: space-between;
     padding: 1em;
     height: 3.5em;
     width: 13em;
     background: #F8C463;
-    margin: 0.3em;
+    margin: 0.3em; */
     }
     
     .msg2 {
-    display: flex;
+        display: none;
+    /* display: flex;
     justify-content: space-between;
     padding: 1em;
     height: 3.5em;
     width: 13em;
     background: #F8C463;
     margin: 0.3em;
-    margin-bottom: 5em;
+    margin-bottom: 5em; */
     }
 
 input {
@@ -847,7 +911,7 @@ input {
     outline: none;
 }
 
-input::after {
+input:after {
     border-bottom: solid 0.1em #F8C463;
     outline: none;
     width: 20em;
@@ -862,17 +926,21 @@ input::after {
     background: none;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 48px;
     outline: none;
     padding-top: 0.1em;
     margin: 0.1em;
     transition:0.4s; cursor: pointer;
+    position: relative;
 }
 
-.place-comment:hover {
-    background: #F8C463;
-
+.place-comment img {
+    margin: 0em;
+    position: absolute;
+    left: -0.7em;
+    bottom: 0.35em;
 }
+
     /* FOOTER */
 
 footer {
@@ -963,8 +1031,8 @@ hr {
 @media (min-width:1080px) {
 
 main{
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
     color: #333333;
 }
 
@@ -1108,12 +1176,12 @@ article > li:last-child {
     padding-right: 5em;
     padding-top: 0em;
     padding-bottom: 0em;
-    width: 230em;
+    width: 240em;
 }
 
 article {
-margin-left: 0em;
-margin-right: 0em;
+margin-left: 5em;
+margin-right: 5em;
 }
 
        /* COMMENT SECTION */
@@ -1124,24 +1192,26 @@ margin-right: 0em;
     }
     
     .msg1 {
-        display: flex;
+        display: none;
+        /* display: flex;
         justify-content: space-between;
         padding: 1em;
         height: 3.5em;
         width: 13em;
         background: #F8C463;
-        margin: 0.3em;
+        margin: 0.3em; */
         }
         
         .msg2 {
-        display: flex;
+            display: none;
+        /* display: flex;
         justify-content: space-between;
         padding: 1em;
         height: 3.5em;
         width: 13em;
         background: #F8C463;
         margin: 0.3em;
-        margin-bottom: 5em;
+        margin-bottom: 5em; */
         }
     
     input {
@@ -1156,7 +1226,7 @@ margin-right: 0em;
         outline: none;
     }
     
-    input::after {
+    input:focus {
         border-bottom: solid 0.1em #F8C463;
         outline: none;
         width: 20em;
@@ -1166,8 +1236,8 @@ margin-right: 0em;
         display: flex;
         width: 15em;
     }
-    
-    .place-comment {
+
+    }.place-comment {
         background: none;
         border: none;
         border-radius: 5px;
@@ -1175,11 +1245,16 @@ margin-right: 0em;
         outline: none;
         padding-top: 0.1em;
         margin: 0.1em;
-        transition:0.4s; cursor: pointer;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        position: relative;
     }
     
-    .place-comment:hover {
-        background: #F8C463;
+    .place-comment img {
+        margin: 0em;
+        position: absolute;
+        left: -1.8em;
+        bottom: 1.3em;
     }
 
 /* FOOTER */
@@ -1190,8 +1265,8 @@ footer {
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: 0.5fr 0.5fr;
     justify-content: center;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
 }
 
 a {
@@ -1212,42 +1287,46 @@ span {
 }
 
 .diensten {
-    grid-column: 1 / 6 ;
+    grid-column: 3 / 8 ;
     grid-row: 1 / 2;
     line-height: 2.25em;
 }
 
 .informatie {
-    grid-column: 6 / 12;
+    grid-column: 8 / 14;
     grid-row: 1 / 2;
     line-height: 2.25em;
 }
 
 .makelaars {
-    grid-column: 12 / 18;
+    grid-column: 14 / 20;
     grid-row: 1 / 2;
     line-height: 2.25em;
 }
 
 .over-ons {
-    grid-column: 18 / 24;
+    grid-column: 20 / 25;
     grid-row: 1 / 2;
     line-height: 2.25em;
+}
+
+hr {
+    grid-column: 1 / 25;
+    grid-row: 2 / 2;
 }
 
 .socials {
     display: flex;
     justify-content: space-between;
-    grid-column: 1 / 8;
+    grid-column: 3 / 10;
     grid-row: 2 / 3;
 }
 
 .center-footer {
     display: flex;
     flex-direction: row;
-    grid-column: 10 / 21;
+    grid-column: 12 / 20;
     grid-row: 2 / 3 ;
-    justify-content: space-between;
 }
 
 .copyright {
@@ -1255,7 +1334,7 @@ span {
 }
 
 .switch-language {
-    grid-column: 22 / 24;
+    grid-column: 21 / 23;
     grid-row: 2 / 3;
     padding-top: 1em;
     padding-bottom: 1em;
