@@ -1,0 +1,76 @@
+ <!-- pop-up  -->
+ <button type="button" class="add-user" onclick="openPopup()"> + </button> 
+ <!-- <title> Bijdrager uitnodigen </title> -->
+ <div class="popup" id="popup">
+   <p > Voeg een bijdrager toe aan uw lijst </p>
+   <input type="email" placeholder="Email">
+   <button class="add-user-button" type="submit" onclick="openPopup()"> Bijdrager toevoegen </button>
+   <button class="close-button">&times;</button>
+ </div>
+</form>
+
+<script> 
+let popup = document.getElementById("popup");
+
+function openPopup(){
+ popup.classList.add("open-popup");
+}
+
+function closePopup(){
+ popup.classList.remove("open-popup");
+}
+
+</script>
+
+<style>
+    
+/* POP-UP BIJDRAGER TOEVOEGEN */
+
+.popup {
+    background: #EDEDED;
+    border-radius: 8px;
+    color: #333333;
+    margin-left: 43em;
+    padding: 1em;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.4s top 0.4s;
+    text-align: center;
+    visibility: hidden;
+    width: 25em;
+    z-index: 100;
+}
+
+.open-popup {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+body.open-popup {
+    height: 100vh;
+    overflow: hidden;
+    padding-right:15px ;
+}
+
+.close-button {
+    background-color: transparent;
+    border: 0em;
+    color: #333333;
+    font-size: 2em;
+    position: absolute;
+    right: 0em;
+    top: 0em;
+    transition: all 0.2 ease-in;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: transparent;
+    color:#F7A100;
+    position: absolute;
+    top: 0em;
+    right: 0em;
+}
+</style>
