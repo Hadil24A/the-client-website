@@ -54,7 +54,6 @@ a {
 .heart, .account-human{
     color: #fff;
     height: 2em;
-
     margin: auto 5px;
  
 }
@@ -168,7 +167,6 @@ h1 {
     --clr-blue: #115D92;
     --clr-heart: #DB1D10;
     --clr-gray: #525252;
-    
 }
 
 .theme-toggle {
